@@ -58,5 +58,161 @@
         "type":"simple-melee",
         "damage":"1d6 piercing",
         "properties":["thrown","versatile"]
+    },
+    {
+        "name":"Light crossbow",
+        "type":"simple-ranged",
+        "damage":"1d8 piercing",
+        "properties":["ammunition","loading","two-handed"]
+    },
+    {
+        "name":"Dart",
+        "type":"simple-ranged",
+        "damage":"1d4 piercing",
+        "properties":["thrown","finesse"]
+    },
+    {
+        "name":"Shortbow",
+        "type":"simple-ranged",
+        "damage":"1d6 piercing",
+        "properties":["ammunition","two-handed"]
+    },
+    {
+        "name":"Sling",
+        "type":"simple-ranged",
+        "damage":"1d4 bludgeoning",
+        "properties":["ammunition"]
+    },
+    {
+        "name":"Battleaxe",
+        "type":"martial-melee",
+        "damage":"1d8 slashing",
+        "properties":["versatile"]
+    },
+    {
+        "name":"Flail",
+        "type":"martial-melee",
+        "damage":"1d8 bludgeoning",
+        "properties":[]
+    },
+    {
+        "name":"Glaive",
+        "type":"martial-melee",
+        "damage":"1d10 slashing",
+        "properties":["heavy","reach","two-handed"]
+    },
+    {
+        "name":"Greataxe",
+        "type":"martial-melee",
+        "damage":"1d12 slashing",
+        "properties":["heavy","two-handed"]
+    },
+    {
+        "name":"Greatsword",
+        "type":"martial-melee",
+        "damage":"2d6 slashing",
+        "properties":["heavy","two-handed"]
+    },
+    {
+        "name":"Halberd",
+        "type":"martial-melee",
+        "damage":"1d10 slashing",
+        "properties":["heavy","reach","two-handed"]
+    },
+    {
+        "name":"Lance",
+        "type":"martial-melee",
+        "damage":"1d12 piercing",
+        "properties":["reach","special"]
+    },
+    {
+        "name":"Longsword",
+        "type":"martial-melee",
+        "damage":"1d8 slashing",
+        "properties":["versatile"]
+    },
+    {
+        "name":"Maul",
+        "type":"martial-melee",
+        "damage":"2d6 bludgeoning",
+        "properties":["heavy","two-handed"]
+    },
+    {
+        "name":"Morningstar",
+        "type":"martial-melee",
+        "damage":"1d8 piercing",
+        "properties":[]
+    },
+    {
+        "name":"Pike",
+        "type":"martial-melee",
+        "damage":"1d10 piercing",
+        "properties":["heavy","reach","two-handed"]
+    },
+    {
+        "name":"Rapier",
+        "type":"martial-melee",
+        "damage":"1d8 piercing",
+        "properties":["finesse"]
+    },
+    {
+        "name":"Scimitar",
+        "type":"martial-melee",
+        "damage":"1d6 slashing",
+        "properties":["finesse","light"]
+    },
+    {
+        "name":"Shortsword",
+        "type":"martial-melee",
+        "damage":"1d6 piercing",
+        "properties":["finesse","light"]
+    },
+    {
+        "name":"Trident",
+        "type":"martial-melee",
+        "damage":"1d6 piercing",
+        "properties":["thrown","versatile"]
+    },
+    {
+        "name":"War pick",
+        "type":"martial-melee",
+        "damage":"1d8 piercing",
+        "properties":[]
+    },
+    {
+        "name":"Warhammer",
+        "type":"martial-melee",
+        "damage":"1d8 bludgeoning",
+        "properties":["versatile"]
+    },
+    {
+        "name":"Whip",
+        "type":"martial-melee",
+        "damage":"1d4 slashing",
+        "properties":["finesse","reach"]
+    },
+    {
+        "name":"Blowgun",
+        "type":"martial-ranged",
+        "damage":"1 piercing",
+        "properties":["ammunition","loading"]
+    },
+    {
+        "name":"Hand crossbow",
+        "type":"martial-ranged",
+        "damage":"1d6 piercing",
+        "properties":["ammunition","light","loading"]
+    },
+    {
+        "name":"Heavy crossbow",
+        "type":"martial-ranged",
+        "damage":"1d10 piercing",
+        "properties":["ammunition","heavy","loading","two-handed"]
+    },
+    {
+        "name":"Longbow",
+        "type":"martial-ranged",
+        "damage":"1d8 piercing",
+        "properties":["ammunition","heavy","two-handed"]
     }
 ]
