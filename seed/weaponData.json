@@ -1,0 +1,62 @@
+[
+    {
+        "name":"Club",
+        "type":"simple-melee",
+        "damage":"1d4 bludgeoning",
+        "properties":["light"]
+    },
+    {
+        "name":"Dagger",
+        "type":"simple-melee",
+        "damage":"1d4 piercing",
+        "properties":["finesse","light","thrown"]
+    },
+    {
+        "name":"Greatclub",
+        "type":"simple-melee",
+        "damage":"1d8 bludgeoning",
+        "properties":["two-handed"]
+    },
+    {
+        "name":"Handaxe",
+        "type":"simple-melee",
+        "damage":"1d6 slashing",
+        "properties":["light","thrown"]
+    },
+    {
+        "name":"Javelin",
+        "type":"simple-melee",
+        "damage":"1d6 piercing",
+        "properties":["thrown"]
+    },
+    {
+        "name":"Light hammer",
+        "type":"simple-melee",
+        "damage":"1d4 bludgeoning",
+        "properties":["light","thrown"]
+    },
+    {
+        "name":"Mace",
+        "type":"simple-melee",
+        "damage":"1d6 bludgeoning",
+        "properties":[]
+    },
+    {
+        "name":"Quarterstaff",
+        "type":"simple-melee",
+        "damage":"1d6 bludgeoning",
+        "properties":["versatile"]
+    },
+    {
+        "name":"Sickle",
+        "type":"simple-melee",
+        "damage":"1d4 slashing",
+        "properties":["light"]
+    },
+    {
+        "name":"Spear",
+        "type":"simple-melee",
+        "damage":"1d6 piercing",
+        "properties":["thrown","versatile"]
+    }
+]
