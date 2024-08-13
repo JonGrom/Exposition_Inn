@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Weapon extends Model {}
+class Spell extends Model {}
 
-Weapon.init(
+Spell.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,24 +11,16 @@ Weapon.init(
       allowNull: false,
       autoIncrement: true
     },
-    name: {
-      type: DataTypes.STRING,
+    slot: {
+      type: DataTypes.ARRAY,
       allowNull: false,
     },
-    type: {
-      type: DataTypes.STRING,
+    slot: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
-    equipped: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
-    damage: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    properties: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
+    sorceryPoint: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     character_id: {
@@ -43,8 +35,8 @@ Weapon.init(
     sequelize,
     timestamps: true,
     underscored: true,
-    modelName: 'weapon'
+    modelName: 'spell'
   },
 );
 
-module.exports = Weapon;
+module.exports = Spell;

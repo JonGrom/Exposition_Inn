@@ -31,6 +31,7 @@ Character.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    //THIS IS NOT THEIR BACKSTORY NARRATIVE! IT'S SOMETHING ELSE THAT THEY NEED.
     race: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -38,6 +39,10 @@ Character.init(
     alignment: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    lvl1slot: {
+      type: DataTypes.INTEGER,
+      allowNull: true
     },
     stat_id: {
       type: DataTypes.INTEGER,
@@ -55,6 +60,7 @@ Character.init(
     },
     weapon_id: {
       type: DataTypes.INTEGER,
+      allowNull: true,
       references: {
         model: 'weapon',
         key: 'id'
@@ -62,6 +68,7 @@ Character.init(
     },
     armor_id: {
       type: DataTypes.INTEGER,
+      allowNull: true,
       references: {
         model: 'armor',
         key: 'id'
@@ -69,6 +76,7 @@ Character.init(
     },
     spell_id: {
       type: DataTypes.INTEGER,
+      allowNull: true,
       references: {
         model: 'equipment',
         key: 'id'

@@ -15,11 +15,7 @@ Spell.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    slot: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    sorceryPoint: {
+    level: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
