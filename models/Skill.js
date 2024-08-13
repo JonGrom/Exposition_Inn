@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Character extends Model {}
+class Skill extends Model {}
 
-Character.init(
+Skill.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,62 +11,89 @@ Character.init(
       allowNull: false,
       autoIncrement: true
     },
-    class: {
-      type: DataTypes.STRING,
+    acrobatics: {
+      type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    level: {
+    animalHandling: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    arcana: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    athletics: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    deception: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    history: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    insight: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    intimidation: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    investigation: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    medicine: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    nature: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    perception: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    performance: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    persuasion: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    religion: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    sleightOfHand: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    stealth: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    survival: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    passsivePerception: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        min: 1,
-        max: 20
+        min: 1
       },
     },
-    background: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    race: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    alignment: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    stat_id: {
+    character_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'stat',
-        key: 'id'
-      }
-    },
-    skill_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'skill',
-        key: 'id'
-      }
-    },
-    equipment_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'equipment',
-        key: 'id'
-      }
-    },
-    spell_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'equipment',
-        key: 'id'
-      }
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
+        model: 'character',
         key: 'id'
       }
     },
@@ -75,8 +102,8 @@ Character.init(
     sequelize,
     timestamps: true,
     underscored: true,
-    modelName: 'user'
+    modelName: 'skill'
   },
 );
 
-module.exports = Character;
+module.exports = Skill;
