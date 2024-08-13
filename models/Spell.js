@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Character extends Model {}
+class Spell extends Model {}
 
-Character.init(
+Spell.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,62 +11,22 @@ Character.init(
       allowNull: false,
       autoIncrement: true
     },
-    class: {
+    spell: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    level: {
+    slot: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      validate: {
-        min: 1,
-        max: 20
-      },
     },
-    background: {
-      type: DataTypes.STRING,
+    sorceryPoint: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
-    race: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    alignment: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    stat_id: {
+    character_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'stat',
-        key: 'id'
-      }
-    },
-    skill_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'skill',
-        key: 'id'
-      }
-    },
-    equipment_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'equipment',
-        key: 'id'
-      }
-    },
-    spell_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'equipment',
-        key: 'id'
-      }
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
+        model: 'character',
         key: 'id'
       }
     },
@@ -75,8 +35,8 @@ Character.init(
     sequelize,
     timestamps: true,
     underscored: true,
-    modelName: 'user'
+    modelName: 'spell'
   },
 );
 
-module.exports = Character;
+module.exports = Spell;

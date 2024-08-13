@@ -53,10 +53,17 @@ Character.init(
         key: 'id'
       }
     },
-    equipment_id: {
+    weapon_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'equipment',
+        model: 'weapon',
+        key: 'id'
+      }
+    },
+    armor_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'armor',
         key: 'id'
       }
     },
@@ -79,7 +86,7 @@ Character.init(
     sequelize,
     timestamps: true,
     underscored: true,
-    modelName: 'user'
+    modelName: 'character'
   },
 );
 

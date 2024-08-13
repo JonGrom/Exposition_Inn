@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Equipment extends Model {}
+class Armor extends Model {}
 
-Equipment.init(
+Armor.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,26 +11,34 @@ Equipment.init(
       allowNull: false,
       autoIncrement: true
     },
-    class: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    background: {
+    type: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    race: {
-      type: DataTypes.STRING,
+    equipped: {
+      type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    alignment: {
-      type: DataTypes.STRING,
+    armorClass: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
-    user_id: {
+    steathDisadvantage: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    minStrength: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    character_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: 'character',
         key: 'id'
       }
     },
@@ -39,8 +47,8 @@ Equipment.init(
     sequelize,
     timestamps: true,
     underscored: true,
-    modelName: 'user'
+    modelName: 'armor'
   },
 );
 
-module.exports = Character;
+module.exports = Armor;
