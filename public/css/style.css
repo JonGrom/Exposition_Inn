@@ -1,0 +1,18 @@
+body {
+    background-image: url("../assets/homebackground.jpg");
+    position: inherit;
+    background-size: 100vw 100%;
+    background-repeat: no-repeat;
+}
+body {
+    background-image: url("../assets/createbackground.jpg");
+    position: inherit;
+    background-size: 100vw 100%;
+    background-repeat: no-repeat;
+}
+body {
+    background-image: url("../assets/loginsigninbackground.jpg");
+    position: inherit;
+    background-size: 100vw 100%;
+    background-repeat: no-repeat;
+}

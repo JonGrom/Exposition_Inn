@@ -83,13 +83,6 @@ Skill.init(
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    passsivePerception: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        min: 1
-      },
-    },
     character_id: {
       type: DataTypes.INTEGER,
       references: {
