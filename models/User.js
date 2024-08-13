@@ -12,16 +12,11 @@ User.init(
       allowNull: false,
       autoIncrement: true
     },
-    fname: {
-      type: DataTypes.STRING
-    },
-    lname: {
-      type: DataTypes.STRING
-    },
-    email: {
+    username: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true
+      unique: true,
+      len: [5, 15]
     },
     password: {
       type: DataTypes.STRING,

@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS express_starter_db;
-CREATE DATABASE express_starter_db;
+DROP DATABASE IF EXISTS dungeon_db;
+CREATE DATABASE dungeon_db;
