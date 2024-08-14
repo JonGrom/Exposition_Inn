@@ -31,6 +31,7 @@ Spell.init(
     sequelize,
     timestamps: true,
     underscored: true,
+    freezeTableName: true,
     modelName: 'spell'
   },
 );
