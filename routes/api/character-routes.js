@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
   // get one character
 router.get('/:id', async (req, res) => {
     // find a single product by its `id`
-    // be sure to include its associated Category and Tag data
+    // be sure to include its associated Category and Tag 
     try {
       const characterData = await Character.findByPk(req.params.id, {
   
