@@ -95,6 +95,7 @@ Character.init(
     sequelize,
     timestamps: true,
     underscored: true,
+    freezeTableName: true,
     modelName: 'character'
   },
 );
