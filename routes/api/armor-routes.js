@@ -1,15 +1,15 @@
 const router = require("express").Router() 
-const { Spell, Character } = require("../../models")
+const { Armor, Character} = require("../../models")
 
 router.get('/', async (req, res) => {
 
     try {
-      const spellData = await Stat.findAll({       
+      const armorData = await Armor.findAll({       
         include: [
           { model: Character, as: 'character' },
         ]
         });
-      res.status(200).json(spellData);
+      res.status(200).json(armorData);
     } catch (err) {
       res.status(500).json(err);
     }
@@ -19,18 +19,18 @@ router.get('/', async (req, res) => {
     // find a single product by its `id`
     // be sure to include its associated Category and Tag data
     try {
-      const spellData = await Spell.findByPk(req.params.id, {
+      const armorData = await Armor.findByPk(req.params.id, {
         include: [
-          { model: Character, as: 'character' },
+          { model: Character, as: 'character' }
         ]
       });
   
-      if (!spellData) {
-        res.status(404).json({ message: 'No spell found with this id!' });
+      if (!armorData) {
+        res.status(404).json({ message: 'No armor found with this id!' });
         return;
       }
   
-      res.status(200).json(spellData);
+      res.status(200).json(armorData);
     } catch (err) {
       res.status(500).json(err);
     }
