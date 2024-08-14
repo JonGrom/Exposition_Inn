@@ -14,32 +14,32 @@
 <div>
     <div>
         <p>Strength</p>
-        <p>{{strMod}}</p> {{!-- bonus --}}
+        <p>Modifier: {{strMod}}</p> {{!-- bonus --}}
         <p>{{strength}}</p> {{!-- value --}}
     </div>
     <div>
         <p>Dexterity</p>
-        <p>{{dexMod}}</p> {{!-- bonus --}}
+        <p>Modifier: {{dexMod}}</p> {{!-- bonus --}}
         <p>{{dexterity}}</p> {{!-- value --}}
     </div>
     <div>
         <p>Constitution</p>
-        <p>{{conMod}}</p> {{!-- bonus --}}
+        <p>Modifier: {{conMod}}</p> {{!-- bonus --}}
         <p>{{constitution}}</p> {{!-- value --}}
     </div>
     <div>
         <p>Intelligence</p>
-        <p>{{intMod}}</p> {{!-- bonus --}}
+        <p>Modifier: {{intMod}}</p> {{!-- bonus --}}
         <p>{{intelligence}}</p> {{!-- value --}}
     </div>
     <div>
         <p>Wisdom</p>
-        <p>{{wisMod}}</p> {{!-- bonus --}}
+        <p>Modifier: {{wisMod}}</p> {{!-- bonus --}}
         <p>{{wisdom}}</p> {{!-- value --}}
     </div>
     <div>
         <p>Charisma</p>
-        <p>{{chaMod}}</p> {{!-- bonus --}}
+        <p>Modifier: {{chaMod}}</p> {{!-- bonus --}}
         <p>{{charisma}}</p> {{!-- value --}}
     </div>
 </div>
@@ -47,27 +47,27 @@
 {{!-- Saving Throws --}}
 <div>
     <div>
-        <p>{{strSave}}</p> {{!-- bonus --}}
+        <p>Modifier: {{strSave}}</p> {{!-- bonus --}}
         <p>Strength</p>
     </div>
     <div>
-        <p>{{dexSave}}</p> {{!-- bonus --}}
+        <p>Modifier: {{dexSave}}</p> {{!-- bonus --}}
         <p>Dexterity</p>
     </div>
     <div>
-        <p>{{conSave}}</p> {{!-- bonus --}}
+        <p>Modifier: {{conSave}}</p> {{!-- bonus --}}
         <p>Constitution</p>
     </div>
     <div>
-        <p>{{intSave}}</p> {{!-- bonus --}}
+        <p>Modifier: {{intSave}}</p> {{!-- bonus --}}
         <p>Intelligence</p>
     </div>
     <div>
-        <p>{{wisSave}}</p> {{!-- bonus --}}
+        <p>Modifier: {{wisSave}}</p> {{!-- bonus --}}
         <p>Wisdom</p>
     </div>
     <div>
-        <p>{{chaSave}}</p> {{!-- bonus --}}
+        <p>Modifier: {{chaSave}}</p> {{!-- bonus --}}
         <p>Charisma</p>
     </div>
     <p>Saving Throws</p>
@@ -76,93 +76,93 @@
 {{!-- Skills: proficiency and bonus --}}
 <div>
     <div>
-        <p>{{#if acrobatics.proficiency}}</p> {{!-- proficient? --}}
-        <p></p> {{!-- bonus --}}
+        <p>{{#if acrobatics.proficiency}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
+        <p>Modifier: {{acrobatics.value}}</p> {{!-- bonus --}}
         <p> Acrobatics (Dex)</p>
     </div>
     <div>
-        <p></p> {{!-- proficient? --}}
-        <p></p> {{!-- bonus --}}
+        <p>{{#if animalHandling.proficiency}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
+        <p>Modifier: {{animalHandling.value}}</p> {{!-- bonus --}}
         <p> Animal Handling (Wis)</p>
     </div>
     <div>
-        <p></p> {{!-- proficient? --}}
-        <p></p> {{!-- bonus --}}
+        <p>{{#if arcana.proficiency}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
+        <p>Modifier: {{arcana.value}}</p> {{!-- bonus --}}
         <p> Arcana (Int)</p>
     </div>
     <div>
-        <p></p> {{!-- proficient? --}}
-        <p></p> {{!-- bonus --}}
+        <p>{{#if athletics.proficiency}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
+        <p>Modifier: {{athletics.value}}</p> {{!-- bonus --}}
         <p> Athletics (Str)</p>
     </div>
     <div>
-        <p></p> {{!-- proficient? --}}
-        <p></p> {{!-- bonus --}}
+        <p>{{#if deception.proficiency}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
+        <p>Modifier: {{deception.value}}</p> {{!-- bonus --}}
         <p> Deception (Cha)</p>
     </div>
     <div>
-        <p></p> {{!-- proficient? --}}
-        <p></p> {{!-- bonus --}}
+        <p>{{#if history.proficiency}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
+        <p>Modifier: {{history.value}}</p> {{!-- bonus --}}
         <p> History (Int)</p>
     </div>
     <div>
-        <p></p> {{!-- proficient? --}}
-        <p></p> {{!-- bonus --}}
+        <p>{{#if insight.proficiency}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
+        <p>Modifier: {{insight.value}}</p> {{!-- bonus --}}
         <p> Insight (Wis)</p>
     </div>
     <div>
-        <p></p> {{!-- proficient? --}}
-        <p></p> {{!-- bonus --}}
+        <p>{{#if intimidation.proficiency}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
+        <p>Modifier: {{intimidation.value}}</p> {{!-- bonus --}}
         <p> Intimidation (Cha)</p>
     </div>
     <div>
-        <p></p> {{!-- proficient? --}}
-        <p></p> {{!-- bonus --}}
+        <p>{{#if investigation.proficiency}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
+        <p>Modifier: {{investigation.value}}</p> {{!-- bonus --}}
         <p> Investigation (Int)</p>
     </div>
     <div>
-        <p></p> {{!-- proficient? --}}
-        <p></p> {{!-- bonus --}}
+        <p>{{#if medicine.proficiency}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
+        <p>Modifier: {{medicine.value}}</p> {{!-- bonus --}}
         <p> Medicine (Wis)</p>
     </div>
     <div>
-        <p></p> {{!-- proficient? --}}
-        <p></p> {{!-- bonus --}}
+        <p>{{#if nature.proficiency}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
+        <p>Modifier: {{nature.value}}</p> {{!-- bonus --}}
         <p> Nature (Int)</p>
     </div>
     <div>
-        <p></p> {{!-- proficient? --}}
-        <p></p> {{!-- bonus --}}
+        <p>{{#if perception.proficiency}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
+        <p>Modifier: {{perception.value}}</p> {{!-- bonus --}}
         <p> Perception (Wis)</p>
     </div>
     <div>
-        <p></p> {{!-- proficient? --}}
-        <p></p> {{!-- bonus --}}
+        <p>{{#if performance.proficiency}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
+        <p>Modifier: {{performance.value}}</p> {{!-- bonus --}}
         <p> Performance (Cha)</p>
     </div>
     <div>
-        <p></p> {{!-- proficient? --}}
-        <p></p> {{!-- bonus --}}
+        <p>{{#if persuasion.proficiency}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
+        <p>Modifier: {{persuasion.value}}</p> {{!-- bonus --}}
         <p> Persuasion (Cha)</p>
     </div>
     <div>
-        <p></p> {{!-- proficient? --}}
-        <p></p> {{!-- bonus --}}
+        <p>{{#if religion.proficiency}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
+        <p>Modifier: {{religion.value}}</p> {{!-- bonus --}}
         <p> Religion (Int)</p>
     </div>
     <div>
-        <p></p> {{!-- proficient? --}}
-        <p></p> {{!-- bonus --}}
+        <p>{{#if slieghtOfHand.proficiency}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
+        <p>Modifier: {{slieghtOfHand.value}}</p> {{!-- bonus --}}
         <p> Sleight of Hand (Dex)</p>
     </div>
     <div>
-        <p></p> {{!-- proficient? --}}
-        <p></p> {{!-- bonus --}}
+        <p>{{#if stealth.proficiency}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
+        <p>Modifier: {{stealth.value}}</p> {{!-- bonus --}}
         <p> Stealth (Dex)</p>
     </div>
     <div>
-        <p></p> {{!-- proficient? --}}
-        <p></p> {{!-- bonus --}}
+        <p>{{#if survival.proficiency}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
+        <p>Modifier: {{survival.value}}</p> {{!-- bonus --}}
         <p> Survival (Wis)</p>
     </div>
     <p>Skills</p>
@@ -171,26 +171,23 @@
 {{!-- Armor class, Initiative, Speed, HP --}}
 <div>
     <div>
-        <p>Armor Class:</p>
-        <p></p> {{!-- AC value --}}
+        <p>Armor Class:{{armorClass}}</p> {{!-- AC value --}}
     </div>
     <div>
-        <p>Initiative:</p>
-        <p></p> {{!-- Initiative bonus --}}
+        <p>Initiative:{{initiative}}</p> {{!-- Initiative bonus --}}
     </div>
     <div>
-        <p>Speed:</p>
-        <p></p> {{!-- speed value --}}
+        <p>Speed:{{speed}}</p>{{!-- speed value --}}
     </div>
     <div>
-        <p>Hit Points:</p>
-        <p></p> {{!-- HP value --}}
+        <p>Max Hit Points:{{hpMax}}</p>{{!-- HP value --}}
     </div>
 </div>
 
 {{!-- Weapons --}}
 <div>
     {{!-- here is where to list all the weapon elements --}}
+
 </div>
 
 {{!-- Cantrips --}}
