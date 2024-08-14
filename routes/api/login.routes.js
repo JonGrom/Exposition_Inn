@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 router.post("/", async (req, res) => {
   let foundUser
   try {
-    foundUser = await Model.findOne({ where: { email: req.body.email } })
+    foundUser = await Model.findOne({ where: { userName: req.body.userName } })
   } catch(err){
     res.status(500).json({ status: "error", payload: err.message })
   }
