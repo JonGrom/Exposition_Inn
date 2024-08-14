@@ -11,76 +11,148 @@ Skill.init(
       allowNull: false,
       autoIncrement: true
     },
-    acrobatics: {
+    acrobaticsProf: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    animalHandling: {
+    acrobaticsVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    animalHandlingProf: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    arcana: {
+    animalHandlingVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    arcanaProf: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    athletics: {
+    arcanaVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    athleticsProf: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    deception: {
+    athleticsVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    deceptionProf: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    history: {
+    deceptionVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    historyProf: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    insight: {
+    historyVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    insightProf: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    intimidation: {
+    insightVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    intimidationProf: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    investigation: {
+    intimidationVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    investigationProf: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    medicine: {
+    investigationVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    medicineProf: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    nature: {
+    medicineVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    natureProf: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    perception: {
+    natureVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    perceptionProf: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    performance: {
+    perceptionVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    performanceProf: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    persuasion: {
+    performanceVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    persuasionProf: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    religion: {
+    persuasionVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    religionProf: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    sleightOfHand: {
+    religionVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    sleightOfHandProf: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    stealth: {
+    sleightOfHandVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    stealthProf: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    survival: {
+    stealthVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    survivalProf: {
       type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    survivalVal: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     character_id: {

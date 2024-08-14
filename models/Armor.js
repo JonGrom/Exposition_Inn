@@ -11,20 +11,20 @@ Armor.init(
       allowNull: false,
       autoIncrement: true
     },
-    name: {
+    armorName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    type: {
+    armorType: {
       type: DataTypes.STRING,
-      allowNull: false,
-    },
-    equipped: {
-      type: DataTypes.BOOLEAN,
       allowNull: false,
     },
     armorClass: {
       type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    equipped: {
+      type: DataTypes.BOOLEAN,
       allowNull: false,
     },
     steathDisadvantage: {
