@@ -47,27 +47,27 @@
 {{!-- Saving Throws --}}
 <div>
     <div>
-        <p>Modifier: {{strSave}}</p> {{!-- bonus --}}
+        <p>{{#if strSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{strSaveVal}}</p> {{!-- bonus --}}
         <p>Strength</p>
     </div>
     <div>
-        <p>Modifier: {{dexSave}}</p> {{!-- bonus --}}
+        <p>{{#if dexSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{dexSaveVal}}</p> {{!-- bonus --}}
         <p>Dexterity</p>
     </div>
     <div>
-        <p>Modifier: {{conSave}}</p> {{!-- bonus --}}
+        <p>{{#if conSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{conSaveVal}}</p> {{!-- bonus --}}
         <p>Constitution</p>
     </div>
     <div>
-        <p>Modifier: {{intSave}}</p> {{!-- bonus --}}
+        <p>{{#if intSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{intSaveVal}}</p> {{!-- bonus --}}
         <p>Intelligence</p>
     </div>
     <div>
-        <p>Modifier: {{wisSave}}</p> {{!-- bonus --}}
+        <p>{{#if wisSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{wisSaveVal}}</p> {{!-- bonus --}}
         <p>Wisdom</p>
     </div>
     <div>
-        <p>Modifier: {{chaSave}}</p> {{!-- bonus --}}
+        <p>{{#if chaSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{chaSaveVal}}</p> {{!-- bonus --}}
         <p>Charisma</p>
     </div>
     <p>Saving Throws</p>
