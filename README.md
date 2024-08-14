@@ -19,3 +19,11 @@ This is the first iteration of an Express/Sequelize boilerplate for use by stude
 - A sample homepage route wired up 
 - Session scaffolding in place
 - Seed file set up and ready to use
+
+
+
+
+
+
+
+spells.json taken from https://github.com/vorpalhex/srd_spells 

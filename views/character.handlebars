@@ -1,45 +1,204 @@
-
+{{!-- Character info --}}
 <div>
-    <h3>Character Name: </h3>
+    <h3>Character Name: {{name}}</h3>
 </div>
 <div>
-    <p>Class and Level: </p>
-    <p>Background:</p>
+    <p>Level {{level}} {{archetype}} </p>
+    <p>Background: {{background}}</p>
     <p>Player Name: </p>
-    <p>Race: </p>
-    <p>Alignment: </p>
+    <p>Race: {{race}}</p>
+    <p>Alignment: {{aliagnment}}</p>
 </div>
 
-
+{{!-- Stats: value and bonus --}}
 <div>
     <div>
         <p>Strength</p>
-        <p></p>
-        <p></p>
+        <p>{{strMod}}</p> {{!-- bonus --}}
+        <p>{{strength}}</p> {{!-- value --}}
     </div>
     <div>
         <p>Dexterity</p>
-        <p></p>
-        <p></p>
+        <p>{{dexMod}}</p> {{!-- bonus --}}
+        <p>{{dexterity}}</p> {{!-- value --}}
     </div>
     <div>
         <p>Constitution</p>
-        <p></p>
-        <p></p>
+        <p>{{conMod}}</p> {{!-- bonus --}}
+        <p>{{constitution}}</p> {{!-- value --}}
     </div>
     <div>
         <p>Intelligence</p>
-        <p></p>
-        <p></p>
+        <p>{{intMod}}</p> {{!-- bonus --}}
+        <p>{{intelligence}}</p> {{!-- value --}}
     </div>
     <div>
         <p>Wisdom</p>
-        <p></p>
-        <p></p>
+        <p>{{wisMod}}</p> {{!-- bonus --}}
+        <p>{{wisdom}}</p> {{!-- value --}}
     </div>
     <div>
         <p>Charisma</p>
-        <p></p>
-        <p></p>
+        <p>{{chaMod}}</p> {{!-- bonus --}}
+        <p>{{charisma}}</p> {{!-- value --}}
     </div>
+</div>
+
+{{!-- Saving Throws --}}
+<div>
+    <div>
+        <p>{{strSave}}</p> {{!-- bonus --}}
+        <p>Strength</p>
+    </div>
+    <div>
+        <p>{{dexSave}}</p> {{!-- bonus --}}
+        <p>Dexterity</p>
+    </div>
+    <div>
+        <p>{{conSave}}</p> {{!-- bonus --}}
+        <p>Constitution</p>
+    </div>
+    <div>
+        <p>{{intSave}}</p> {{!-- bonus --}}
+        <p>Intelligence</p>
+    </div>
+    <div>
+        <p>{{wisSave}}</p> {{!-- bonus --}}
+        <p>Wisdom</p>
+    </div>
+    <div>
+        <p>{{chaSave}}</p> {{!-- bonus --}}
+        <p>Charisma</p>
+    </div>
+    <p>Saving Throws</p>
+</div>
+
+{{!-- Skills: proficiency and bonus --}}
+<div>
+    <div>
+        <p>{{#if acrobatics.proficiency}}</p> {{!-- proficient? --}}
+        <p></p> {{!-- bonus --}}
+        <p> Acrobatics (Dex)</p>
+    </div>
+    <div>
+        <p></p> {{!-- proficient? --}}
+        <p></p> {{!-- bonus --}}
+        <p> Animal Handling (Wis)</p>
+    </div>
+    <div>
+        <p></p> {{!-- proficient? --}}
+        <p></p> {{!-- bonus --}}
+        <p> Arcana (Int)</p>
+    </div>
+    <div>
+        <p></p> {{!-- proficient? --}}
+        <p></p> {{!-- bonus --}}
+        <p> Athletics (Str)</p>
+    </div>
+    <div>
+        <p></p> {{!-- proficient? --}}
+        <p></p> {{!-- bonus --}}
+        <p> Deception (Cha)</p>
+    </div>
+    <div>
+        <p></p> {{!-- proficient? --}}
+        <p></p> {{!-- bonus --}}
+        <p> History (Int)</p>
+    </div>
+    <div>
+        <p></p> {{!-- proficient? --}}
+        <p></p> {{!-- bonus --}}
+        <p> Insight (Wis)</p>
+    </div>
+    <div>
+        <p></p> {{!-- proficient? --}}
+        <p></p> {{!-- bonus --}}
+        <p> Intimidation (Cha)</p>
+    </div>
+    <div>
+        <p></p> {{!-- proficient? --}}
+        <p></p> {{!-- bonus --}}
+        <p> Investigation (Int)</p>
+    </div>
+    <div>
+        <p></p> {{!-- proficient? --}}
+        <p></p> {{!-- bonus --}}
+        <p> Medicine (Wis)</p>
+    </div>
+    <div>
+        <p></p> {{!-- proficient? --}}
+        <p></p> {{!-- bonus --}}
+        <p> Nature (Int)</p>
+    </div>
+    <div>
+        <p></p> {{!-- proficient? --}}
+        <p></p> {{!-- bonus --}}
+        <p> Perception (Wis)</p>
+    </div>
+    <div>
+        <p></p> {{!-- proficient? --}}
+        <p></p> {{!-- bonus --}}
+        <p> Performance (Cha)</p>
+    </div>
+    <div>
+        <p></p> {{!-- proficient? --}}
+        <p></p> {{!-- bonus --}}
+        <p> Persuasion (Cha)</p>
+    </div>
+    <div>
+        <p></p> {{!-- proficient? --}}
+        <p></p> {{!-- bonus --}}
+        <p> Religion (Int)</p>
+    </div>
+    <div>
+        <p></p> {{!-- proficient? --}}
+        <p></p> {{!-- bonus --}}
+        <p> Sleight of Hand (Dex)</p>
+    </div>
+    <div>
+        <p></p> {{!-- proficient? --}}
+        <p></p> {{!-- bonus --}}
+        <p> Stealth (Dex)</p>
+    </div>
+    <div>
+        <p></p> {{!-- proficient? --}}
+        <p></p> {{!-- bonus --}}
+        <p> Survival (Wis)</p>
+    </div>
+    <p>Skills</p>
+</div>
+
+{{!-- Armor class, Initiative, Speed, HP --}}
+<div>
+    <div>
+        <p>Armor Class:</p>
+        <p></p> {{!-- AC value --}}
+    </div>
+    <div>
+        <p>Initiative:</p>
+        <p></p> {{!-- Initiative bonus --}}
+    </div>
+    <div>
+        <p>Speed:</p>
+        <p></p> {{!-- speed value --}}
+    </div>
+    <div>
+        <p>Hit Points:</p>
+        <p></p> {{!-- HP value --}}
+    </div>
+</div>
+
+{{!-- Weapons --}}
+<div>
+    {{!-- here is where to list all the weapon elements --}}
+</div>
+
+{{!-- Cantrips --}}
+<div>
+
+</div>
+
+{{!-- Level 1 spells --}}
+<div>
+
 </div>
