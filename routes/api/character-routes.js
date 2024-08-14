@@ -50,7 +50,7 @@ router.get('/:id', async (req, res) => {
     }
   });
 
-  // create new product
+  // create 
 router.post('/', async (req, res) => {
     try {
       console.log('Received request body:', req.body);
