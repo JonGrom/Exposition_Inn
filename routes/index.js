@@ -17,3 +17,16 @@ router.get("/", (req, res) => {
 
 
 module.exports = router;
+
+/*
+
+User 
+Product
+Order
+
+User
+Pet
+Comment
+
+
+*/

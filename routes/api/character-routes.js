@@ -54,9 +54,9 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
     try {
       console.log('Received request body:', req.body);
-      const { id, name, class, level, skill_id, background, race, alignment, lvl1slot, tagIds } = req.body 
+      const { id, name, archetype, level, skill_id, background, race, alignment, lvl1slot, tagIds } = req.body 
       console.log('Received tagIds:', tagIds);
-      const newCharacter = await Character.create({ id, name, class, level, skill_id, background, race, alignment, lvl1slot, tagIds},
+      const newCharacter = await Character.create({ id, name, archetype, level, skill_id, background, race, alignment, lvl1slot, tagIds},
         {
         include: [
         { model: Stat, as: 'stat' },
