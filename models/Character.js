@@ -15,10 +15,11 @@ Character.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    class: {
+    archetype: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    //In game this is actually called Class, but obv class is a reserved js thingee, so it's archetype here
     level: {
       type: DataTypes.INTEGER,
       allowNull: false,
