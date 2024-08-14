@@ -47,6 +47,7 @@ Armor.init(
     sequelize,
     timestamps: true,
     underscored: true,
+    freezeTableName: true,
     modelName: 'armor'
   },
 );

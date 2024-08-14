@@ -79,7 +79,7 @@ Character.init(
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'equipment',
+        model: 'spell',
         key: 'id'
       }
     },
@@ -95,6 +95,7 @@ Character.init(
     sequelize,
     timestamps: true,
     underscored: true,
+    freezeTableName: true,
     modelName: 'character'
   },
 );
