@@ -4,7 +4,7 @@ const { Character, Stat, Skill, Weapon, Armor, Spell, User } = require("../../mo
 // get all characters
 router.get('/', async (req, res) => {
     // find all products
-    // be sure to include its associated Category and Tag data
+    // be sure to include its associated Category and Tag
     try {
       const characterData = await Character.findAll({
         include: [
