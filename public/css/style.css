@@ -1,18 +1,56 @@
 body {
-    background-image: url("../assets/homebackground.jpg");
+    background-image: url("/assets/homebackground.jpg");
     position: inherit;
     background-size: 100vw 100%;
     background-repeat: no-repeat;
 }
 body {
-    background-image: url("../assets/createbackground.jpg");
+    background-image: url("/assets/createbackground.jpg");
     position: inherit;
     background-size: 100vw 100%;
     background-repeat: no-repeat;
 }
 body {
-    background-image: url("../assets/loginsigninbackground.jpg");
+    background-image: url("/assets/joinsigninbackground.jpg");
     position: inherit;
     background-size: 100vw 100%;
     background-repeat: no-repeat;
+}
+
+header{
+    background-color: white;
+    opacity: 60%;
+}
+
+.signup-card{
+    color: yellow;
+    @media screen {
+        
+    }
+}
+
+.login-card{
+    color: yellow;
+    
+}
+
+@media screen and (max-width: 768px) {
+    .login-card {
+      display: block;
+      width: 98.5%;
+      align-items: center;
+      margin: 10px;
+      margin-right: 5px;
+      padding: -20px;
+    };
+}
+@media screen and (max-width: 768px) {
+    .signup-card {
+      display: block;
+      width: 98.5%;
+      align-items: center;
+      margin: 10px;
+      margin-right: 5px;
+      padding: -20px;
+    }
 }

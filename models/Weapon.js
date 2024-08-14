@@ -11,24 +11,24 @@ Weapon.init(
       allowNull: false,
       autoIncrement: true
     },
-    name: {
+    weaponName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    type: {
+    weaponType: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    equipped: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
-    damage: {
+    weaponDamage: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     properties: {
       type: DataTypes.ARRAY(DataTypes.STRING),
+      allowNull: false,
+    },
+    equipped: {
+      type: DataTypes.BOOLEAN,
       allowNull: false,
     },
     character_id: {
