@@ -4,6 +4,7 @@ const signupForm = document.querySelector('.signup-form');
 
 // Add event listeners for form submissions
 loginForm.addEventListener('submit', (event) => {
+  console.log("ok")
   event.preventDefault(); // Prevent the default form submission
   const email = document.getElementById('email-login').value;
   const password = document.getElementById('password-login').value;
@@ -22,19 +23,28 @@ loginForm.addEventListener('submit', (event) => {
     body: JSON.stringify(loginData)
   })
   .then(response => {
-    // Handle the response as needed
+    console.log(response)
+    if(response.ok){
+      document.location.replace ('/user')
+    }
+  })
+  .then( data => {
+    // Clear the form fields
+    document.getElementById('email-login').value = '';
+    document.getElementById('password-login').value = '';
   })
   .catch(error => {
     console.error('Error:', error);
   });
 });
 
+
 signupForm.addEventListener('submit', (event) => {
   event.preventDefault(); // Prevent the default form submission
   const username = document.getElementById('username-signup').value;
   const email = document.getElementById('email-signup').value;
   const password = document.getElementById('password-signup').value;
-
+  
   const signupData = {
     username: username,
     email: email,
@@ -54,6 +64,10 @@ signupForm.addEventListener('submit', (event) => {
   })
   .then( data => {
     console.log(data)
+    // Clear the form fields
+    document.getElementById('username-signup').value = '';
+    document.getElementById('email-signup').value = '';
+    document.getElementById('password-signup').value = '';
   })
   .catch(error => {
     console.error('Error:', error);

@@ -9,8 +9,10 @@ router.post('/', async (req, res) => {
 
     req.session.save(() => {
       req.session.user_id = userData.id;
-      req.session.logged_in = true;
 
+    if (req.session.user_id){
+      console.log("success", userData);
+    }
       res.status(200).json(userData);
     });
   } catch (err) {
@@ -29,23 +31,23 @@ router.get("/", async (req, res) => {
 })
 
 
-router.get("/:id", async (req, res) => {
-  try {
-    const response = await User.findByPk(req.params.id)
-    res.json({ status: "success", payload: response })
-  } catch(err){
-    res.status(500).json({ status: "error", payload: err.message })
-  }
-})
+// router.post("/", async (req, res) => {
+//   try {
+//     const response = await User.create(req.body)
+//     res.json({ status: "success", payload: response })
+//   } catch(err){
+//     res.status(500).json({ status: "error", payload: err.message })
+//   }
+// })
 
-
-router.post("/", async (req, res) => {
-  try {
-    const response = await User.create(req.body)
-    res.json({ status: "success", payload: response })
-  } catch(err){
-    res.status(500).json({ status: "error", payload: err.message })
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
   }
-})
+});
 
 module.exports = router;
