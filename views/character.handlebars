@@ -1,18 +1,18 @@
 {{!-- Character info --}}
-<div class="row">
+<div class="row align-items-center justify-content-around">
     <div>
-        <h3>Character Name: {{name}}</h3>
+        <h4>Character Name: {{name}}</h4>
     </div>
     <div>
+        <p>Player Name: {{username}}</p>
         <p>Level {{level}} {{archetype}} </p>
-        <p>Background: {{background}}</p>
-        <p>Player Name: </p>
         <p>Race: {{race}}</p>
+        <p>Background: {{background}}</p>
         <p>Alignment: {{aliagnment}}</p>
     </div>
 </div>
 {{!-- Stats: value and bonus --}}
-<div class="row">
+<div class="row justify-content-around">
     <div>
         <p>Strength</p>
         <p>Modifier: {{strMod}}</p> {{!-- bonus --}}
@@ -43,11 +43,14 @@
         <p>Modifier: {{chaMod}}</p> {{!-- bonus --}}
         <p>{{charisma}}</p> {{!-- value --}}
     </div>
+    <div>
+        <p>Proficiency Bonus: {{proficiencyBonus}}</p>
+    </div>
 </div>
 
-<div class="row">
+<div class="row justify-content-around">
     {{!-- Saving Throws --}}
-    <div class="col">
+    <div class="col col-sm-12">
         <div>
             <p>{{#if strSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{strSaveVal}}</p> {{!-- bonus --}}
             <p>Strength</p>
@@ -76,7 +79,7 @@
     </div>
 
     {{!-- Skills: proficiency and bonus --}}
-    <div class="col">
+    <div class="col col-sm-12">
         <div>
             <p>{{#if acrobaticsProf}}🔳{{#else}}🔲{{/if}} Modifier: {{acrobaticsVal}}  Acrobatics (Dex)</p>
         </div>
@@ -133,8 +136,10 @@
         </div>
         <p>Skills</p>
     </div>
+</div>
 
-{{!-- Armor class, Initiative, Speed, HP --}}
+<div class="row justify-content-around">
+ {{!-- Armor class, Initiative, Speed, HP --}}
     <div class="col">
         <div>
             <p>Armor Class: {{armorClass}}</p> {{!-- AC value --}}
@@ -156,18 +161,23 @@
         </div>
     </div>
 </div>
-{{!-- Weapons --}}
-<div>
-    {{!-- here is where to list all the weapon elements --}}
-    {{#each }}
-</div>
 
-{{!-- Cantrips --}}
-<div>
 
-</div>
+<div class="row">
 
-{{!-- Level 1 spells --}}
-<div>
+    {{!-- Weapons --}}
+    <div class="col col-sm-12">
+        {{!-- here is where to list all the weapon elements --}}
+        {{#each }}
+    </div>
+    
+    {{!-- Cantrips --}}
+    <div class="col col-sm-12">
 
+    </div>
+
+    {{!-- Level 1 spells --}}
+    <div class="col col-sm-12">
+
+    </div>
 </div>
