@@ -27,17 +27,6 @@ Weapon.init(
       type: DataTypes.ARRAY(DataTypes.STRING),
       allowNull: true,
     },
-    equipped: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
-    character_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'character',
-        key: 'id'
-      }
-    },
   },
   {
     sequelize,

@@ -157,43 +157,21 @@ Character.init(
       allowNull: true
     },
 //Foreign keys
-    stat_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'stat',
-        key: 'id'
-      }
-    },
-    skill_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'skill',
-        key: 'id'
-      }
-    },
-    weapon_id: {
+    equipped_weapon_id: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
         model: 'weapon',
-        key: 'id'
-      }
+        key: 'id',
+      },
     },
-    armor_id: {
+    equipped_armor_id: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
         model: 'armor',
-        key: 'id'
-      }
-    },
-    spell_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'spell',
-        key: 'id'
-      }
+        key: 'id',
+      },
     },
     user_id: {
       type: DataTypes.INTEGER,
