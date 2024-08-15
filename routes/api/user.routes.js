@@ -1,9 +1,9 @@
 const router = require("express").Router() 
-const User = require("../../models/User")
-const Character = require("../../models/Character")
+const { User, Character } = require("../../models")
 
 // Session Router
 router.post('/', async (req, res) => {
+  console.log("ok")
   try {
     const userData = await User.create(req.body);
 
@@ -14,6 +14,7 @@ router.post('/', async (req, res) => {
       res.status(200).json(userData);
     });
   } catch (err) {
+    console.log(err)
     res.status(400).json(err);
   }
 });

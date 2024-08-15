@@ -35,22 +35,87 @@ header{
 }
 
 @media screen and (max-width: 768px) {
+    
+    
     .login-card {
       display: block;
-      width: 98.5%;
-      align-items: center;
-      margin: 10px;
+      width: 40%;
+      align-items: left;
+      margin: 10px; 
       margin-right: 5px;
       padding: -20px;
-    };
-}
-@media screen and (max-width: 768px) {
+    } 
+
     .signup-card {
-      display: block;
-      width: 98.5%;
-      align-items: center;
-      margin: 10px;
-      margin-right: 5px;
-      padding: -20px;
+        display: absolute;
+        width: 40%;
+        text-align: right; /* Align the content within .signup-card to the right */
+        margin: 10px;
+        margin-left: 425px;
+        margin-right: 5px;
+        padding: -20px;
+    
+    }
+    
+    div.login-card{
+        margin-top: -10px;
+    }
+
+    div.signup-card{
+        margin-top: -50px;
+    }
+
+    div.form-group{
+        margin: 2px;
+    }
+
+    h2{
+        margin-top: -10px;
+    }
+
+    .signup-form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* Align form items to the right */
+    }
+    
+    .form-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end; /* Align form labels and inputs to the right */
+    }
+    
+    label {
+        margin-right: 10px; /* Add space between label and input */
+    }
+    
+    .form-input {
+        width: 200px; /* Adjust the input width as needed */
+    }
+}
+@media screen and (max-width: 576px) {
+
+    .signup-card {
+        display: absolute;
+        width: 40%;
+        text-align: right; /* Align the content within .signup-card to the right */
+        margin: 10px;
+        margin-left: 315px;
+        margin-right: 5px;
+        padding: -20px;
+    
+    }
+}
+@media screen and (max-width: 423px) {
+
+    .signup-card {
+        display: absolute;
+        width: 40%;
+        text-align: right; /* Align the content within .signup-card to the right */
+        margin: 10px;
+        margin-left: 215px;
+        margin-right: 5px;
+        padding: -20px;
+    
     }
 }

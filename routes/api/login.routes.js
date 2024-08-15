@@ -1,34 +1,45 @@
 const router = require("express").Router() 
-const Model = require("../../models/User");
+const { User, Character } = require("../../models")
 const bcrypt = require("bcrypt");
 
-router.post("/", async (req, res) => {
-  let foundUser
+router.post('/', async (req, res) => {
   try {
-    foundUser = await Model.findOne({ where: { userName: req.body.userName } })
-  } catch(err){
-    res.status(500).json({ status: "error", payload: err.message })
-  }
-  
-  if( !foundUser ){
-    res.status(500).json({ status: "error", payload: err.message })
-  
-  } else {
-    
-    const validPassword = bcrypt.compare(req.body.password, foundUser.password)
+    const dbUserData = await User.findOne({
+      where: {
+        email: req.body.email,
+      },
+    });
 
-    if( !validPassword ){
-      res.status(500).json({ status: "error", payload: err.message })
-    } else {
-
-      // Send back the user info but without the password 
-      const safeUser = {...foundUser.get({plain:true}), password: null } 
-
-      res.json({ status: "success", payload: safeUser })
+    if (!dbUserData) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password. Please try again!' });
+      return;
     }
-    
+
+    const validPassword = await dbUserData.checkPassword(req.body.password);
+
+    if (!validPassword) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password. Please try again!' });
+      return;
+    }
+
+    req.session.save(() => {
+      // TODO: Once the user successfully logs in, set up sessions with the 'loggedIn' variable
+      req.session.loggedIn = true;
+      res
+        .status(200)
+        .json({ user: dbUserData, message: 'You are now logged in!' });
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
   }
-})
+});
+
+
 
 
 module.exports = router;
