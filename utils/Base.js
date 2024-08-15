@@ -439,8 +439,8 @@ class Base{
             this.toolProficiencies.push('')
             //no tools
             //SAVING THROWS
-            this. = true
-            this. = true
+            
+            
             this[this.archetype.option.skill[0]] = true
             this[this.archetype.option.skill[1]] = true
 
@@ -467,8 +467,8 @@ class Base{
             this.toolProficiencies.push('')
             //no tools
             //SAVING THROWS
-            this. = true
-            this. = true
+            
+            
             this[this.archetype.option.skill[0]] = true
             this[this.archetype.option.skill[1]] = true
 
@@ -495,8 +495,8 @@ class Base{
             this.toolProficiencies.push('')
             //no tools
             //SAVING THROWS
-            this. = true
-            this. = true
+            
+            
             this[this.archetype.option.skill[0]] = true
             this[this.archetype.option.skill[1]] = true
 
@@ -523,8 +523,8 @@ class Base{
             this.toolProficiencies.push('')
             //no tools
             //SAVING THROWS
-            this. = true
-            this. = true
+            
+            
             this[this.archetype.option.skill[0]] = true
             this[this.archetype.option.skill[1]] = true
 
@@ -551,8 +551,8 @@ class Base{
             this.toolProficiencies.push('')
             //no tools
             //SAVING THROWS
-            this. = true
-            this. = true
+            
+            
             this[this.archetype.option.skill[0]] = true
             this[this.archetype.option.skill[1]] = true
 
@@ -579,8 +579,8 @@ class Base{
             this.toolProficiencies.push('')
             //no tools
             //SAVING THROWS
-            this. = true
-            this. = true
+            
+            
             this[this.archetype.option.skill[0]] = true
             this[this.archetype.option.skill[1]] = true
 
@@ -607,8 +607,8 @@ class Base{
             this.toolProficiencies.push('')
             //no tools
             //SAVING THROWS
-            this. = true
-            this. = true
+            
+            
             this[this.archetype.option.skill[0]] = true
             this[this.archetype.option.skill[1]] = true
 
@@ -635,8 +635,8 @@ class Base{
             this.toolProficiencies.push('')
             //no tools
             //SAVING THROWS
-            this. = true
-            this. = true
+            
+            
             this[this.archetype.option.skill[0]] = true
             this[this.archetype.option.skill[1]] = true
 
@@ -663,8 +663,8 @@ class Base{
             this.toolProficiencies.push('')
             //no tools
             //SAVING THROWS
-            this. = true
-            this. = true
+            
+            
             this[this.archetype.option.skill[0]] = true
             this[this.archetype.option.skill[1]] = true
 
@@ -691,8 +691,8 @@ class Base{
             this.toolProficiencies.push('')
             //no tools
             //SAVING THROWS
-            this. = true
-            this. = true
+            
+            
             this[this.archetype.option.skill[0]] = true
             this[this.archetype.option.skill[1]] = true
 
@@ -801,3 +801,5 @@ const character = new Base(dataObj)
 character.applyRace(this.race)
 console.log(dataObj)
 console.log(character)
+
+module.exports = Base
