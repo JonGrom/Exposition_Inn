@@ -15,9 +15,9 @@ const characterTestData = require('./jsons/characterTestData.json');
 const skillTestData = require('./jsons/skillTestData.json');
 const statTestData = require('./jsons/statTestData.json');
 //test join table
-const charWeaponTestData = require('./jsons/charWeaponTestData.json');
-const charArmorTestData = require('./jsons/charArmorTestData.json');
-const charSpellTestData = require('./jsons/charSpellTestData.json');
+// const charWeaponTestData = require('./jsons/charWeaponTestData.json');
+// const charArmorTestData = require('./jsons/charArmorTestData.json');
+// const charSpellTestData = require('./jsons/charSpellTestData.json');
 
 
 const seedDB = async () => {
@@ -66,7 +66,8 @@ const seedDB = async () => {
             character_id: testCharacters[Math.floor(Math.random() * testCharacters.length)].id,
           });
         }
-          //jointable testdata stuff:
+      }
+        //jointable testdata stuff:
         
         for (const characterWeapons of charWeaponTestData) { 
           await CharacterWeapons.create({
@@ -91,7 +92,6 @@ const seedDB = async () => {
             spell_id: spells[Math.floor(Math.random() * spells.length)].id,
           });
         }
-      }
 
     console.log('Test Characters seeded:', testCharacters);
   } catch (error) {
