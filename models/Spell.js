@@ -15,7 +15,7 @@ Spell.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    SpellLevel: {
+    spellLevel: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
