@@ -1,17 +1,18 @@
 {{!-- Character info --}}
-<div>
-    <h3>Character Name: {{name}}</h3>
+<div class="row">
+    <div>
+        <h3>Character Name: {{name}}</h3>
+    </div>
+    <div>
+        <p>Level {{level}} {{archetype}} </p>
+        <p>Background: {{background}}</p>
+        <p>Player Name: </p>
+        <p>Race: {{race}}</p>
+        <p>Alignment: {{aliagnment}}</p>
+    </div>
 </div>
-<div>
-    <p>Level {{level}} {{archetype}} </p>
-    <p>Background: {{background}}</p>
-    <p>Player Name: </p>
-    <p>Race: {{race}}</p>
-    <p>Alignment: {{aliagnment}}</p>
-</div>
-
 {{!-- Stats: value and bonus --}}
-<div>
+<div class="row">
     <div>
         <p>Strength</p>
         <p>Modifier: {{strMod}}</p> {{!-- bonus --}}
@@ -44,150 +45,121 @@
     </div>
 </div>
 
-{{!-- Saving Throws --}}
-<div>
-    <div>
-        <p>{{#if strSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{strSaveVal}}</p> {{!-- bonus --}}
-        <p>Strength</p>
+<div class="row">
+    {{!-- Saving Throws --}}
+    <div class="col">
+        <div>
+            <p>{{#if strSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{strSaveVal}}</p> {{!-- bonus --}}
+            <p>Strength</p>
+        </div>
+        <div>
+            <p>{{#if dexSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{dexSaveVal}}</p> {{!-- bonus --}}
+            <p>Dexterity</p>
+        </div>
+        <div>
+            <p>{{#if conSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{conSaveVal}}</p> {{!-- bonus --}}
+            <p>Constitution</p>
+        </div>
+        <div>
+            <p>{{#if intSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{intSaveVal}}</p> {{!-- bonus --}}
+            <p>Intelligence</p>
+        </div>
+        <div>
+            <p>{{#if wisSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{wisSaveVal}}</p> {{!-- bonus --}}
+            <p>Wisdom</p>
+        </div>
+        <div>
+            <p>{{#if chaSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{chaSaveVal}}</p> {{!-- bonus --}}
+            <p>Charisma</p>
+        </div>
+        <p>Saving Throws</p>
     </div>
-    <div>
-        <p>{{#if dexSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{dexSaveVal}}</p> {{!-- bonus --}}
-        <p>Dexterity</p>
-    </div>
-    <div>
-        <p>{{#if conSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{conSaveVal}}</p> {{!-- bonus --}}
-        <p>Constitution</p>
-    </div>
-    <div>
-        <p>{{#if intSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{intSaveVal}}</p> {{!-- bonus --}}
-        <p>Intelligence</p>
-    </div>
-    <div>
-        <p>{{#if wisSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{wisSaveVal}}</p> {{!-- bonus --}}
-        <p>Wisdom</p>
-    </div>
-    <div>
-        <p>{{#if chaSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{chaSaveVal}}</p> {{!-- bonus --}}
-        <p>Charisma</p>
-    </div>
-    <p>Saving Throws</p>
-</div>
 
-{{!-- Skills: proficiency and bonus --}}
-<div>
-    <div>
-        <p>{{#if acrobaticsProf}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
-        <p>Modifier: {{acrobaticsVal}}</p> {{!-- bonus --}}
-        <p> Acrobatics (Dex)</p>
+    {{!-- Skills: proficiency and bonus --}}
+    <div class="col">
+        <div>
+            <p>{{#if acrobaticsProf}}🔳{{#else}}🔲{{/if}} Modifier: {{acrobaticsVal}}  Acrobatics (Dex)</p>
+        </div>
+        <div>
+            <p>{{#if animalHandlingProf}}🔳{{#else}}🔲{{/if}} Modifier: {{animalHandlingVal}} Animal Handling (Wis)</p>
+        </div>
+        <div>
+            <p>{{#if arcanaProf}}🔳{{#else}}🔲{{/if}} Modifier: {{arcanaVal}} Arcana (Int)</p>
+        </div>
+        <div>
+            <p>{{#if athleticsProf}}🔳{{#else}}🔲{{/if}} Modifier: {{athleticsVal}} Athletics (Str)</p>
+        </div>
+        <div>
+            <p>{{#if deceptionProf}}🔳{{#else}}🔲{{/if}} Modifier: {{deceptionVal}} Deception (Cha)</p>
+        </div>
+        <div>
+            <p>{{#if historyProf}}🔳{{#else}}🔲{{/if}} Modifier: {{historyVal}} History (Int)</p>
+        </div>
+        <div>
+            <p>{{#if insightProf}}🔳{{#else}}🔲{{/if}} Modifier: {{insightVal}} Insight (Wis)</p>
+        </div>
+        <div>
+            <p>{{#if intimidationProf}}🔳{{#else}}🔲{{/if}} Modifier: {{intimidationVal}} Intimidation (Cha)</p>
+        </div>
+        <div>
+            <p>{{#if investigationProf}}🔳{{#else}}🔲{{/if}} Modifier: {{investigationVal}} Investigation (Int)</p>
+        </div>
+        <div>
+            <p>{{#if medicineProf}}🔳{{#else}}🔲{{/if}} Modifier: {{medicineVal}} Medicine (Wis)</p>
+        </div>
+        <div>
+            <p>{{#if natureProf}}🔳{{#else}}🔲{{/if}} Modifier: {{natureVal}} Nature (Int)</p>
+        </div>
+        <div>
+            <p>{{#if perceptionProf}}🔳{{#else}}🔲{{/if}} Modifier: {{perceptionVal}} Perception (Wis)</p>
+        </div>
+        <div>
+            <p>{{#if performanceProf}}🔳{{#else}}🔲{{/if}} Modifier: {{performanceVal}} Performance (Cha)</p>
+        </div>
+        <div>
+            <p>{{#if persuasionProf}}🔳{{#else}}🔲{{/if}} Modifier: {{persuasionVal}} Persuasion (Cha)</p>
+        </div>
+        <div>
+            <p>{{#if religionProf}}🔳{{#else}}🔲{{/if}} Modifier: {{religionVal}} Religion (Int)</p>
+        </div>
+        <div>
+            <p>{{#if slieghtOfHandProf}}🔳{{#else}}🔲{{/if}} Modifier: {{slieghtOfHandVal}} Sleight of Hand (Dex)</p>
+        </div>
+        <div>
+            <p>{{#if stealthProf}}🔳{{#else}}🔲{{/if}} Modifier: {{stealthVal}} Stealth (Dex)</p>
+        </div>
+        <div>
+            <p>{{#if survivalProf}}🔳{{#else}}🔲{{/if}} Modifier: {{survivalVal}} Survival (Wis)</p>
+        </div>
+        <p>Skills</p>
     </div>
-    <div>
-        <p>{{#if animalHandlingProf}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
-        <p>Modifier: {{animalHandlingVal}}</p> {{!-- bonus --}}
-        <p> Animal Handling (Wis)</p>
-    </div>
-    <div>
-        <p>{{#if arcanaProf}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
-        <p>Modifier: {{arcanaVal}}</p> {{!-- bonus --}}
-        <p> Arcana (Int)</p>
-    </div>
-    <div>
-        <p>{{#if athleticsProf}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
-        <p>Modifier: {{athleticsVal}}</p> {{!-- bonus --}}
-        <p> Athletics (Str)</p>
-    </div>
-    <div>
-        <p>{{#if deceptionProf}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
-        <p>Modifier: {{deceptionVal}}</p> {{!-- bonus --}}
-        <p> Deception (Cha)</p>
-    </div>
-    <div>
-        <p>{{#if historyProf}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
-        <p>Modifier: {{historyVal}}</p> {{!-- bonus --}}
-        <p> History (Int)</p>
-    </div>
-    <div>
-        <p>{{#if insightProf}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
-        <p>Modifier: {{insightVal}}</p> {{!-- bonus --}}
-        <p> Insight (Wis)</p>
-    </div>
-    <div>
-        <p>{{#if intimidationProf}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
-        <p>Modifier: {{intimidationVal}}</p> {{!-- bonus --}}
-        <p> Intimidation (Cha)</p>
-    </div>
-    <div>
-        <p>{{#if investigationProf}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
-        <p>Modifier: {{investigationVal}}</p> {{!-- bonus --}}
-        <p> Investigation (Int)</p>
-    </div>
-    <div>
-        <p>{{#if medicineProf}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
-        <p>Modifier: {{medicineVal}}</p> {{!-- bonus --}}
-        <p> Medicine (Wis)</p>
-    </div>
-    <div>
-        <p>{{#if natureProf}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
-        <p>Modifier: {{natureVal}}</p> {{!-- bonus --}}
-        <p> Nature (Int)</p>
-    </div>
-    <div>
-        <p>{{#if perceptionProf}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
-        <p>Modifier: {{perceptionVal}}</p> {{!-- bonus --}}
-        <p> Perception (Wis)</p>
-    </div>
-    <div>
-        <p>{{#if performanceProf}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
-        <p>Modifier: {{performanceVal}}</p> {{!-- bonus --}}
-        <p> Performance (Cha)</p>
-    </div>
-    <div>
-        <p>{{#if persuasionProf}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
-        <p>Modifier: {{persuasionVal}}</p> {{!-- bonus --}}
-        <p> Persuasion (Cha)</p>
-    </div>
-    <div>
-        <p>{{#if religionProf}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
-        <p>Modifier: {{religionVal}}</p> {{!-- bonus --}}
-        <p> Religion (Int)</p>
-    </div>
-    <div>
-        <p>{{#if slieghtOfHandProf}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
-        <p>Modifier: {{slieghtOfHandVal}}</p> {{!-- bonus --}}
-        <p> Sleight of Hand (Dex)</p>
-    </div>
-    <div>
-        <p>{{#if stealthProf}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
-        <p>Modifier: {{stealthVal}}</p> {{!-- bonus --}}
-        <p> Stealth (Dex)</p>
-    </div>
-    <div>
-        <p>{{#if survivalProf}}🔳{{#else}}🔲{{/if}}</p> {{!-- proficient? --}}
-        <p>Modifier: {{survivalVal}}</p> {{!-- bonus --}}
-        <p> Survival (Wis)</p>
-    </div>
-    <p>Skills</p>
-</div>
 
 {{!-- Armor class, Initiative, Speed, HP --}}
-<div>
-    <div>
-        <p>Armor Class:{{armorClass}}</p> {{!-- AC value --}}
-    </div>
-    <div>
-        <p>Initiative:{{initiative}}</p> {{!-- Initiative bonus --}}
-    </div>
-    <div>
-        <p>Speed:{{speed}}</p>{{!-- speed value --}}
-    </div>
-    <div>
-        <p>Max Hit Points:{{hpMax}}</p>{{!-- HP value --}}
+    <div class="col">
+        <div>
+            <p>Armor Class: {{armorClass}}</p> {{!-- AC value --}}
+        </div>
+        <div>
+            <p>Initiative: {{initiative}}</p> {{!-- Initiative bonus --}}
+        </div>
+        <div>
+            <p>Speed: {{speed}}</p>{{!-- speed value --}}
+        </div>
+        <div>
+            <p>Max Hit Points: {{hpMax}}</p>{{!-- HP value --}}
+        </div>
+        <div>
+            <p>Current Hit Points:</p>
+        </div>
+        <div>
+            <p>Temporary Hit Points:</p>
+        </div>
     </div>
 </div>
-
 {{!-- Weapons --}}
 <div>
     {{!-- here is where to list all the weapon elements --}}
-
+    {{#each }}
 </div>
 
 {{!-- Cantrips --}}
