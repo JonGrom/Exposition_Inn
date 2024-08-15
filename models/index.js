@@ -5,7 +5,9 @@ const Skill = require('./Skill');
 const Spell = require('./Spell');
 const Weapon = require('./Weapon');
 const Armor = require('./Armor');
-
+// const CharacterWeapons = require('./CharacterWeapons')
+// const CharacterArmor = require('./CharacterArmor')
+// const CharacterSpells = require('./CharacterSpells')
 //only one relationship needed for user, user can have many character
 User.hasMany(Character, {
   foreignKey: 'user_id',
