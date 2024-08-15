@@ -173,6 +173,14 @@ Character.init(
         key: 'id',
       },
     },
+    // spellsKnown: {
+    //   type: DataTypes.ARRAY(DataTypes.STRING),
+    //   allowNull: true,
+    //   references: {
+    //     model: 'spell',
+    //     key: 'id',
+    //   },
+    // },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
