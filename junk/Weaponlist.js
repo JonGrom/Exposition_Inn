@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Armor extends Model {}
+class Weaponlist extends Model {}
 
-Armor.init(
+Weaponlist.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,25 +11,32 @@ Armor.init(
       allowNull: false,
       autoIncrement: true
     },
-    armorName: {
+    weaponName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    armorType: {
+    weaponType: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    armorClass: {
-      type: DataTypes.INTEGER,
+    weaponDamage: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
-    stealthDisadvantage: {
+    properties: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      allowNull: true,
+    },
+    equipped: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    minStrength: {
+    weapon_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      references: {
+        model: 'weapon',
+        key: 'id'
+      }
     },
   },
   {
@@ -37,8 +44,8 @@ Armor.init(
     timestamps: true,
     underscored: true,
     freezeTableName: true,
-    modelName: 'armor'
+    modelName: 'weaponlist'
   },
 );
 
-module.exports = Armor;
+module.exports = Weaponlist;
