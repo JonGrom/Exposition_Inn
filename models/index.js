@@ -40,36 +40,21 @@ Skill.belongsTo(Character, {
 
 //Character Spell
 
-Character.hasMany(Spell, {
-  foreignKey: 'character_id',
-  onDelete: "CASCADE"
-})
+Character.belongsToMany(Spell, {through: 'CharacterSpells'});
 
-Spell.belongsTo(Character, {
-  foreignKey: 'character_id'
-})
+Spell.belongsToMany(Character, {through: 'CharacterSpells'});
 
 //Character Weapon
 
-Character.hasMany(Weapon, {
-  foreignKey: 'character_id',
-  onDelete: "CASCADE"
-})
+Character.belongsToMany(Weapon, {through: 'CharacterWeapons'});
 
-Weapon.belongsTo(Character, {
-  foreignKey: 'character_id'
-})
+Weapon.belongsToMany(Character, {through: 'CharacterWeapons'});
 
 //Character Armor
 
-Character.hasMany(Armor, {
-  foreignKey: 'character_id',
-  onDelete: "CASCADE"
-})
+Character.belongsToMany(Armor, {through: 'CharacterArmor'});
 
-Armor.belongsTo(Character, {
-  foreignKey: 'character_id'
-})
+Armor.belongsToMany(Character, {through: 'CharacterArmor'});
 
 module.exports = {
   User, 
@@ -78,5 +63,5 @@ module.exports = {
   Skill,
   Spell,
   Weapon,
-  Armor
+  Armor,
 }

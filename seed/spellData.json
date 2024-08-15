@@ -1,7 +1,7 @@
 [
   {
     "spellName": "Acid Splash",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Alarm",
@@ -17,7 +17,7 @@
   },
   {
     "spellName": "Blade Ward",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Bless",
@@ -33,7 +33,7 @@
   },
   {
     "spellName": "Chill Touch",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Chromatic Orb",
@@ -65,7 +65,7 @@
   },
   {
     "spellName": "Dancing Lights",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Detect Evil and Good",
@@ -93,11 +93,11 @@
   },
   {
     "spellName": "Druidcraft",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Eldritch Blast",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Ensnaring Strike",
@@ -129,7 +129,7 @@
   },
   {
     "spellName": "Fire Bolt",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Fog Cloud",
@@ -137,7 +137,7 @@
   },
   {
     "spellName": "Friends",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Goodberry",
@@ -149,7 +149,7 @@
   },
   {
     "spellName": "Guidance",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Guiding Bolt",
@@ -197,7 +197,7 @@
   },
   {
     "spellName": "Light",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Longstrider",
@@ -209,7 +209,7 @@
   },
   {
     "spellName": "Mage Hand",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Magic Missile",
@@ -217,27 +217,27 @@
   },
   {
     "spellName": "Mending",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Message",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Minor Illusion",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Poison Spray",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Prestidigitation",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Produce Flame",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Protection from Evil and Good",
@@ -249,7 +249,7 @@
   },
   {
     "spellName": "Ray of Frost",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Ray of Sickness",
@@ -261,11 +261,11 @@
   },
   {
     "spellName": "Resistance",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Sacred Flame",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Sanctuary",
@@ -285,11 +285,11 @@
   },
   {
     "spellName": "Shillelagh",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Shocking Grasp",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Silent Image",
@@ -301,7 +301,7 @@
   },
   {
     "spellName": "Spare the Dying",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Speak with Animals",
@@ -309,11 +309,11 @@
   },
   {
     "spellName": "Thaumaturgy",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Thorn Whip",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Thunderous Smite",
@@ -325,7 +325,7 @@
   },
   {
     "spellName": "True Strike",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Unseen Servant",
@@ -333,7 +333,7 @@
   },
   {
     "spellName": "Vicious Mockery",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Witch Bolt",
@@ -1377,7 +1377,7 @@
   },
   {
     "spellName": "Thunderclap",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Warding Wind",
@@ -1385,31 +1385,31 @@
   },
   {
     "spellName": "Control Flames",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Create Bonfire",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Frostbite",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Gust",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Magic Stone",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Mold Earth",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Shape Water",
-    "spellLevel": "cantrip"
+    "spellLevel": "0"
   },
   {
     "spellName": "Absorb Elements",
