@@ -11,11 +11,11 @@ Spell.init(
       allowNull: false,
       autoIncrement: true
     },
-    spell: {
+    spellName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    level: {
+    SpellLevel: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },

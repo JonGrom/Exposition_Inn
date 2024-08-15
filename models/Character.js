@@ -31,8 +31,8 @@ Character.init(
     background: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
     //THIS IS NOT THEIR BACKSTORY NARRATIVE! IT'S SOMETHING ELSE THAT THEY NEED.
+    },
     race: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -41,12 +41,121 @@ Character.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    lvl1slot: {
+//Begin magic stuff for character
+    splClass: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    splAbility: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    splSave: {
       type: DataTypes.INTEGER,
       allowNull: true
     },
-    stat_id: {
+    splAtckBonus: {
       type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    lvl1spellSlots: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+//end magic stuff
+    passivePerception: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+//other proficiencies
+    languages: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    weaponProficiencies: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    armorProficiencies: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    toolProficiencies: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+//Begin combat stuff for character
+    armorClass: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    initiative: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+      },
+    speed: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+      },
+    hpMax: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+      },
+    hitDice: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+      },
+    hitDiceCount: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+      },
+    
+//DO WE NEED THESE TWO OTHER HP VALUES????
+    hpCurrent: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+      },
+    hpTemp: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+      },
+
+    equipment: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+      },
+//End combat stuff for character//
+
+//DO WE NEED THESE TWO STRINGS IN DB? OR WERE THESE DERIVED?
+    features: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+      },
+    traits: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+      },
+//COSMETICS
+    personalityTraits: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    ideals: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    bonds: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    flaws: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+
+//Foreign keys
+    stat_id: {
+      type: DataTypes.STRING,
       references: {
         model: 'stat',
         key: 'id'
