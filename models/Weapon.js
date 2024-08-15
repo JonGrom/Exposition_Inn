@@ -25,7 +25,7 @@ Weapon.init(
     },
     properties: {
       type: DataTypes.ARRAY(DataTypes.STRING),
-      allowNull: false,
+      allowNull: true,
     },
     equipped: {
       type: DataTypes.BOOLEAN,
