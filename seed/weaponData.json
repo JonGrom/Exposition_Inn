@@ -1,218 +1,218 @@
 [
     {
-        "name":"Club",
-        "type":"simple-melee",
-        "damage":"1d4 bludgeoning",
+        "weaponName":"Club",
+        "weaponType":"simple-melee",
+        "weaponDamage":"1d4 bludgeoning",
         "properties":["light"]
     },
     {
-        "name":"Dagger",
-        "type":"simple-melee",
-        "damage":"1d4 piercing",
+        "weaponName":"Dagger",
+        "weaponType":"simple-melee",
+        "weaponDamage":"1d4 piercing",
         "properties":["finesse","light","thrown"]
     },
     {
-        "name":"Greatclub",
-        "type":"simple-melee",
-        "damage":"1d8 bludgeoning",
+        "weaponName":"Greatclub",
+        "weaponType":"simple-melee",
+        "weaponDamage":"1d8 bludgeoning",
         "properties":["two-handed"]
     },
     {
-        "name":"Handaxe",
-        "type":"simple-melee",
-        "damage":"1d6 slashing",
+        "weaponName":"Handaxe",
+        "weaponType":"simple-melee",
+        "weaponDamage":"1d6 slashing",
         "properties":["light","thrown"]
     },
     {
-        "name":"Javelin",
-        "type":"simple-melee",
-        "damage":"1d6 piercing",
+        "weaponName":"Javelin",
+        "weaponType":"simple-melee",
+        "weaponDamage":"1d6 piercing",
         "properties":["thrown"]
     },
     {
-        "name":"Light hammer",
-        "type":"simple-melee",
-        "damage":"1d4 bludgeoning",
+        "weaponName":"Light hammer",
+        "weaponType":"simple-melee",
+        "weaponDamage":"1d4 bludgeoning",
         "properties":["light","thrown"]
     },
     {
-        "name":"Mace",
-        "type":"simple-melee",
-        "damage":"1d6 bludgeoning",
+        "weaponName":"Mace",
+        "weaponType":"simple-melee",
+        "weaponDamage":"1d6 bludgeoning",
         "properties":[]
     },
     {
-        "name":"Quarterstaff",
-        "type":"simple-melee",
-        "damage":"1d6 bludgeoning",
+        "weaponName":"Quarterstaff",
+        "weaponType":"simple-melee",
+        "weaponDamage":"1d6 bludgeoning",
         "properties":["versatile"]
     },
     {
-        "name":"Sickle",
-        "type":"simple-melee",
-        "damage":"1d4 slashing",
+        "weaponName":"Sickle",
+        "weaponType":"simple-melee",
+        "weaponDamage":"1d4 slashing",
         "properties":["light"]
     },
     {
-        "name":"Spear",
-        "type":"simple-melee",
-        "damage":"1d6 piercing",
+        "weaponName":"Spear",
+        "weaponType":"simple-melee",
+        "weaponDamage":"1d6 piercing",
         "properties":["thrown","versatile"]
     },
     {
-        "name":"Light crossbow",
-        "type":"simple-ranged",
-        "damage":"1d8 piercing",
+        "weaponName":"Light crossbow",
+        "weaponType":"simple-ranged",
+        "weaponDamage":"1d8 piercing",
         "properties":["ammunition","loading","two-handed"]
     },
     {
-        "name":"Dart",
-        "type":"simple-ranged",
-        "damage":"1d4 piercing",
+        "weaponName":"Dart",
+        "weaponType":"simple-ranged",
+        "weaponDamage":"1d4 piercing",
         "properties":["thrown","finesse"]
     },
     {
-        "name":"Shortbow",
-        "type":"simple-ranged",
-        "damage":"1d6 piercing",
+        "weaponName":"Shortbow",
+        "weaponType":"simple-ranged",
+        "weaponDamage":"1d6 piercing",
         "properties":["ammunition","two-handed"]
     },
     {
-        "name":"Sling",
-        "type":"simple-ranged",
-        "damage":"1d4 bludgeoning",
+        "weaponName":"Sling",
+        "weaponType":"simple-ranged",
+        "weaponDamage":"1d4 bludgeoning",
         "properties":["ammunition"]
     },
     {
-        "name":"Battleaxe",
-        "type":"martial-melee",
-        "damage":"1d8 slashing",
+        "weaponName":"Battleaxe",
+        "weaponType":"martial-melee",
+        "weaponDamage":"1d8 slashing",
         "properties":["versatile"]
     },
     {
-        "name":"Flail",
-        "type":"martial-melee",
-        "damage":"1d8 bludgeoning",
+        "weaponName":"Flail",
+        "weaponType":"martial-melee",
+        "weaponDamage":"1d8 bludgeoning",
         "properties":[]
     },
     {
-        "name":"Glaive",
-        "type":"martial-melee",
-        "damage":"1d10 slashing",
+        "weaponName":"Glaive",
+        "weaponType":"martial-melee",
+        "weaponDamage":"1d10 slashing",
         "properties":["heavy","reach","two-handed"]
     },
     {
-        "name":"Greataxe",
-        "type":"martial-melee",
-        "damage":"1d12 slashing",
+        "weaponName":"Greataxe",
+        "weaponType":"martial-melee",
+        "weaponDamage":"1d12 slashing",
         "properties":["heavy","two-handed"]
     },
     {
-        "name":"Greatsword",
-        "type":"martial-melee",
-        "damage":"2d6 slashing",
+        "weaponName":"Greatsword",
+        "weaponType":"martial-melee",
+        "weaponDamage":"2d6 slashing",
         "properties":["heavy","two-handed"]
     },
     {
-        "name":"Halberd",
-        "type":"martial-melee",
-        "damage":"1d10 slashing",
+        "weaponName":"Halberd",
+        "weaponType":"martial-melee",
+        "weaponDamage":"1d10 slashing",
         "properties":["heavy","reach","two-handed"]
     },
     {
-        "name":"Lance",
-        "type":"martial-melee",
-        "damage":"1d12 piercing",
+        "weaponName":"Lance",
+        "weaponType":"martial-melee",
+        "weaponDamage":"1d12 piercing",
         "properties":["reach","special"]
     },
     {
-        "name":"Longsword",
-        "type":"martial-melee",
-        "damage":"1d8 slashing",
+        "weaponName":"Longsword",
+        "weaponType":"martial-melee",
+        "weaponDamage":"1d8 slashing",
         "properties":["versatile"]
     },
     {
-        "name":"Maul",
-        "type":"martial-melee",
-        "damage":"2d6 bludgeoning",
+        "weaponName":"Maul",
+        "weaponType":"martial-melee",
+        "weaponDamage":"2d6 bludgeoning",
         "properties":["heavy","two-handed"]
     },
     {
-        "name":"Morningstar",
-        "type":"martial-melee",
-        "damage":"1d8 piercing",
+        "weaponName":"Morningstar",
+        "weaponType":"martial-melee",
+        "weaponDamage":"1d8 piercing",
         "properties":[]
     },
     {
-        "name":"Pike",
-        "type":"martial-melee",
-        "damage":"1d10 piercing",
+        "weaponName":"Pike",
+        "weaponType":"martial-melee",
+        "weaponDamage":"1d10 piercing",
         "properties":["heavy","reach","two-handed"]
     },
     {
-        "name":"Rapier",
-        "type":"martial-melee",
-        "damage":"1d8 piercing",
+        "weaponName":"Rapier",
+        "weaponType":"martial-melee",
+        "weaponDamage":"1d8 piercing",
         "properties":["finesse"]
     },
     {
-        "name":"Scimitar",
-        "type":"martial-melee",
-        "damage":"1d6 slashing",
+        "weaponName":"Scimitar",
+        "weaponType":"martial-melee",
+        "weaponDamage":"1d6 slashing",
         "properties":["finesse","light"]
     },
     {
-        "name":"Shortsword",
-        "type":"martial-melee",
-        "damage":"1d6 piercing",
+        "weaponName":"Shortsword",
+        "weaponType":"martial-melee",
+        "weaponDamage":"1d6 piercing",
         "properties":["finesse","light"]
     },
     {
-        "name":"Trident",
-        "type":"martial-melee",
-        "damage":"1d6 piercing",
+        "weaponName":"Trident",
+        "weaponType":"martial-melee",
+        "weaponDamage":"1d6 piercing",
         "properties":["thrown","versatile"]
     },
     {
-        "name":"War pick",
-        "type":"martial-melee",
-        "damage":"1d8 piercing",
+        "weaponName":"War pick",
+        "weaponType":"martial-melee",
+        "weaponDamage":"1d8 piercing",
         "properties":[]
     },
     {
-        "name":"Warhammer",
-        "type":"martial-melee",
-        "damage":"1d8 bludgeoning",
+        "weaponName":"Warhammer",
+        "weaponType":"martial-melee",
+        "weaponDamage":"1d8 bludgeoning",
         "properties":["versatile"]
     },
     {
-        "name":"Whip",
-        "type":"martial-melee",
-        "damage":"1d4 slashing",
+        "weaponName":"Whip",
+        "weaponType":"martial-melee",
+        "weaponDamage":"1d4 slashing",
         "properties":["finesse","reach"]
     },
     {
-        "name":"Blowgun",
-        "type":"martial-ranged",
-        "damage":"1 piercing",
+        "weaponName":"Blowgun",
+        "weaponType":"martial-ranged",
+        "weaponDamage":"1 piercing",
         "properties":["ammunition","loading"]
     },
     {
-        "name":"Hand crossbow",
-        "type":"martial-ranged",
-        "damage":"1d6 piercing",
+        "weaponName":"Hand crossbow",
+        "weaponType":"martial-ranged",
+        "weaponDamage":"1d6 piercing",
         "properties":["ammunition","light","loading"]
     },
     {
-        "name":"Heavy crossbow",
-        "type":"martial-ranged",
-        "damage":"1d10 piercing",
+        "weaponName":"Heavy crossbow",
+        "weaponType":"martial-ranged",
+        "weaponDamage":"1d10 piercing",
         "properties":["ammunition","heavy","loading","two-handed"]
     },
     {
-        "name":"Longbow",
-        "type":"martial-ranged",
-        "damage":"1d8 piercing",
+        "weaponName":"Longbow",
+        "weaponType":"martial-ranged",
+        "weaponDamage":"1d8 piercing",
         "properties":["ammunition","heavy","two-handed"]
     }
 ]
