@@ -13,37 +13,37 @@
     </div>
     {{!-- Stats: value and bonus --}}
     <div class="row justify-content-around">
-        <div>
+        <div class="character-box">
             <p>Strength</p>
             <p>Modifier: {{strMod}}</p> {{!-- bonus --}}
             <p>{{strength}}</p> {{!-- value --}}
         </div>
-        <div>
+        <div class="character-box">
             <p>Dexterity</p>
             <p>Modifier: {{dexMod}}</p> {{!-- bonus --}}
             <p>{{dexterity}}</p> {{!-- value --}}
         </div>
-        <div>
+        <div class="character-box">
             <p>Constitution</p>
             <p>Modifier: {{conMod}}</p> {{!-- bonus --}}
             <p>{{constitution}}</p> {{!-- value --}}
         </div>
-        <div>
+        <div class="character-box">
             <p>Intelligence</p>
             <p>Modifier: {{intMod}}</p> {{!-- bonus --}}
             <p>{{intelligence}}</p> {{!-- value --}}
         </div>
-        <div>
+        <div class="character-box">
             <p>Wisdom</p>
             <p>Modifier: {{wisMod}}</p> {{!-- bonus --}}
             <p>{{wisdom}}</p> {{!-- value --}}
         </div>
-        <div>
+        <div class="character-box">
             <p>Charisma</p>
             <p>Modifier: {{chaMod}}</p> {{!-- bonus --}}
             <p>{{charisma}}</p> {{!-- value --}}
         </div>
-        <div>
+        <div class="character-box">
             <p>Proficiency Bonus: {{proficiencyBonus}}</p>
             <p>Passive Perception: {{passivePerception}}</p>
         </div>
@@ -51,28 +51,28 @@
     
     <div class="row justify-content-around">
         {{!-- Saving Throws --}}
-        <div class="col-12 col-sm-6 col-md-4">
-            <div>
+        <div class="col-12 col-sm-6 col-md-4 character-box">
+            <div class="character-box">
                 <p>{{#if strSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{strSaveVal}}</p> {{!-- bonus --}}
                 <p>Strength</p>
             </div>
-            <div>
+            <div class="character-box">
                 <p>{{#if dexSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{dexSaveVal}}</p> {{!-- bonus --}}
                 <p>Dexterity</p>
             </div>
-            <div>
+            <div class="character-box">
                 <p>{{#if conSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{conSaveVal}}</p> {{!-- bonus --}}
                 <p>Constitution</p>
             </div>
-            <div>
+            <div class="character-box">
                 <p>{{#if intSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{intSaveVal}}</p> {{!-- bonus --}}
                 <p>Intelligence</p>
             </div>
-            <div>
+            <div class="character-box">
                 <p>{{#if wisSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{wisSaveVal}}</p> {{!-- bonus --}}
                 <p>Wisdom</p>
             </div>
-            <div>
+            <div class="character-box">
                 <p>{{#if chaSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{chaSaveVal}}</p> {{!-- bonus --}}
                 <p>Charisma</p>
             </div>
@@ -80,8 +80,8 @@
         </div>
     
         {{!-- Skills: proficiency and bonus --}}
-        <div class="col-12 col-sm-6 col-md-4">
-            <div>
+        <div class="col-12 col-sm-6 col-md-4 character-box">
+            <div >
                 <p>{{#if acrobaticsProf}}🔳{{#else}}🔲{{/if}} Modifier: {{acrobaticsVal}}  Acrobatics (Dex)</p>
             </div>
             <div>
@@ -141,7 +141,7 @@
     
     <div class="row justify-content-around">
      {{!-- Armor class, Initiative, Speed, HP --}}
-        <div class="col-12 col-sm-6 col-md-4">
+        <div class="col-12 col-sm-6 col-md-4 character-box">
             <div>
                 <p>Armor Class: {{armorClass}}</p> {{!-- AC value --}}
             </div>
@@ -162,7 +162,7 @@
             </div>
         </div>
     
-        <div class="col-12 col-sm-6 col-md-4">
+        <div class="col-12 col-sm-6 col-md-4 character-box">
             <p>Hit Dice: {{hitDice}}</p>
             <p>Hit Dice Count: {{hitDiceCount}}</p>
         </div>
@@ -179,36 +179,36 @@
     <div class="row">
     
         {{!-- Weapons --}}
-        <div class="col-12 col-sm-6 col-md-4">
+        <div class="col-12 col-sm-6 col-md-4 character-box">
             {{!-- here is where to list all the weapon elements --}}
             {{#each }}
         </div>
         
         {{!-- Cantrips --}}
-        <div class="col-12 col-sm-6 col-md-4">
+        <div class="col-12 col-sm-6 col-md-4 character-box">
     
         </div>
     
         {{!-- Level 1 spells --}}
-        <div class="col-12 col-sm-6 col-md-4">
+        <div class="col-12 col-sm-6 col-md-4 character-box">
     
         </div>
     </div>
     
     <div class="row">
-        <div class="col-12 col-sm-6 col-md-4">
+        <div class="col-12 col-sm-6 col-md-4 character-box">
             <p>Personality Traits</p>
             <p>{{personalityTraits}}</p>
         </div>
-        <div class="col-12 col-sm-6 col-md-4">
+        <div class="col-12 col-sm-6 col-md-4 character-box">
             <p>Ideals</p>
             <p>{{ideals}}</p>
         </div>
-        <div class="col-12 col-sm-6 col-md-4">
+        <div class="col-12 col-sm-6 col-md-4 character-box">
             <p>Bonds</p>
             <p>{{bonds}}</p>
         </div>
-        <div class="col-12 col-sm-6 col-md-4">
+        <div class="col-12 col-sm-6 col-md-4 character-box">
             <p>Flaws</p>
             <p>{{flaws}}</p>
         </div>
