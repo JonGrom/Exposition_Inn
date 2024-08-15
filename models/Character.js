@@ -37,11 +37,11 @@ Character.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    alignment: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
 //Begin magic stuff for character
+    spellsKnown: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
     splClass: {
       type: DataTypes.STRING,
       allowNull: true
@@ -70,7 +70,7 @@ Character.init(
 //other proficiencies
     languages: {
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: false
     },
     weaponProficiencies: {
       type: DataTypes.STRING,
@@ -109,18 +109,16 @@ Character.init(
       type: DataTypes.INTEGER,
       allowNull: false
       },
-    
-//DO WE NEED THESE TWO OTHER HP VALUES????
-    hpCurrent: {
-      type: DataTypes.INTEGER,
-      allowNull: false
+    equipment: {
+      type: DataTypes.STRING,
+      allowNull: true
       },
-    hpTemp: {
+//THESE ARE FOR THE FUTURE!
+    hpCurrent: {
       type: DataTypes.INTEGER,
       allowNull: true
       },
-
-    equipment: {
+    hpTemp: {
       type: DataTypes.INTEGER,
       allowNull: true
       },
@@ -128,13 +126,15 @@ Character.init(
 
 //DO WE NEED THESE TWO STRINGS IN DB? OR WERE THESE DERIVED?
     features: {
-      type: DataTypes.INTEGER,
-      allowNull: true
+      type: DataTypes.STRING,
+      allowNull: false
       },
+      //this comes from class/archetype
     traits: {
-      type: DataTypes.INTEGER,
-      allowNull: true
+      type: DataTypes.STRING,
+      allowNull: false
       },
+      //this comes from race
 //COSMETICS
     personalityTraits: {
       type: DataTypes.STRING,
@@ -152,10 +152,13 @@ Character.init(
       type: DataTypes.STRING,
       allowNull: true
     },
-
+    alignment: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
 //Foreign keys
     stat_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       references: {
         model: 'stat',
         key: 'id'
