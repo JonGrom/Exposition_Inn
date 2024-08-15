@@ -1,40 +1,61 @@
-const loginFormHandler = async (event) => {
-  event.preventDefault();
+// Get the login and signup forms
+const loginForm = document.querySelector('.login-form');
+const signupForm = document.querySelector('.signup-form');
 
-  // Collect values from the login form
-  const email = document.querySelector('#email-login').value.trim();
-  const password = document.querySelector('#password-login').value.trim();
+// Add event listeners for form submissions
+loginForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent the default form submission
+  const email = document.getElementById('email-login').value;
+  const password = document.getElementById('password-login').value;
 
-  if (email && password) {
-    // Send a POST request to the API endpoint
-    const response = await fetch('/api/user', {
-      method: 'POST',
-      body: JSON.stringify({ email, password }),
-      headers: { 'Content-Type': 'application/json' },
-    });
-  }
-};
+  const loginData = {
+    email: email,
+    password: password
+  };
 
-const signupFormHandler = async (event) => {
-  event.preventDefault();
+  // Make a POST request to the server with loginData
+  fetch('/api/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(loginData)
+  })
+  .then(response => {
+    // Handle the response as needed
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+});
 
-  const userName = document.querySelector('#username-signup').value.trim();
-  const email = document.querySelector('#email-login').value.trim();
-  const password = document.querySelector('#password-signup').value.trim();
+signupForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent the default form submission
+  const username = document.getElementById('username-signup').value;
+  const email = document.getElementById('email-signup').value;
+  const password = document.getElementById('password-signup').value;
 
-  if (userName && email && password) {
-    const response = await fetch('/api/user', {
-      method: 'POST',
-      body: JSON.stringify({ userName, email, password }),
-      headers: { 'Content-Type': 'application/json' },
-    });
-  }
-};
+  const signupData = {
+    username: username,
+    email: email,
+    password: password
+  };
 
-document
-  .querySelector('.login-form')
-  .addEventListener('submit', loginFormHandler);
-
-document
-  .querySelector('.signup-form')
-  .addEventListener('submit', signupFormHandler);
+  // Make a POST request to the server with signupData
+  fetch('/api/user', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(signupData)
+  })
+  .then(response => {
+    return response.json()
+  })
+  .then( data => {
+    console.log(data)
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+});
