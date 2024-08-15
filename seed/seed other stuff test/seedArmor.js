@@ -1,8 +1,8 @@
-//this is just a file for testing with some dummy data, mostly to make sure the db is setup correctly.
+//this is a file for loading actual armor data, for use by other parts of the db.
 const sequelize = require('../config/connection');
 const { Armor } = require('../models');
 
-const armorData = require('./armorData.json');
+const armorData = require('./jsons/armorData.json');
 
 const seedArmor = async () => {
   await sequelize.sync({ force: true });

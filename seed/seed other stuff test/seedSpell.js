@@ -1,8 +1,8 @@
-//this is just a file for testing with some dummy data, mostly to make sure the db is setup correctly.
+//this is a file for loading actual spell data, for use by other parts of the db.
 const sequelize = require('../config/connection');
 const { Spell } = require('../models');
 
-const spellData = require('./spellData.json');
+const spellData = require('./jsons/spellData.json');
 
 const seedSpell = async () => {
   await sequelize.sync({ force: true });
