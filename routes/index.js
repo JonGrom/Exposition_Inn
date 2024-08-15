@@ -17,8 +17,11 @@ router.get('/', async (req, res) => {
   }
 });
 
+
+
 // Use withAuth middleware to prevent access to route
 router.get('/user', withAuth, async (req, res) => {
+  console.log("user page")
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id);
@@ -30,6 +33,7 @@ router.get('/user', withAuth, async (req, res) => {
       logged_in: true
     });
   } catch (err) {
+    console.log("User page loading fails: routes/index")
     res.status(500).json(err);
   }
 });
