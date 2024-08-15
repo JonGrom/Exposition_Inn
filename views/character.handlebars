@@ -1,9 +1,9 @@
 {{!-- Character info --}}
     <div class="row align-items-center justify-content-around">
-        <div>
+        <div class="col-12 col-sm-6 col-md-4">
             <h4>Character Name: {{name}}</h4>
         </div>
-        <div>
+        <div class="col-12 col-sm-6 col-md-4">
             <p>Player Name: {{username}}</p>
             <p>Level {{level}} {{archetype}} </p>
             <p>Race: {{race}}</p>
@@ -76,7 +76,7 @@
                 <p>{{#if chaSaveProf}}🔳{{#else}}🔲{{/if}}Modifier: {{chaSaveVal}}</p> {{!-- bonus --}}
                 <p>Charisma</p>
             </div>
-            <p>Saving Throws</p>
+            <p class="bold">Saving Throws</p>
         </div>
     
         {{!-- Skills: proficiency and bonus --}}
@@ -135,7 +135,7 @@
             <div>
                 <p>{{#if survivalProf}}🔳{{#else}}🔲{{/if}} Modifier: {{survivalVal}} Survival (Wis)</p>
             </div>
-            <p>Skills</p>
+            <p class="bold">Skills</p>
         </div>
     </div>
     
@@ -167,7 +167,7 @@
             <p>Hit Dice Count: {{hitDiceCount}}</p>
         </div>
         <div class="col-12 col-sm-6 col-md-4 character-box">
-            <p>Death Saving Throws</p>
+            <p class="bold">Death Saving Throws</p>
             <div>
                 <p>🔲🔲🔲 Success</p>
                 <p>🔲🔲🔲 Failure</p>
@@ -197,23 +197,23 @@
     
     <div class="row">
         <div class="col-12 col-sm-6 col-md-4 character-box">
-            <p>Personality Traits</p>
+            <p class="bold">Personality Traits</p>
             <p>{{personalityTraits}}</p>
         </div>
         <div class="col-12 col-sm-6 col-md-4 character-box">
-            <p>Ideals</p>
+            <p class="bold">Ideals</p>
             <p>{{ideals}}</p>
         </div>
         <div class="col-12 col-sm-6 col-md-4 character-box">
-            <p>Bonds</p>
+            <p class="bold">Bonds</p>
             <p>{{bonds}}</p>
         </div>
         <div class="col-12 col-sm-6 col-md-4 character-box">
-            <p>Flaws</p>
+            <p class="bold">Flaws</p>
             <p>{{flaws}}</p>
         </div>
         <div class="col-12 col-sm-6 col-md-4 character-box">
-            <p>Backstory: </p>
+            <p class="bold">Backstory: </p>
             <p></p>
         </div>
     
