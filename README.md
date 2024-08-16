@@ -1,5 +1,5 @@
 # Group Project Two: Exposition Inn - Who Goes There?
-A collaborative project using Express and Sequelize to create a website where users can create a secure account and login to create a DnD character, ready to use in your next campaign! This work was completed by Jonathan Grommesh, Tanner Johnson, Nash Peterson, &amp; Tim Scallon.
+A collaborative project using Express and Sequelize to create a website on Render, where users can create a secure account and login to create a DnD character, ready to use in your next campaign! This work was completed by Jonathan Grommesh, Tanner Johnson, Nash Peterson, &amp; Tim Scallon.
 
   ## Table of Contents
   - [Description](#description)
@@ -13,8 +13,11 @@ A collaborative project using Express and Sequelize to create a website where us
 
   ## Description
   Dungeons and Dragons turns 50! In honor of one of the greatest things to come from our great state of Minnesota (fun fact!), we've been diving into designing programs related to the game. For our group project, we built a character creator website, from which a user with a secure login can design the DnD character (or characters) of their dreams!
+  ### Homepage/Landing
   ![image](./assets/war-mockup.png)
+  ### User Secure Page (View Your Characters On File)
   ![image](./assets/war-mockup.png)
+  ### Character Creation
   ![image](./assets/war-mockup.png)
 
   ## Installation
