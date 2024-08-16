@@ -1,3 +1,5 @@
+
+
 .user-background {
     background-image: url("/assets/userbackground.jpg");
     position: inherit;
@@ -17,18 +19,35 @@
     background-repeat: no-repeat;
 }
 
+.character-form{
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(237,237,237);
+background: radial-gradient(circle, rgba(237,237,237,0.6587228641456583) 8%, rgba(224,255,0,0.8379945728291316) 78%);
+    opacity: 90%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 30px;
+    margin: 15px;
+    margin-left: -15px;
+}
+
+
+#character-submit{
+    background-color: blue;
+    color: white;
+}
+
+#archetype{
+    padding-left: 5px;
+}
+
+
+
+
 #charisma-stat, #strength-stat, #dexterity-stat, #constitution-stat, #intelligence-stat, #wisdom-stat{
     padding-right: 18px;
     padding-left: 5px
-}
-
-#backstory label {
-    display: block;
-    margin-bottom: 5px; /* Adjust the margin as needed */
-}
-
-#backstory textarea {
-    width: 300px; /* Adjust the height as needed */
 }
 
 header{
@@ -68,6 +87,16 @@ header{
 
 h2{
     color: yellow;
+    padding-top: 10px;
+}
+
+#character-submit{
+    margin-top: 20px;
+}
+
+.form-label{
+   color: rgb(0, 8, 255);
+   font-weight:bold
 }
 
 @media screen and (max-width: 768px) {
