@@ -3,20 +3,16 @@ const { User, Character } = require("../../models")
 
 // Session Router
 router.post('/', async (req, res) => {
-  console.log("ok")
   try {
     const userData = await User.create(req.body);
 
     req.session.save(() => {
       req.session.user_id = userData.id;
-      req.session.logged_in = true;
-    if (req.session.user_id){
-      console.log("success", userData);
-    }
+      req.session.logged_in = true; // Set logged_in to true after successful login
       res.status(200).json(userData);
     });
   } catch (err) {
-    console.log(err)
+    console.log(err);
     res.status(400).json(err);
   }
 });
