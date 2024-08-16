@@ -6,114 +6,196 @@
         <label for="character-name">Character Name</label>
         <input class="form-input" type="text" />
       </div>
-      <div class="form-group" id="race">
+     <div class="radio-group" id="race">
         <label for="race">Race:</label>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="dwarf" id="dwarf" value="option1" checked>
-          <label class="form-check-label" for="Radio1">
-            Dwarf
-          </label>
+            <input class="form-check-input" type="radio" name="race" value="dwarf">
+            <label class="form-check-label" for="Radio1">
+                Dwarf
+            </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
-            Second default radio
-          </label>
+            <input class="form-check-input" type="radio" name="race" id="exampleRadios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+                Second default radio
+            </label>
         </div>
         <div class="form-check disabled">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-          <label class="form-check-label" for="exampleRadios3">Third default radio
-          </label>
+          <input class="form-check-input" type="radio" name="race" id="exampleRadios3" value="option3">
+          <label class="form-check-label" for="exampleRadios3">Third default radio</label>
         </div>
-      <div class="form-group" id="archetype">
+      </div>
+      <div class="radio-group" id="archetype">
         <label for="archetype">Class:</label>
-        <input class="form-input" type="radio" />
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="dwarf" id="dwarf" value="option1" checked>
-          <label class="form-check-label" for="Radio1">
-            Dwarf
-          </label>
+            <input class="form-check-input" type="radio" name="archetype" value="class1">
+            <label class="form-check-label" for="Radio1">
+                Class 1
+            </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
-            Second default radio
-          </label>
+            <input class="form-check-input" type="radio" name="archetype" value="class2">
+            <label class="form-check-label" for="class2">
+                Class 2
+            </label>
         </div>
         <div class="form-check disabled">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-          <label class="form-check-label" for="exampleRadios3">Third default radio
-          </label>
+            <input class="form-check-input" type="radio" name="archetype" value="class3">
+            <label class="form-check-label" for="class3">Class 3
+            </label>
         </div>
       </div>
       <div class="form-group" id="alignment">
         <label for="alignment">Alignment:</label>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-          <label class="form-check-label" for="defaultCheck1">
-            Default checkbox1
+          <input class="form-check-input" type="checkbox" value="align1">
+          <label class="form-check-label" for="align1">
+            Alignment 1
           </label>
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-          <label class="form-check-label" for="defaultCheck2">
-            Default checkbox2
+          <input class="form-check-input" type="checkbox" value="align2">
+          <label class="form-check-label" for="align2">
+            Alignment 2
           </label>
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-          <label class="form-check-label" for="defaultCheck3">
-            Default checkbox3
+          <input class="form-check-input" type="checkbox" value="align3">
+          <label class="form-check-label" for="align3">
+            Alignment 3
           </label>
         </div>
       </div>
       <div class="form-group" id="stat">
-        <label for="stats">Stats:</label>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-          <label class="form-check-label" for="defaultCheck1">
-            Default checkbox1
-          </label>
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-          <label class="form-check-label" for="defaultCheck2">
-            Default checkbox2
-          </label>
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-          <label class="form-check-label" for="defaultCheck3">
-            Default checkbox3
-          </label>
-        </div>
+        <label for="alignment">Stats:</label>
+          <div class="form-group" id="strength">
+            <label for="exampleFormControlSelect1">Strength:</label>
+              <select class="form-control" id="strength-stat">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>
+          </div>
+          <div class="form-group" id="dexterity">
+            <label for="exampleFormControlSelect1">Dexerity:</label>
+              <select class="form-control" id="dexterity-stat">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>
+          </div>
+          <div class="form-group" id="constitution">
+            <label for="exampleFormControlSelect1">Constitution:</label>
+              <select class="form-control" id="constitution-stat">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>
+          </div>
+          <div class="form-group" id="intelligence">
+            <label for="exampleFormControlSelect1">Intelligence:</label>
+              <select class="form-control" id="intelligence-stat">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>
+          </div>
+          <div class="form-group" id="wisdom">
+            <label for="exampleFormControlSelect1">Wisdom:</label>
+              <select class="form-control" id="wisdom-stat">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>
+          </div>
+          <div class="form-group" id="charisma">
+            <label for="exampleFormControlSelect1">Charisma:</label>
+              <select class="form-control" id="charisma-stat">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>
+          </div>
+      </div>
       <div class="form-group" id="skill">
         <label for="skills">Skills:</label>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
-              Default checkbox1
+            <input class="form-check-input" type="checkbox" value="skill1">
+            <label class="form-check-label" for="skill1">
+              Skill 1
             </label>
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-            <label class="form-check-label" for="defaultCheck2">
-              Default checkbox2
+            <input class="form-check-input" type="checkbox" value="skill2">
+            <label class="form-check-label" for="skill2">
+              Skill 2
             </label>
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-            <label class="form-check-label" for="defaultCheck3">
-              Default checkbox3
+            <input class="form-check-input" type="checkbox" value="skill3">
+            <label class="form-check-label" for="skill3">
+              Skill 3
             </label>
           </div>
       <div class="form-group" id="background">
         <label for="background">Background:</label>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
-              Default checkbox1
+            <input class="form-check-input" type="checkbox" value="background1">
+            <label class="form-check-label" for="background1">
+              Background 1
             </label>
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-            <label class="form-check-label" for="defaultCheck2">
-              Default checkbox2
+            <input class="form-check-input" type="checkbox" value="background2">
+            <label class="form-check-label" for="background2">
+              Background 2
             </label>
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-            <label class="form-check-label" for="defaultCheck3">
-              Default checkbox3
+            <input class="form-check-input" type="checkbox" value="background3">
+            <label class="form-check-label" for="background3">
+              Background 3
             </label>
           </div>
       <div class="form-group" id="backstory">
         <label for="backstory">Backstory:</label>
-        <textarea class="form-control" id="backstory" rows="3"></textarea>
+        <textarea class="form-control" id="backstory" rows="10"></textarea>
       </div>
       <div class="form-group">
         <button class="btn btn-secondary" type="submit" id="character-submit">signup</button>
@@ -124,3 +206,4 @@
 
 {{!-- Need to get the correct src filepath --}}
 <script src="/js/profile.js"></script> 
+

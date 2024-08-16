@@ -17,6 +17,20 @@
     background-repeat: no-repeat;
 }
 
+#charisma-stat, #strength-stat, #dexterity-stat, #constitution-stat, #intelligence-stat, #wisdom-stat{
+    padding-right: 18px;
+    padding-left: 5px
+}
+
+#backstory label {
+    display: block;
+    margin-bottom: 5px; /* Adjust the margin as needed */
+}
+
+#backstory textarea {
+    width: 300px; /* Adjust the height as needed */
+}
+
 header{
     background-color: white;
     opacity: 60%;
