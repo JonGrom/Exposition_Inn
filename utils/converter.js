@@ -163,7 +163,7 @@ async function convertFromDatabase(databaseObject){
     }
 
 
-
+    return characterObject;
 }
 
 
