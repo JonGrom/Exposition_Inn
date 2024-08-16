@@ -1,6 +1,6 @@
 //this is just a file for testing with some dummy data, mostly to make sure the db is setup correctly.
 const sequelize = require('../config/connection');
-const { Weapon, Armor, Spell, User, Character,
+const { Weapon, Armor, Spell, User, Character, Skill, Stat, 
         // CharacterWeapons, 
         // CharacterSpells, 
         // CharacterArmor 
@@ -12,7 +12,8 @@ const spellData = require('./jsons/spellData.json');
 //test table
 const userTestData = require('./jsons/userTestData.json');
 const characterTestData = require('./jsons/characterTestData.json');
-
+const skillTestData = require('./jsons/skillTestData.json');
+const statTestData = require('./jsons/statTestData.json');
 //test join table
 // const charWeaponTestData = require('./jsons/charWeaponTestData.json');
 // const charArmorTestData = require('./jsons/charArmorTestData.json');
@@ -47,11 +48,24 @@ const seedDB = async () => {
         const testCharacters = await Character.create({
           ...character,
           user_id: testUsers[Math.floor(Math.random() * testUsers.length)].id,
-          // equipped_weapon_id: weapons[Math.floor(Math.random() * weapons.length)].id,
-          // equipped_armor_id: armor[Math.floor(Math.random() * armor.length)].id,
+          equipped_weapon_id: weapons[Math.floor(Math.random() * weapons.length)].id,
+          equipped_armor_id: armor[Math.floor(Math.random() * armor.length)].id,
           // spellsKnown: spells[Math.floor(Math.random() * spells.length)].id,
         });
         console.log('Test Characters seeded:', testCharacters);
+        // for (const skill of skillTestData) { 
+        //   await Skill.create({
+        //     ...skill,
+        //     character_id: testCharacters[Math.floor(Math.random() * testCharacters.length)].id,
+        //   });
+        // }
+
+        // for (const stat of statTestData) { 
+        //   await Stat.create({
+        //     ...stat,
+        //     character_id: testCharacters[Math.floor(Math.random() * testCharacters.length)].id,
+        //   });
+        // }
       }
         //jointable testdata stuff:
         
@@ -78,6 +92,7 @@ const seedDB = async () => {
         //     spell_id: spells[Math.floor(Math.random() * spells.length)].id,
         //   });
         // }
+
 
   } catch (error) {
     console.error('Error seeding users:', error);
