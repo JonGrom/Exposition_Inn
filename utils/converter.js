@@ -6,10 +6,10 @@ function convertToDb(charObj) {
     const databaseObj = Character.create(
         {
             name: charObj.name,
-            archetype: charObj.archetype, 
+            archetype: charObj.archetype.name, 
             level: charObj.level, 
             background: charObj.background, 
-            race: charObj.race, 
+            race: charObj.race.name, 
 
             strength: charObj.stat.strength.val, 
             strMod: charObj.stat.strength.mod, 
@@ -95,7 +95,7 @@ function convertToDb(charObj) {
             survivalProf: charObj.skill.survival.prof, 
             survivalVal: charObj.skill.survival.val, 
 
-            spellsKnown: charObj.spellsKnown, 
+            spellsKnown: charObj.spellsKnown.join(), 
             splClass: charObj.splClass, 
             splAbility: charObj.splAbility, 
             splSave: charObj.splSave, 
@@ -103,10 +103,10 @@ function convertToDb(charObj) {
             lvl1spellSlots: charObj.lvl1spellSlots,
 
             passivePerception: charObj.passivePerception, 
-            languages: charObj.languages, 
-            weaponProficiencies: charObj.weaponProficiencies, 
-            armorProficiencies: charObj.armorProficiencies, 
-            toolProficiencies: charObj.toolProficiencies, 
+            languages: charObj.languages.join(), 
+            weaponProficiencies: charObj.weaponProficiencies.join(), 
+            armorProficiencies: charObj.armorProficiencies.join(), 
+            toolProficiencies: charObj.toolProficiencies.join(), 
             armorClass: charObj.armorClass, 
             initiative: charObj.initiative, 
             speed: charObj.speed, 
@@ -114,12 +114,14 @@ function convertToDb(charObj) {
             hitDice: charObj.hitDice, 
             hitDiceCount: charObj.hitDiceCount, 
 
-            // equipment: , 
+            weapon: charObj.equipment.weapon.join(),
+            armor: charObj.equipment.armor.join(),
+            kit: charObj.equipment.kits.join(),
 
             hpCurrent: charObj.hpMax, 
             hpTemp: 0, 
-            features: charObj.features, 
-            traits: charObj.traits, 
+            features: charObj.features.join(), 
+            traits: charObj.traits.join(), 
             personalityTraits: charObj.personalityTraits, 
             ideals: charObj.ideals, 
             bonds: charObj.bonds, 
