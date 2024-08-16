@@ -50,7 +50,9 @@ router.get('/user', withAuth, async (req, res) => {
 
 router.get('/profile', (req, res) => {
   res.render('profile', {
-    bodyClass: 'profile-background'
+    bodyClass: 'profile-background',
+    logged_in: true,
+    making_character: true
     });
 });
 
