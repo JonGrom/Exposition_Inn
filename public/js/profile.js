@@ -26,3 +26,11 @@ const newFormHandler = async (event) => {
       }
     }
   };
+
+function renderRaceOptions(){
+
+}
+
+function renderClassOptions(){
+  
+}
