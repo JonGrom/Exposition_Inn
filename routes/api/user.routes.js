@@ -9,6 +9,7 @@ router.post('/', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true; // Set logged_in to true after successful login
+      console.log('Log in session created')
       res.status(200).json(userData);
     });
   } catch (err) {
@@ -39,7 +40,8 @@ router.get("/", async (req, res) => {
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
-      req.session.logged_in = false; // Set logged_in to false
+      // req.session.logged_in = false; // Set logged_in to false
+      console.log('Log in session destroyed')
       res.status(204).end();
     });
   } else {
