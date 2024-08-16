@@ -8,7 +8,7 @@ const newFormHandler = async (event) => {
     const stat = document.querySelector('#stat').value.trim();
     const skill = document.querySelector('#skill').value.trim();
     const background = document.querySelector('#background').value.trim();
-    const backstory = document.querySelector('#backstory').value.trim();
+    const backstory = document.querySelector('#backstory').value.trim(); 
     
     if (characterName && race && archetype && alignment && stat && skill && background && backstory) {
       const response = await fetch(`/api/profile`, {
