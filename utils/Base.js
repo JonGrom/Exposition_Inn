@@ -1,4 +1,4 @@
-cclass Base{
+class Base{
     //takes in user input data to construct character
     constructor(dataObj){
         const { name, archetype, level, race, background, username, strength, dexterity, constitution, intelligence, wisdom, charisma } = dataObj;
