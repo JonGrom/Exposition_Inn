@@ -28,7 +28,7 @@ A collaborative project using Express and Sequelize to create a website where us
   4. Open a separate terminal on the project root and run `node ./seed/seedData.js` to seed the db.
   5. On that same node terminal, run `nodemon server.js` - the server will boot and the routes can be hit via Postman or Insomnia!
 
-  [You can also run from our deployed application on Render!](https://dashboard.render.com/web/srv-cqvaj6tds78s739g1lig)
+  [You can also run from our deployed application on Render!](https://exposition-inn.onrender.com/)
 
   ## Contributing
   If you want to contribute to this project - particularly if you want to work with us on expanding our database, normalizing it more, or getting our equipment setup more game-accurate for interface with a future game engine, see our contact info in the Questions section below (Jonathan owns the repo, but all four of the devs have essentially admin access to it). Don’t hesitate to reach out!
