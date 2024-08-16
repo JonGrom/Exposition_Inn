@@ -6,13 +6,13 @@
 <div class="row justify-space-between-md">
   <div class="character-card">
     <h2 class="page-title">New Character Creator</h2>
-    <form class="form login-form">
+    <form class="character-form">
       <div class="form-group" id="character-name">
-        <label for="character-name">Character Name</label>
+        <label for="character-name" class="form-label">Character Name</label>
         <input class="form-input" type="text" />
       </div>
      <div class="radio-group" id="race">
-        <label for="race">Race:</label>
+        <label for="race" class="form-label">Race:</label>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="race" value="dwarf">
             <label class="form-check-label" for="Dwarf">
@@ -63,7 +63,7 @@
         </div>
       </div>
       <div class="radio-group" id="archetype">
-        <label for="archetype">Class:</label>
+        <label for="archetype" class="form-label">Class:</label>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="archetype" value="class1">
             <label class="form-check-label" for="Barbarian">
@@ -142,48 +142,23 @@
         <label for="alignment">Alignment:</label>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="align1">
-          <label class="form-check-label" for="Lawful Good">
-            Lawful Good
+          <label class="form-check-label" for="align1">
+            Alignment 1
           </label>
           <input class="form-check-input" type="checkbox" value="align2">
-          <label class="form-check-label" for="Neutral Good">
-            Neutral Good
+          <label class="form-check-label" for="align2">
+            Alignment 2
           </label>
           <input class="form-check-input" type="checkbox" value="align3">
-          <label class="form-check-label" for="Chaotic Good">
-            Chaotic Good
+          <label class="form-check-label" for="align3">
+            Alignment 3
           </label>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="align1">
-          <label class="form-check-label" for="Lawful Neutral">
-            Lawful Neutral
-          </label>
-          <input class="form-check-input" type="checkbox" value="align2">
-          <label class="form-check-label" for="True Neutral">
-            True Neutral
-          </label>
-          <input class="form-check-input" type="checkbox" value="align3">
-          <label class="form-check-label" for="Chaotic Neutral">
-            Chaotic Neutral
-          </label>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="align1">
-          <label class="form-check-label" for="Lawful Evil">
-            Lawful Evil
-          </label>
-          <input class="form-check-input" type="checkbox" value="align2">
-          <label class="form-check-label" for="Neutral Evil">
-            Neutral Evil
-          </label>
-          <input class="form-check-input" type="checkbox" value="align3">
-          <label class="form-check-label" for="Chaotic Evil">
-            Chaotic Evil
-          </label>
+          <br>
         </div>
       </div>
       <div class="form-group" id="stat">
-        <label for="alignment">Stats:</label>
-          <div class="form-group" id="strength">
+        <label for="stat" class="form-label">Stats:</label>
+          <div class="form-group" id="stat">
             <label for="exampleFormControlSelect1">Strength:</label>
               <select class="form-control" id="strength-stat">
                 <option>8</option>
@@ -263,39 +238,45 @@
           </div>
       </div>
       <div class="form-group" id="skill">
-        <label for="skills">Skills:</label>
+        <label for="skills" class="form-label">Skills:</label>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="skill1">
             <label class="form-check-label" for="skill1">
               Skill 1
             </label>
+            <br>
             <input class="form-check-input" type="checkbox" value="skill2">
             <label class="form-check-label" for="skill2">
               Skill 2
             </label>
+            <br>
             <input class="form-check-input" type="checkbox" value="skill3">
             <label class="form-check-label" for="skill3">
               Skill 3
             </label>
-      </div>
+          </div>
       <div class="form-group" id="background">
-        <label for="background">Background:</label>
+        <label for="background" class="form-label">Background:</label>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="background1">
             <label class="form-check-label" for="background1">
               Background 1
             </label>
+            <br>
             <input class="form-check-input" type="checkbox" value="background2">
             <label class="form-check-label" for="background2">
               Background 2
             </label>
+            <br>
             <input class="form-check-input" type="checkbox" value="background3">
             <label class="form-check-label" for="background3">
               Background 3
             </label>
+            <br>
+          </div>
       </div>
       <div class="form-group">
-        <button class="btn btn-secondary" type="submit" id="character-submit">signup</button>
+        <button class="btn btn-secondary" type="submit" id="character-submit">Submit</button>
       </div>
     </form>
   </div>
