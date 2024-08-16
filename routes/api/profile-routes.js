@@ -4,7 +4,9 @@ const { Character, Stat, Skill, Weapon, Armor, Spell, User } = require("../../mo
 
 router.get('/', (req, res) => {
   res.render('profile', {
-  bodyClass: 'profile-background'
+  bodyClass: 'profile-background',
+  logged_in: true,
+  making_character: true
   });
 });
 
