@@ -8,8 +8,8 @@ router.get('/', async (req, res) => {
     try {
       const characterData = await Character.findAll({
         include: [
-        { model: Stat, as: 'stat' },
-        { model: Skill, as: 'skill' },
+        // { model: Stat, as: 'stat' },
+        // { model: Skill, as: 'skill' },
         { model: Weapon, as: 'weapon' },
         { model: Armor, as: 'armor' },
         { model: Spell, as: 'spell' },
