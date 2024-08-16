@@ -16,10 +16,10 @@ Character.init(
       allowNull: false,
     },
     archetype: {
+      //In game this is actually called Class, but obv class is a reserved js thingee, so it's archetype here
       type: DataTypes.STRING,
       allowNull: false,
     },
-    //In game this is actually called Class, but obv class is a reserved js thingee, so it's archetype here
     level: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -29,15 +29,15 @@ Character.init(
       },
     },
     background: {
+      //THIS IS NOT THEIR BACKSTORY NARRATIVE! IT'S SOMETHING ELSE THAT THEY NEED.
       type: DataTypes.STRING,
       allowNull: false,
-    //THIS IS NOT THEIR BACKSTORY NARRATIVE! IT'S SOMETHING ELSE THAT THEY NEED.
     },
     race: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-//Begin magic stuff for character
+//BEGIN MAGIC STATS FOR CHARACTER//
     spellsKnown: {
       type: DataTypes.STRING,
       allowNull: true
@@ -62,12 +62,12 @@ Character.init(
       type: DataTypes.INTEGER,
       allowNull: true
     },
-//end magic stuff
+//END OF MAGIC STATS FOR CHARACTER//
     passivePerception: {
       type: DataTypes.INTEGER,
       allowNull: false
     },
-//other proficiencies
+//BEGIN OTHER PROFICIENCIES FOR CHARACTER//
     languages: {
       type: DataTypes.STRING,
       allowNull: false
@@ -84,7 +84,8 @@ Character.init(
       type: DataTypes.STRING,
       allowNull: true
     },
-//Begin combat stuff for character
+//END OTHER PROFICIENCIES FOR CHARACTER//
+//BEGIN COMBAT INFORMATION FOR CHARACTER//
     armorClass: {
       type: DataTypes.INTEGER,
       allowNull: false
@@ -113,7 +114,7 @@ Character.init(
       type: DataTypes.STRING,
       allowNull: true
       },
-//THESE ARE FOR THE FUTURE!
+//THESE ARE FOR WORK IN THE FUTURE! THEY WILL BE GIVEN 0 FOR NOW BY DEFAULT BECAUSE WHILE THEY CAN BE NULL, PASSING NULL INT IS A PAIN IN SEEDING//
     hpCurrent: {
       type: DataTypes.INTEGER,
       allowNull: true
@@ -122,20 +123,21 @@ Character.init(
       type: DataTypes.INTEGER,
       allowNull: true
       },
-//End combat stuff for character//
-
-//DO WE NEED THESE TWO STRINGS IN DB? OR WERE THESE DERIVED?
+//END COMBAT INFORMATION FOR CHARACTER//
+//BEGIN TWO MISC STRINGS
     features: {
       type: DataTypes.STRING,
       allowNull: false
+      //this comes from logic related to class/archetype
       },
-      //this comes from class/archetype
+      
     traits: {
       type: DataTypes.STRING,
       allowNull: false
-      },
-      //this comes from race
-//COSMETICS
+      //this comes from from logic related to race
+      }, 
+//END TWO MISC STRINGS
+//BEGIN CHARACTER COSMETICS
     personalityTraits: {
       type: DataTypes.STRING,
       allowNull: true
@@ -156,31 +158,256 @@ Character.init(
       type: DataTypes.STRING,
       allowNull: true
     },
-//Foreign keys
-    equipped_weapon_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'weapon',
-        key: 'id',
-      },
+//END CHARACTER COSMETICS
+//BEGIN CHARACTER SKILLS INFO
+    acrobaticsProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
     },
-    equipped_armor_id: {
+    acrobaticsVal: {
       type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'armor',
-        key: 'id',
-      },
+      allowNull: false,
     },
-    // spellsKnown: {
-    //   type: DataTypes.ARRAY(DataTypes.STRING),
-    //   allowNull: true,
-    //   references: {
-    //     model: 'spell',
-    //     key: 'id',
-    //   },
-    // },
+    animalHandlingProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    animalHandlingVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    arcanaProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    arcanaVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    athleticsProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    athleticsVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    deceptionProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    deceptionVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    historyProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    historyVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    insightProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    insightVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    intimidationProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    intimidationVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    investigationProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    investigationVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    medicineProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    medicineVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    natureProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    natureVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    perceptionProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    perceptionVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    performanceProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    performanceVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    persuasionProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    persuasionVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    religionProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    religionVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    sleightOfHandProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    sleightOfHandVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    stealthProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    stealthVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    survivalProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    survivalVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+//END CHARACTER SKILLS INFO
+//BEGIN CHARACTER STATS INFO
+    strength: {
+      //strength itself
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    strMod: {
+      //strength mod int
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    strSaveProf: {
+      //strength save proficiency boolean component
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    strSaveVal: {
+      //strength save proficiency int component
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    dexterity: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    dexMod: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    dexSaveProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    dexSaveVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    constitution: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    conMod: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    conSaveProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    conSaveVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    intelligence: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    intMod: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    intSaveProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    intSaveVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    wisdom: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    wisMod: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    wisSaveProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    wisSaveVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    charisma: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    chaMod: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    chaSaveProf: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    chaSaveVal: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+//END CHARACTER STATS INFO
+//Foreign key - tied to USER!//
     user_id: {
       type: DataTypes.INTEGER,
       references: {
