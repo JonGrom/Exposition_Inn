@@ -84,6 +84,10 @@ Character.init(
       type: DataTypes.STRING,
       allowNull: true
     },
+    proficiencyBonus: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
 //END OTHER PROFICIENCIES FOR CHARACTER//
 //BEGIN COMBAT INFORMATION FOR CHARACTER//
     armorClass: {
