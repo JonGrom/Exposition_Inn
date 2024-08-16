@@ -110,7 +110,15 @@ Character.init(
       type: DataTypes.INTEGER,
       allowNull: false
       },
-    equipment: {
+    weapon: {
+      type: DataTypes.STRING,
+      allowNull: true
+      },
+    armor: {
+      type: DataTypes.STRING,
+      allowNull: true
+      },
+    kit: {
       type: DataTypes.STRING,
       allowNull: true
       },
