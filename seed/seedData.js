@@ -43,16 +43,13 @@ const seedDB = async () => {
       returning: true,
     });
     
-      for (const character of characterTestData) { 
-        const testCharacters = await Character.create({
-          ...character,
-          user_id: testUsers[Math.floor(Math.random() * testUsers.length)].id,
-          // equipped_weapon_id: weapons[Math.floor(Math.random() * weapons.length)].id,
-          // equipped_armor_id: armor[Math.floor(Math.random() * armor.length)].id,
-          // spellsKnown: spells[Math.floor(Math.random() * spells.length)].id,
-        });
-        console.log('Test Characters seeded:', testCharacters);
-      }
+    for (let i = 0; i < characterTestData.length; i++) { 
+      const testCharacters = await Character.create({
+        ...characterTestData[i],
+        user_id: testUsers[i].id, // Assign corresponding user_id
+      });
+      console.log('Test Characters seeded:', testCharacters);
+    }
         //jointable testdata stuff:
         
         // for (const characterWeapons of charWeaponTestData) { 
