@@ -18,6 +18,7 @@ Character.belongsTo(User, {
   foreignKey: 'user_id'
 })
 
+//THESE JOIN TABLES ARE BEING SET ASIDE FOR A MORE ADVANCED INVENTORY ASSIGNMENT SYSTEM IN THE FUTURE//
 
 //Character Spell
 
