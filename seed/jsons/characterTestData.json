@@ -183,7 +183,7 @@
     "intelligence": "12",
     "intMod": "1",
     "intSaveProf": "False",
-    "intSaveVal": "1",
+    "intSaveVal": "0",
     "wisdom": "14",
     "wisMod": "2",
     "wisSaveProf": "True",
@@ -280,7 +280,7 @@
     "intelligence": "14",
     "intMod": "2",
     "intSaveProf": "False",
-    "intSaveVal": "2",
+    "intSaveVal": "0",
     "wisdom": "16",
     "wisMod": "3",
     "wisSaveProf": "True",
@@ -377,7 +377,7 @@
     "intelligence": "6",
     "intMod": "-1",
     "intSaveProf": "False",
-    "intSaveVal": "1",
+    "intSaveVal": "0",
     "wisdom": "14",
     "wisMod": "2",
     "wisSaveProf": "True",
@@ -385,6 +385,6 @@
     "charisma": "14",
     "chaMod": "2",
     "chaSaveProf": "False",
-    "chaSaveVal": "2"
+    "chaSaveVal": "0"
   }
 ]
