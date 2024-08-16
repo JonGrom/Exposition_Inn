@@ -1,14 +1,7 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
   
-    const characterName = document.querySelector('#character-name').value.trim();
-    const race = document.querySelector('#race').value.trim();
-    const archetype = document.querySelector('#archetype').value.trim();
-    const alignment = document.querySelector('#alignment').value.trim();
-    const stat = document.querySelector('#stat').value.trim();
-    const skill = document.querySelector('#skill').value.trim();
-    const background = document.querySelector('#background').value.trim();
-    const backstory = document.querySelector('#backstory').value.trim(); 
+     
     
     if (characterName && race && archetype && alignment && stat && skill && background && backstory) {
       const response = await fetch(`/api/profile`, {
@@ -27,10 +20,20 @@ const newFormHandler = async (event) => {
     }
   };
 
+//event listeners on race and class options
 function renderRaceOptions(){
 
 }
 
+const race = $('#race')
+console.log(race)
 function renderClassOptions(){
-  
+
 }
+
+$(document).ready(function (){
+  //event listeners on race and class options
+  const archetypeSelect = $('#archetype').val()
+})
+
+//GOAL! send character info into api

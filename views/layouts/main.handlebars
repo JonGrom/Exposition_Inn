@@ -16,6 +16,11 @@
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
         <a href="/">Exposition Inn</a>
+                  <span id="🔊" class="btn btn-success m-1 p-1">🔊
+        <audio id="speaker-icon" loop>
+            <source src="./assets/sound/cobblestone.mp3" type="audio/mpeg">
+            <source src="./assets/sound/cobblestone.mp3" type="audio/ogg">
+        </audio>
       </h1>
       <nav>
         <!-- Conditionally render login or logout links -->
@@ -42,6 +47,7 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+  <script src="/js/speaker.js"></script>
 </body>
 
 </html>
