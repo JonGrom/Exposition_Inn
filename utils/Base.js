@@ -149,7 +149,7 @@ class Base{
         }
         
         
-        this.passivePerception = 0
+        this.passivePerception = 10 + this.stat.wisdom.mod
 
         //other proficiencies
         this.languages = []
@@ -161,7 +161,7 @@ class Base{
         //combat
 
         this.armorClass = 10
-        this.initiative = 0
+        this.initiative = this.stat.dexterity.mod
         this.speed = 0
         this.hpMax = 0
         //current and temp hp are updateables
@@ -169,12 +169,11 @@ class Base{
         this.hitDiceCount = this.level
         //death saves are updateable
         //attacks + spellcasting has array of attack names atk bonus and damage/type
-        this.equipment = [
-            {weapon: []},
-            {armor: []},
-            {kits: []},
-        ]
-        this.weapon = []
+        this.equipment = {
+            weapon: [],
+            armor: [],
+            kits: [],
+        }
 
         this.features = []
         this.traits = []
@@ -313,10 +312,10 @@ class Base{
             this.traits.push('Draconic Ancestry', 'Breath Weapon', 'Damage Resistance')
             
             //Languages
-            this.equipment[0].weapon.push('Breath Weapon')
+            this.equipment.weapon.push('Breath Weapon')
             this.languages.push('Common', 'Draconic')
             //UNFINISHED!!
-            //IDEA: seed breath weapon into weapon and this.equipment[0].weapon.push(`${this.race.option.ancestry}`)
+            //IDEA: seed breath weapon into weapon and this.equipment.weapon.push(`${this.race.option.ancestry}`)
         }
         if(this.race.name == 'Forest Gnome'){
             //Buffs
@@ -387,7 +386,7 @@ class Base{
         const stats = Object.keys(this.stat)
         stats.forEach((stat) => this.stat[stat].mod = Math.floor(this.stat[stat].val/2 - 5))
     }
-    applyArchetpye(){
+    applyArchetype(){
         if(this.archetype.name == 'Barbarian'){
             //HIT POINTS
             this.hitDice = '1d12'
@@ -405,7 +404,7 @@ class Base{
 
             //EQUIPMENT
             this.weapon.push(this.archetype.option.weapon)
-            this.equipment[2].kits.push("explorer's pack")
+            this.equipment.kits.push("explorer's pack")
             this.weapon.push('javelin')
 
             this.features.push('Rage', 'Unarmored Defense')
@@ -432,9 +431,9 @@ class Base{
             this.skill[this.archetype.option.skill[2]].prof = true
 
             //EQUIPMENT
-            this.equipment[0].weapon.push(this.archetype.option.weapon, 'Dagger')
-            this.equipment[2].kits.push(this.archetype.option.pack, this.archetype.option.instrument)
-            this.equipment[1].armor.push('Leather')
+            this.equipment.weapon.push(this.archetype.option.weapon, 'Dagger')
+            this.equipment.kits.push(this.archetype.option.pack, this.archetype.option.instrument)
+            this.equipment.armor.push('Leather')
 
             //SPELLCASTING 
             this.splClass = 'Bard'
@@ -464,9 +463,9 @@ class Base{
             this.skill[this.archetype.option.skill[1]].prof = true
 
             //EQUIPMENT
-            this.equipment[0].weapon.push(this.archetype.option.weapon)
-            this.equipment[1].armor.push(this.archetype.option.armor)
-            this.equipment[2].kits.push(this.archetype.option.pack, 'shield', 'holy symbol')
+            this.equipment.weapon.push(this.archetype.option.weapon)
+            this.equipment.armor.push(this.archetype.option.armor)
+            this.equipment.kits.push(this.archetype.option.pack, 'shield', 'holy symbol')
 
             //SPELLCASTING 
             this.splClass = 'Cleric'
@@ -498,9 +497,9 @@ class Base{
             this.skill[this.archetype.option.skill[1]].prof = true
 
             //EQUIPMENT
-            this.equipment[0].weapon.push(this.archetype.option.weapon)
-            this.archetype.option.armor ? this.equipment[1].armor.push(this.archetype.option.armor, 'Leather') : this.equipment[1].armor.push('Leather')
-            this.equipment[2].kits.push("Explorer's Pack", 'Druidic Focus')
+            this.equipment.weapon.push(this.archetype.option.weapon)
+            this.archetype.option.armor ? this.equipment.armor.push(this.archetype.option.armor, 'Leather') : this.equipment.armor.push('Leather')
+            this.equipment.kits.push("Explorer's Pack", 'Druidic Focus')
 
             //SPELLCASTING 
             this.splClass = 'Druid'
@@ -553,8 +552,8 @@ class Base{
             this.skill[this.archetype.option.skill[1]].prof = true
 
             //EQUIPMENT
-            this.equipment[0].weapon.push(this.archetype.option.weapon)
-            this.equipment[2].kits.push(this.archetype.option.kit, 'Dart') //10 darts?
+            this.equipment.weapon.push(this.archetype.option.weapon)
+            this.equipment.kits.push(this.archetype.option.kit, 'Dart') //10 darts?
 
             this.features.push('Unarmored Defense', 'Martial Arts')
             
@@ -579,9 +578,9 @@ class Base{
 
         
             //EQUIPMENT
-            this.equipment[0].weapon.push(this.archetype.option.weapon[0])
-            this.equipment[1].armor.push('Chain mail')
-            this.equipment[2].kits.push(this.archetype.option.pack, 'Holy Symbol')
+            this.equipment.weapon.push(this.archetype.option.weapon[0])
+            this.equipment.armor.push('Chain mail')
+            this.equipment.kits.push(this.archetype.option.pack, 'Holy Symbol')
 
             this.features.push('Divine Sense', 'Lay on Hands')
             
@@ -604,9 +603,9 @@ class Base{
             this.skill[this.archetype.option.skill[2]].prof = true
 
             //EQUIPMENT
-            this.equipment[0].weapon.push(this.archetype.option.weapon, 'Longbow')
-            this.equipment[1].armor.push(this.archetype.option.armor)
-            this.equipment[2].kits.push(this.archetype.option.pack)
+            this.equipment.weapon.push(this.archetype.option.weapon, 'Longbow')
+            this.equipment.armor.push(this.archetype.option.armor)
+            this.equipment.kits.push(this.archetype.option.pack)
 
             this.features.push(`Favored Enemy: ${this.archetype.option.feature[0]}`, `Natural Explorer: ${this.archetype.option.feature[1]}`)
             
@@ -631,9 +630,9 @@ class Base{
             this.skill[this.archetype.option.skill[3]].prof = true
 
             //EQUIPMENT
-            this.equipment[0].weapon.push(this.archetype.option.weapon)
-            this.equipment[1].armor.push('Leather', 'Daggar', 'Daggar')
-            this.equipment[2].kits.push(this.archetype.option.pack, "Thieves' Tools")
+            this.equipment.weapon.push(this.archetype.option.weapon, 'Daggar', 'Daggar')
+            this.equipment.armor.push('Leather')
+            this.equipment.kits.push(this.archetype.option.pack, "Thieves' Tools")
        
 
             this.features.push(`Expertise: ${this.archetype.option.feature[0]}, ${this.archetype.option.feature[1]}`, 'Sneak Attack', "Thieves' Cant")
@@ -659,8 +658,8 @@ class Base{
             this.skill[this.archetype.option.skill[1]].val = true
 
             //EQUIPMENT
-            this.equipment[0].weapon.push(this.archetype.option.weapon, 'Dagger', 'Dagger')
-            this.equipment[2].kits.push(this.archetype.option.pack)
+            this.equipment.weapon.push(this.archetype.option.weapon[0], 'Dagger', 'Dagger')
+            this.equipment.kits.push(this.archetype.option.pack)
 
             //SPELLCASTING 
             this.splClass = 'Sorcerer'
@@ -698,9 +697,9 @@ class Base{
             this.skill[this.archetype.option.skill[1]].val = true
 
             //EQUIPMENT
-            this.equipment[0].weapon.push(this.archetype.option.weapon, 'Dagger', 'Dagger')
-            this.equipment[1].armor.push('Leather')
-            this.equipment[2].kits.push(this.archetype.option.pack)
+            this.equipment.weapon.push(this.archetype.option.weapon, 'Dagger', 'Dagger')
+            this.equipment.armor.push('Leather')
+            this.equipment.kits.push(this.archetype.option.pack)
             //SPELLCASTING 
             this.splClass = 'Warlock'
             this.splAbility = 'CHA'
@@ -737,8 +736,8 @@ class Base{
             this.skill[this.archetype.option.skill[1]].val = true
 
             //EQUIPMENT
-            this.equipment[0].weapon.push(this.archetype.option.weapon)
-            this.equipment[2].kits.push(this.archetype.option.pack, 'Spellbook')
+            this.equipment.weapon.push(this.archetype.option.weapon)
+            this.equipment.kits.push(this.archetype.option.pack, 'Spellbook')
 
             //SPELLCASTING 
             this.splClass = 'Wizard'
@@ -787,7 +786,8 @@ const dataObj = {
         option: {
             skill: ['arcana', 'intimidation', 'athletics', 'deception'],
             feature: ['athletics', 'deception'],
-            weapon: ['crossbow']
+            weapon: ['crossbow'],
+            pack: ['can of beans']
         }
     },
     level: 1,
@@ -807,5 +807,12 @@ const dataObj = {
     wisdom: 12,
     charisma: 12,
 }
+
+const marcus = new Base(dataObj)
+marcus.applyRace()
+marcus.calculateMods()
+marcus.applyArchetype()
+marcus.calculations()
+console.log(marcus)
 
 module.exports = Base
