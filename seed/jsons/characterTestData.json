@@ -20,7 +20,7 @@
     "initiative":"2",
     "speed":"2",
     "hpMax":"650",
-    "hitDice":"2",
+    "hitDice":"d4",
     "hitDiceCount":"3",
     "weapon":"Darksword",
     "armor":"Armor of Lords",
