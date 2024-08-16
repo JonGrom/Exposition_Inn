@@ -770,6 +770,10 @@ class Base{
         })
         //naked armor class
         this.armorClass = this.armorClass + this.stat.dexterity.mod
+        //initiative
+        this.initiative = this.stat.dexterity.mod
+        //passive perception
+        this.passivePerception = 10 + this.skill.perception.val
     }
 }
 
@@ -786,8 +790,8 @@ const dataObj = {
         option: {
             skill: ['arcana', 'intimidation', 'athletics', 'deception'],
             feature: ['athletics', 'deception'],
-            weapon: ['crossbow'],
-            pack: ['can of beans']
+            weapon: 'crossbow',
+            pack: 'can of beans'
         }
     },
     level: 1,
