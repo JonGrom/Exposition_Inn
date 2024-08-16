@@ -11,6 +11,8 @@ class Base{
         this.background = background;
         this.username = username;
 
+        this.profBonus = 2
+
         //Stats
         this.stat = {
             strength: {
@@ -57,74 +59,92 @@ class Base{
             acrobatics: {
                 val: 0,
                 prof: false,
+                ref: 'dexterity'
             },
             animalHandling: {
                 val: 0,
                 prof: false,
+                ref: 'wisdom'
             },
             arcana: {
                 val: 0,
                 prof: false,
+                ref: 'intelligence'
             },
             athletics: {
                 val: 0,
                 prof: false,
+                ref: 'strength'
             },
             deception: {
                 val: 0,
                 prof: false,
+                ref: 'charisma'
             },
             history: {
                 val: 0,
                 prof: false,
+                ref: 'intelligence'
             },
             insight: {
                 val: 0,
                 prof: false,
+                ref: 'wisdom'
             },
             intimidation: {
                 val: 0,
                 prof: false,
+                ref: 'charisma'
             },
             investigation: {
                 val: 0,
                 prof: false,
+                ref: 'intelligence'
             },
             medicine: {
                 val: 0,
                 prof: false,
+                ref: 'wisdom'
             },
             nature: {
                 val: 0,
                 prof: false,
+                ref: 'intelligence'
             },
             perception: {
                 val: 0,
                 prof: false,
+                ref: 'wisdom'
             },
             performance: {
                 val: 0,
                 prof: false,
+                ref: 'charisma'
             },
             persuasion: {
                 val: 0,
                 prof: false,
+                ref: 'charisma'
             },
             religion: {
                 val: 0,
                 prof: false,
+                ref: 'intelligence'
             },
             sleightOfHand: {
                 val: 0,
                 prof: false,
+                ref: 'dexterity'
             },
             stealth: {
                 val: 0,
                 prof: false,
+                ref: 'dexterity'
             },
             survival: {
                 val: 0,
                 prof: false,
+                ref: 'wisdom'
             },
         }
         
@@ -140,20 +160,21 @@ class Base{
 
         //combat
 
-        this.armorClass = 0
+        this.armorClass = 10
         this.initiative = 0
         this.speed = 0
         this.hpMax = 0
         //current and temp hp are updateables
         this.hitDice = ''
-        this.hitDiceCount = 0
+        this.hitDiceCount = this.level
         //death saves are updateable
         //attacks + spellcasting has array of attack names atk bonus and damage/type
         this.equipment = [
-            {weapons: []},
+            {weapon: []},
             {armor: []},
             {kits: []},
         ]
+        this.weapon = []
 
         this.features = []
         this.traits = []
@@ -292,10 +313,10 @@ class Base{
             this.traits.push('Draconic Ancestry', 'Breath Weapon', 'Damage Resistance')
             
             //Languages
-            this.equipment.weapon.push('Breath Weapon')
+            this.equipment[0].weapon.push('Breath Weapon')
             this.languages.push('Common', 'Draconic')
             //UNFINISHED!!
-            //IDEA: seed breath weapons into weapons and this.equipment.weapon.push(`${this.race.option.ancestry}`)
+            //IDEA: seed breath weapon into weapon and this.equipment[0].weapon.push(`${this.race.option.ancestry}`)
         }
         if(this.race.name == 'Forest Gnome'){
             //Buffs
@@ -329,8 +350,8 @@ class Base{
             this.speed = 30
             this.traits.push('Darkvision', 'Fey Ancestry')
             //Skill Versatility
-            this.skill[this.race.option.prof[0]].prof = true
-            this.skill[this.race.option.prof[1]].prof = true
+            this.skill[this.race.option.skill[0]].prof = true
+            this.skill[this.race.option.skill[1]].prof = true
             
             //Languages
             this.languages.push('Common', 'Elvish', this.race.option.language)
@@ -362,20 +383,20 @@ class Base{
     applyBackground(){
 
     }
-    calculate(){
-
+    calculateMods(){
+        const stats = Object.keys(this.stat)
+        stats.forEach((stat) => this.stat[stat].mod = Math.floor(this.stat[stat].val/2 - 5))
     }
     applyArchetpye(){
         if(this.archetype.name == 'Barbarian'){
             //HIT POINTS
             this.hitDice = '1d12'
-            this.hitDiceCount = this.level
-            //At higher levels 1d12 (or7) plus conMod per level
-            this.hpMax = this.conMod + 12
+            //At higher levels 1d12 (or7) plus stat.constitution.mod per level
+            this.hpMax = this.stat.constitution.mod + 12
             
             //PROFICIENCIES
-            this.armorProficiencies.push('light armor', 'medium armor', 'shields')
-            this.weaponProficiencies.push('simple weapons', 'martial weapons')
+            this.armorProficiencies.push('light', 'medium', 'shields')
+            this.weaponProficiencies.push('simple', 'martial')
             //no tools
             this.stat.strength.prof = true
             this.stat.constitution.prof = true
@@ -383,407 +404,398 @@ class Base{
             this.skill[this.archetype.option.skill[1]].prof = true
 
             //EQUIPMENT
-            this.equipment.weapons.push(this.archetype.option.weapon)
-            //!!! "Two handaxes" potential issue
-            this.equipment.kits.push("explorer's pack")
-            this.equipment.weapons.push('javelin')
+            this.weapon.push(this.archetype.option.weapon)
+            this.equipment[2].kits.push("explorer's pack")
+            this.weapon.push('javelin')
 
             this.features.push('Rage', 'Unarmored Defense')
             //Unarmored Defense
-            this.armorClass = 10 + dexMod + conMod
+            this.armorClass = this.armorClass + this.stat.constitution.mod
             
         }
         if(this.archetype.name == 'Bard'){
             //HIT POINTS
             this.hitDice = '1d8'
-            this.hitDiceCount = this.level
-            //At higher levels 1d12 (or7) plus conMod per level
-            this.hpMax = this.conMod + 8
+            //At higher levels 1d12 (or7) plus stat.constitution.mod per level
+            this.hpMax = this.stat.constitution.mod + 8
             
             //PROFICIENCIES
-            this.armorProficiencies.push('light armor')
-            this.weaponProficiencies.push('simple weapons', 'hand crossbow', 'rapier', 'shortsword')
+            this.armorProficiencies.push('light')
+            this.weaponProficiencies.push('simple', 'hand crossbow', 'rapier', 'shortsword')
             //3 musical instruments
             this.toolProficiencies.push(this.archetype.option.tool)
-            //no tools
-            this.dexSaveProf = true
-            this.chaSaveProf = true
-            this[this.archetype.option.skill[0]] = true
-            this[this.archetype.option.skill[1]] = true
-            this[this.archetype.option.skill[1]] = true
+            //SAVING THROWS
+            this.stat.dexterity.prof = true
+            this.stat.charisma.prof = true
+            this.skill[this.archetype.option.skill[0]].prof = true
+            this.skill[this.archetype.option.skill[1]].prof = true
+            this.skill[this.archetype.option.skill[2]].prof = true
 
             //EQUIPMENT
-            this.equipment.weapons.push(this.archetype.option.weapon)
-            this.equipment.weapons.push('dagger')
-            //!!! "Two handaxes" potential issue
-            this.equipment.kits.push(this.archetype.option.pack)
-            this.equipment.kits.push(this.archetype.option.instrument)
-            this.equipment.armor.push('leather')
+            this.equipment[0].weapon.push(this.archetype.option.weapon, 'Dagger')
+            this.equipment[2].kits.push(this.archetype.option.pack, this.archetype.option.instrument)
+            this.equipment[1].armor.push('Leather')
 
-
-            this.features.push('Rage', 'Unarmored Defense')
-            //Unarmored Defense
-            this.armorClass = 10 + dexMod + conMod
+            //SPELLCASTING 
+            this.splClass = 'Bard'
+            this.splAbility = 'CHA'
+            this.splSave = 8 + this.profBonus + this.stat.charisma.mod
+            this.splAtckBonus = this.profBonus + this.stat.charisma.mod
+            this.spellsKnown.push(this.archetype.option.spell) //should be array
+            this.lvl1spellSlots = 2
+        
+            this.features.push('Ritual Casting', 'Bardic Inspiration')
             
         }
         if(this.archetype.name == 'Cleric'){
             //HIT POINTS
-            this.hitDice = 
-            this.hitDiceCount = 
-            //At higher levels 1d12 (or7) plus conMod per level
-            this.hpMax = this.conMod + 
+            this.hitDice = '1d8'
+            this.hpMax = this.stat.constitution.mod + 8
             
             //PROFICIENCIES
-            this.armorProficiencies.push('')
-            this.weaponProficiencies.push('')
-            this.toolProficiencies.push('')
+            this.armorProficiencies.push('light, medium, shields')
+            this.weaponProficiencies.push('simple')
             //no tools
             //SAVING THROWS
+            this.stat.wisdom.prof = true
+            this.stat.charisma.prof = true
             
-            
-            this[this.archetype.option.skill[0]] = true
-            this[this.archetype.option.skill[1]] = true
+            this.skill[this.archetype.option.skill[0]].prof = true
+            this.skill[this.archetype.option.skill[1]].prof = true
 
             //EQUIPMENT
-            this.equipment.weapons.push(this.archetype.option.weapon[0])
-            //!!! "Two handaxes" potential issue
-            this.equipment.weapons.push(this.archetype.option.weapon[1])
-            this.equipment.kits.push("")
-            this.equipment.weapons.push('')
+            this.equipment[0].weapon.push(this.archetype.option.weapon)
+            this.equipment[1].armor.push(this.archetype.option.armor)
+            this.equipment[2].kits.push(this.archetype.option.pack, 'shield', 'holy symbol')
 
-            this.features.push('')
+            //SPELLCASTING 
+            this.splClass = 'Cleric'
+            this.splAbility = 'WIS'
+            this.splSave = 8 + this.profBonus + this.stat.wisdom.mod
+            this.splAtckBonus = this.profBonus + this.stat.wisdom.mod
+            this.spellsKnown.push(this.archetype.option.spell) //should be array
+            this.lvl1spellSlots = 2
+
+            this.features.push('Ritual Casting', 'Divine Domain')
             
         }
-        if(this.archetype.name == 'NAME'){
+        if(this.archetype.name == 'Druid'){
             //HIT POINTS
-            this.hitDice = 
-            this.hitDiceCount = 
-            //At higher levels 1d12 (or7) plus conMod per level
-            this.hpMax = this.conMod + 
+            this.hitDice = '1d8'
+            this.hpMax = this.stat.constitution.mod + 8
             
             //PROFICIENCIES
-            this.armorProficiencies.push('')
-            this.weaponProficiencies.push('')
-            this.toolProficiencies.push('')
+            this.armorProficiencies.push('light', 'medium', 'shields')
+            this.weaponProficiencies.push('Club', 'Dagger', 'Dart', 'Javelin', 'Mace', 'Quarterstaff', 'Scimitar', 'Sickle', 'Sling', 'Spear')
+            this.toolProficiencies.push('Herbalism Kit')
             //no tools
             //SAVING THROWS
+            this.stat.intelligence.prof = true
+            this.stat.wisdom.prof = true
             
             
-            this[this.archetype.option.skill[0]] = true
-            this[this.archetype.option.skill[1]] = true
+            this.skill[this.archetype.option.skill[0]].prof = true
+            this.skill[this.archetype.option.skill[1]].prof = true
 
             //EQUIPMENT
-            this.equipment.weapons.push(this.archetype.option.weapon[0])
-            //!!! "Two handaxes" potential issue
-            this.equipment.weapons.push(this.archetype.option.weapon[1])
-            this.equipment.kits.push("")
-            this.equipment.weapons.push('')
+            this.equipment[0].weapon.push(this.archetype.option.weapon)
+            this.archetype.option.armor ? this.equipment[1].armor.push(this.archetype.option.armor, 'Leather') : this.equipment[1].armor.push('Leather')
+            this.equipment[2].kits.push("Explorer's Pack", 'Druidic Focus')
 
-            this.features.push('')
+            //SPELLCASTING 
+            this.splClass = 'Druid'
+            this.splAbility = 'WIS'
+            this.splSave = 8 + this.profBonus + this.stat.wisdom.mod
+            this.splAtckBonus = this.profBonus + this.stat.wisdom.mod
+            this.spellsKnown.push(this.archetype.option.spell) //should be array
+            this.lvl1spellSlots = 2
+
+            this.features.push('Ritual Casting')
             
         }
-        if(this.archetype.name == 'NAME'){
+        if(this.archetype.name == 'Fighter'){
             //HIT POINTS
-            this.hitDice = 
-            this.hitDiceCount = 
-            //At higher levels 1d12 (or7) plus conMod per level
-            this.hpMax = this.conMod + 
+            this.hitDice = '1d10'
+            this.hpMax = this.stat.constitution.mod + 10
             
             //PROFICIENCIES
-            this.armorProficiencies.push('')
-            this.weaponProficiencies.push('')
-            this.toolProficiencies.push('')
+            this.armorProficiencies.push('All', 'shields')
+            this.weaponProficiencies.push('simple', 'martial')
             //no tools
             //SAVING THROWS
+            this.stat.strength.prof = true
+            this.stat.constitution.prof = true
             
-            
-            this[this.archetype.option.skill[0]] = true
-            this[this.archetype.option.skill[1]] = true
+            this.skill[this.archetype.option.skill[0]].prof = true
+            this.skill[this.archetype.option.skill[1]].prof = true
 
-            //EQUIPMENT
-            this.equipment.weapons.push(this.archetype.option.weapon[0])
-            //!!! "Two handaxes" potential issue
-            this.equipment.weapons.push(this.archetype.option.weapon[1])
-            this.equipment.kits.push("")
-            this.equipment.weapons.push('')
+            //EQUIPMENT!!!
+           
 
-            this.features.push('')
+            this.features.push(`Fighting Style: ${this.archetype.option.feature}`)
             
         }
-        if(this.archetype.name == 'NAME'){
+        if(this.archetype.name == 'Monk'){
             //HIT POINTS
-            this.hitDice = 
-            this.hitDiceCount = 
-            //At higher levels 1d12 (or7) plus conMod per level
-            this.hpMax = this.conMod + 
+            this.hitDice = '1d8'
+            this.hpMax = this.stat.constitution.mod + 8
             
             //PROFICIENCIES
-            this.armorProficiencies.push('')
-            this.weaponProficiencies.push('')
-            this.toolProficiencies.push('')
-            //no tools
+            //no armor
+            this.weaponProficiencies.push('simple', 'shortbows')
+            this.toolProficiencies.push(this.archetype.option.tool)
             //SAVING THROWS
+            this.stat.strength.prof = true
+            this.stat.dexterity.prof = true
             
             
-            this[this.archetype.option.skill[0]] = true
-            this[this.archetype.option.skill[1]] = true
+            this.skill[this.archetype.option.skill[0]].prof = true
+            this.skill[this.archetype.option.skill[1]].prof = true
 
             //EQUIPMENT
-            this.equipment.weapons.push(this.archetype.option.weapon[0])
-            //!!! "Two handaxes" potential issue
-            this.equipment.weapons.push(this.archetype.option.weapon[1])
-            this.equipment.kits.push("")
-            this.equipment.weapons.push('')
+            this.equipment[0].weapon.push(this.archetype.option.weapon)
+            this.equipment[2].kits.push(this.archetype.option.kit, 'Dart') //10 darts?
 
-            this.features.push('')
+            this.features.push('Unarmored Defense', 'Martial Arts')
             
-        }
-        if(this.archetype.name == 'NAME'){
-            //HIT POINTS
-            this.hitDice = 
-            this.hitDiceCount = 
-            //At higher levels 1d12 (or7) plus conMod per level
-            this.hpMax = this.conMod + 
-            
-            //PROFICIENCIES
-            this.armorProficiencies.push('')
-            this.weaponProficiencies.push('')
-            this.toolProficiencies.push('')
-            //no tools
-            //SAVING THROWS
-            
-            
-            this[this.archetype.option.skill[0]] = true
-            this[this.archetype.option.skill[1]] = true
-
-            //EQUIPMENT
-            this.equipment.weapons.push(this.archetype.option.weapon[0])
-            //!!! "Two handaxes" potential issue
-            this.equipment.weapons.push(this.archetype.option.weapon[1])
-            this.equipment.kits.push("")
-            this.equipment.weapons.push('')
-
-            this.features.push('')
-            
-        }
-        if(this.archetype.name == 'NAME'){
-            //HIT POINTS
-            this.hitDice = 
-            this.hitDiceCount = 
-            //At higher levels 1d12 (or7) plus conMod per level
-            this.hpMax = this.conMod + 
-            
-            //PROFICIENCIES
-            this.armorProficiencies.push('')
-            this.weaponProficiencies.push('')
-            this.toolProficiencies.push('')
-            //no tools
-            //SAVING THROWS
-            
-            
-            this[this.archetype.option.skill[0]] = true
-            this[this.archetype.option.skill[1]] = true
-
-            //EQUIPMENT
-            this.equipment.weapons.push(this.archetype.option.weapon[0])
-            //!!! "Two handaxes" potential issue
-            this.equipment.weapons.push(this.archetype.option.weapon[1])
-            this.equipment.kits.push("")
-            this.equipment.weapons.push('')
-
-            this.features.push('')
-            
-        }
-        if(this.archetype.name == 'NAME'){
-            //HIT POINTS
-            this.hitDice = 
-            this.hitDiceCount = 
-            //At higher levels 1d12 (or7) plus conMod per level
-            this.hpMax = this.conMod + 
-            
-            //PROFICIENCIES
-            this.armorProficiencies.push('')
-            this.weaponProficiencies.push('')
-            this.toolProficiencies.push('')
-            //no tools
-            //SAVING THROWS
-            
-            
-            this[this.archetype.option.skill[0]] = true
-            this[this.archetype.option.skill[1]] = true
-
-            //EQUIPMENT
-            this.equipment.weapons.push(this.archetype.option.weapon[0])
-            //!!! "Two handaxes" potential issue
-            this.equipment.weapons.push(this.archetype.option.weapon[1])
-            this.equipment.kits.push("")
-            this.equipment.weapons.push('')
-
-            this.features.push('')
-            
-        }
-        if(this.archetype.name == 'NAME'){
-            //HIT POINTS
-            this.hitDice = 
-            this.hitDiceCount = 
-            //At higher levels 1d12 (or7) plus conMod per level
-            this.hpMax = this.conMod + 
-            
-            //PROFICIENCIES
-            this.armorProficiencies.push('')
-            this.weaponProficiencies.push('')
-            this.toolProficiencies.push('')
-            //no tools
-            //SAVING THROWS
-            
-            
-            this[this.archetype.option.skill[0]] = true
-            this[this.archetype.option.skill[1]] = true
-
-            //EQUIPMENT
-            this.equipment.weapons.push(this.archetype.option.weapon[0])
-            //!!! "Two handaxes" potential issue
-            this.equipment.weapons.push(this.archetype.option.weapon[1])
-            this.equipment.kits.push("")
-            this.equipment.weapons.push('')
-
-            this.features.push('')
-            
-        }
-        if(this.archetype.name == 'NAME'){
-            //HIT POINTS
-            this.hitDice = 
-            this.hitDiceCount = 
-            //At higher levels 1d12 (or7) plus conMod per level
-            this.hpMax = this.conMod + 
-            
-            //PROFICIENCIES
-            this.armorProficiencies.push('')
-            this.weaponProficiencies.push('')
-            this.toolProficiencies.push('')
-            //no tools
-            //SAVING THROWS
-            
-            
-            this[this.archetype.option.skill[0]] = true
-            this[this.archetype.option.skill[1]] = true
-
-            //EQUIPMENT
-            this.equipment.weapons.push(this.archetype.option.weapon[0])
-            //!!! "Two handaxes" potential issue
-            this.equipment.weapons.push(this.archetype.option.weapon[1])
-            this.equipment.kits.push("")
-            this.equipment.weapons.push('')
-
-            this.features.push('')
-            
-        }
-        if(this.archetype.name == 'NAME'){
-            //HIT POINTS
-            this.hitDice = 
-            this.hitDiceCount = 
-            //At higher levels 1d12 (or7) plus conMod per level
-            this.hpMax = this.conMod + 
-            
-            //PROFICIENCIES
-            this.armorProficiencies.push('')
-            this.weaponProficiencies.push('')
-            this.toolProficiencies.push('')
-            //no tools
-            //SAVING THROWS
-            
-            
-            this[this.archetype.option.skill[0]] = true
-            this[this.archetype.option.skill[1]] = true
-
-            //EQUIPMENT
-            this.equipment.weapons.push(this.archetype.option.weapon[0])
-            //!!! "Two handaxes" potential issue
-            this.equipment.weapons.push(this.archetype.option.weapon[1])
-            this.equipment.kits.push("")
-            this.equipment.weapons.push('')
-
-            this.features.push('')
-            
-        }
-    }
-}
-
-class Barbarian extends Base{
-    constructor(){
-        //super all else
-        super( name, archetype, level, race, background, username, strength, dexterity, constitution, intelligence, wisdom, charisma )
-        
-        //hp
-        this.hitDice = '1d12'
-        this.hitDiceCount = this.level
-            //At higher levels 1d12 (or7) plus conMod per level
-        this.hpMax = this.conMod + 12
-            
-            //PROFICIENCIES
-            this.armorProficiencies.push('light armor', 'medium armor', 'shields')
-            this.weaponProficiencies.push('simple weapons', 'martial weapons')
-            //no tools
-            this.strSaveProf = true
-            this.conSaveProf = true
-            this[this.archetype.option.skill[0]] = true
-            this[this.archetype.option.skill[1]] = true
-
-            //EQUIPMENT
-            this.equipment.weapons.push(this.archetype.option.weapon[0])
-            //!!! "Two handaxes" potential issue
-            this.equipment.weapons.push(this.archetype.option.weapon[1])
-            this.equipment.kits.push("explorer's pack")
-            this.equipment.weapons.push('javelin')
-
-            this.features.push('Rage', 'Unarmored Defense')
             //Unarmored Defense
-            this.armorClass = 10 + dexMod + conMod
+            this.armorClass = this.armorClass + this.stat.wisdom.mod
+        }
+        if(this.archetype.name == 'Paladin'){
+            //HIT POINTS
+            this.hitDice = '1d10'
+            this.hpMax = this.stat.constitution.mod + 10
+            
+            //PROFICIENCIES
+            this.armorProficiencies.push('All', 'shields')
+            this.weaponProficiencies.push('simple', 'martial')
+            //no tools
+            //SAVING THROWS
+            this.stat.wisdom.prof = true
+            this.stat.charisma.prof = true
+            
+            this.skill[this.archetype.option.skill[0]].prof = true
+            this.skill[this.archetype.option.skill[1]].prof = true
 
+        
+            //EQUIPMENT
+            this.equipment[0].weapon.push(this.archetype.option.weapon[0])
+            this.equipment[1].armor.push('Chain mail')
+            this.equipment[2].kits.push(this.archetype.option.pack, 'Holy Symbol')
 
-        //other proficiencies
-        this.languages = []
-        this.weaponProficiencies = []
-        this.armorProficiencies = []
-        this.toolProficiencies = []
+            this.features.push('Divine Sense', 'Lay on Hands')
+            
+        }
+        if(this.archetype.name == 'Ranger'){
+            //HIT POINTS
+            this.hitDice = '1d10'
+            this.hpMax = this.stat.constitution.mod + 10
+            
+            //PROFICIENCIES
+            this.armorProficiencies.push('light', 'medium', 'shields')
+            this.weaponProficiencies.push('simple', 'martial')
+            //no tools
+            //SAVING THROWS
+            this.stat.strength.prof = true
+            this.stat.dexterity.prof = true
+            
+            this.skill[this.archetype.option.skill[0]].prof = true
+            this.skill[this.archetype.option.skill[1]].prof = true
+            this.skill[this.archetype.option.skill[2]].prof = true
 
+            //EQUIPMENT
+            this.equipment[0].weapon.push(this.archetype.option.weapon, 'Longbow')
+            this.equipment[1].armor.push(this.archetype.option.armor)
+            this.equipment[2].kits.push(this.archetype.option.pack)
 
-        //combat
+            this.features.push(`Favored Enemy: ${this.archetype.option.feature[0]}`, `Natural Explorer: ${this.archetype.option.feature[1]}`)
+            
+        }
+        if(this.archetype.name == 'Rogue'){
+            //HIT POINTS
+            this.hitDice = '1d8'
+            this.hpMax = this.stat.constitution.mod + 8
+            
+            //PROFICIENCIES
+            this.armorProficiencies.push('light')
+            this.weaponProficiencies.push('simple', 'crossbow', 'longsword', 'rapier', 'shortsword')
+            this.toolProficiencies.push("Thieves' Tools")
+            //SAVING THROWS
+            this.stat.dexterity.prof = true
+            this.stat.intelligence.prof = true
+            
+            
+            this.skill[this.archetype.option.skill[0]].prof = true
+            this.skill[this.archetype.option.skill[1]].prof = true
+            this.skill[this.archetype.option.skill[2]].prof = true
+            this.skill[this.archetype.option.skill[3]].prof = true
 
-        this.armorClass = 
-        this.initiative = 0
-        this.speed = 0
-        this.hpMax = 0
-        //current and temp hp are updateables
-        this.hitDice = ''
-        this.hitDiceCount = 0
-        //death saves are updateable
-        //attacks + spellcasting has array of attack names atk bonus and damage/type
-        this.equipment = [
-            {weapons: []},
-            {armor: []},
-            {kits: []},
-        ]
+            //EQUIPMENT
+            this.equipment[0].weapon.push(this.archetype.option.weapon)
+            this.equipment[1].armor.push('Leather', 'Daggar', 'Daggar')
+            this.equipment[2].kits.push(this.archetype.option.pack, "Thieves' Tools")
+       
 
-        this.features = ['Rage']
-        this.traits = []
+            this.features.push(`Expertise: ${this.archetype.option.feature[0]}, ${this.archetype.option.feature[1]}`, 'Sneak Attack', "Thieves' Cant")
 
+            //Expertise
+            this.skill[this.archetype.option.feature[0]].val = this.skill[this.archetype.option.feature[0]].val + this.profBonus
+            this.skill[this.archetype.option.feature[1]].val = this.skill[this.archetype.option.feature[1]].val + this.profBonus
+        }
+        if(this.archetype.name == 'Sorcerer'){
+            //HIT POINTS
+            this.hitDice = '1d6'
+            this.hpMax = this.stat.constitution.mod + 6
+            
+            //PROFICIENCIES
+            //no armor
+            this.weaponProficiencies.push('Dagger', 'Dart', 'Sling', 'Quarterstaff', 'Light Crossbow')
+            //no tools
+            //SAVING THROWS
+            this.stat.constitution.prof = true
+            this.stat.charisma.prof = true
+            
+            this.skill[this.archetype.option.skill[0]].val = true
+            this.skill[this.archetype.option.skill[1]].val = true
+
+            //EQUIPMENT
+            this.equipment[0].weapon.push(this.archetype.option.weapon, 'Dagger', 'Dagger')
+            this.equipment[2].kits.push(this.archetype.option.pack)
+
+            //SPELLCASTING 
+            this.splClass = 'Sorcerer'
+            this.splAbility = 'CHA'
+            this.splSave = 8 + this.profBonus + this.stat.charisma.mod
+            this.splAtckBonus = this.profBonus + this.stat.charisma.mod
+            this.spellsKnown.push(this.archetype.option.spell) //should be array
+            this.lvl1spellSlots = 2
+
+            //FEATURES
+            this.features.push(`Sorcerous Origin: ${this.archetype.option.feature}`)
+            if(this.archetype.option.feature == 'Draconic Bloodline'){
+                this.features.push(`Dragon Ancester: ${this.archetype.option.feature.ancestor}`, 'Draconic Resilience')
+                this.languages.push('Draconic')
+            } else if(this.archetype.option.feature == 'Wild Magic'){
+                this.features.push('Wild Magic Surge', 'Tides of Chaos')
+            }
+            
+        }
+        if(this.archetype.name == 'Warlock'){
+            //HIT POINTS
+            this.hitDice = '1d8'
+            this.hpMax = this.stat.constitution.mod + 8
+            
+            //PROFICIENCIES
+            this.armorProficiencies.push('light')
+            this.weaponProficiencies.push('simple')
+
+            //SAVING THROWS
+            this.stat.intelligence.prof = true
+            this.stat.wisdom.prof = true
+            
+            //STAT PROFICIENCIES
+            this.skill[this.archetype.option.skill[0]].val = true
+            this.skill[this.archetype.option.skill[1]].val = true
+
+            //EQUIPMENT
+            this.equipment[0].weapon.push(this.archetype.option.weapon, 'Dagger', 'Dagger')
+            this.equipment[1].armor.push('Leather')
+            this.equipment[2].kits.push(this.archetype.option.pack)
+            //SPELLCASTING 
+            this.splClass = 'Warlock'
+            this.splAbility = 'CHA'
+            this.splSave = 8 + this.profBonus + this.stat.charisma.mod
+            this.splAtckBonus = this.profBonus + this.stat.charisma.mod
+            this.spellsKnown.push(this.archetype.option.spell) //should be array
+            this.lvl1spellSlots = 1
+
+            this.features.push(`Otherworldly Patron: ${this.archetype.option.feature}`, 'Pact Magic')
+
+            if(this.archetype.option.feature == 'The Archfey'){
+                this.features.push('Fey Presence')
+            } else if(this.archetype.option.feature == 'The Fiend'){
+                this.features.push("Dark One's Blessing")
+            } else if(this.archetype.option.feature == 'The Great Old One'){
+                this.features.push('Awakened Mind')
+            }
+            
+        }
+        if(this.archetype.name == 'Wizard'){
+            //HIT POINTS
+            this.hitDice = '1d6'
+            this.hpMax = this.stat.constitution.mod + 6
+            
+            //PROFICIENCIES
+            //no armor
+            this.weaponProficiencies.push('Dagger', 'Dart', 'Sling', 'Quarterstaff', 'Light Crossbow')
+            //no tools
+            //SAVING THROWS
+            this.stat.intelligence.prof = true
+            this.stat.wisdom.prof = true
+            
+            this.skill[this.archetype.option.skill[0]].val = true
+            this.skill[this.archetype.option.skill[1]].val = true
+
+            //EQUIPMENT
+            this.equipment[0].weapon.push(this.archetype.option.weapon)
+            this.equipment[2].kits.push(this.archetype.option.pack, 'Spellbook')
+
+            //SPELLCASTING 
+            this.splClass = 'Wizard'
+            this.splAbility = 'INT'
+            this.splSave = 8 + this.profBonus + this.stat.intelligence.mod
+            this.splAtckBonus = this.profBonus + this.stat.intelligence.mod
+            this.spellsKnown.push(this.archetype.option.spell) //should be array
+            this.lvl1spellSlots = 2
+
+            this.features.push('Ritual Casting', 'Arcane Recovery')
+            
+        }
+    }
+    calculations(){
+        //saves
+        const stats = Object.keys(this.stat)
+        stats.forEach((stat) => {
+            this.stat[stat].saveVal = this.stat[stat].mod
+            if(this.stat[stat].prof == true){
+                this.stat[stat].saveVal = this.stat[stat].saveVal + this.profBonus
+            }
+        })
+        //skills
+        const skills = Object.keys(this.skill)
+        skills.forEach((skill) => {
+            this.skill[skill].val = this.skill[skill].val + this.stat[this.skill[skill].ref].mod
+            if(this.skill[skill].prof == true){
+                this.skill[skill].val = this.skill[skill].val + this.profBonus
+            }
+        })
+        //naked armor class
+        this.armorClass = this.armorClass + this.stat.dexterity.mod
     }
 }
 
-//questionTree:
-    //Character's name? Character'sRace? Character's Class? Character's Background? Character's Stats?
-// name, archetype, level, race, background, username, strength, dexterity, constitution, intelligence, wisdom, charisma
+//WHEN CONSTRUCTING ALWAYS PERFORM THESE FUNCTIONS
+// character.applyRace()
+// character.calculateMods()
+// character.applyArchetpye()
+// character.calculations()
+//EXAMPLE DATA OBJ
 const dataObj = {
     name: "Marcus",
-    archetype: "Barbarian",
+    archetype: {
+        name: "Rogue", 
+        option: {
+            skill: ['arcana', 'intimidation', 'athletics', 'deception'],
+            feature: ['athletics', 'deception'],
+            weapon: ['crossbow']
+        }
+    },
     level: 1,
     race: {
-        name: 'Half-Elf',
+        name: 'High Elf',
         option: {
-            language: 'english',
-            stat: ['strength', 'dexterity'],
-            prof: ['acrobaticsProf', 'athleticsProf']
+            language: 'Draconic',
+            cantrip: 'firebolt'
         },
     },
     background: '',
@@ -796,10 +808,5 @@ const dataObj = {
     charisma: 12,
 }
 
-console.log(dataObj.race.name, dataObj.race.option.language)
-const character = new Base(dataObj)
-character.applyRace(this.race)
-console.log(dataObj)
-console.log(character)
 
 module.exports = Base
