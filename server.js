@@ -3,6 +3,7 @@ const routes = require('./routes');
 const sequelize = require('./config/connection');
 const exphbs = require('express-handlebars');
 const helpers = require('./utils/helpers');
+const path = require('path');
 
 const hbs = exphbs.create({ helpers });
 
@@ -15,6 +16,8 @@ const PORT = process.env.PORT || 3001;
 app.use(express.static("public"))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use('/fonts', express.static(path.join(__dirname, 'public/assets/fonts')));
+
 
 const sess = {
   secret: 'YOUSHALLNOTPASS',
