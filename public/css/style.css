@@ -1,16 +1,16 @@
-body {
-    background-image: url("/assets/homebackground.jpg");
+.user-background {
+    background-image: url("/assets/userbackground.jpg");
     position: inherit;
     background-size: 100vw 100%;
     background-repeat: no-repeat;
 }
-body {
+.character-background {
     background-image: url("/assets/createbackground.jpg");
     position: inherit;
     background-size: 100vw 100%;
     background-repeat: no-repeat;
 }
-body {
+.home-background {
     background-image: url("/assets/joinsigninbackground.jpg");
     position: inherit;
     background-size: 100vw 100%;

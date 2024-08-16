@@ -10,6 +10,7 @@ router.get('/', async (req, res) => {
     try {
     console.log("Hello")
     res.render('homepage', { 
+      bodyClass: 'home-background',
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -29,6 +30,7 @@ router.get('/user', withAuth, async (req, res) => {
     const user = userData.get({ plain: true });
 
     res.render('user', {
+      bodyClass: 'user-background',
       ...user,
       logged_in: true
     });
