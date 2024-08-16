@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const sess = {
-  secret: 'Super secret secret',
+  secret: 'YOUSHALLNOTPASS',
   cookie: {
     maxAge: 60 * 60 * 1000,
     httpOnly: true,
