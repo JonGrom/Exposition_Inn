@@ -2,11 +2,11 @@
   <div class="character-card">
     <h2 class="page-title">New Character Creator</h2>
     <form class="form login-form">
-      <div class="form-group">
+      <div class="form-group" id="character-name">
         <label for="character-name">Character Name</label>
-        <input class="form-input" type="text" id="character-name" />
+        <input class="form-input" type="text" />
       </div>
-      <div class="form-group">
+      <div class="form-group" id="race">
         <label for="race">Race:</label>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="dwarf" id="dwarf" value="option1" checked>
@@ -25,9 +25,9 @@
           <label class="form-check-label" for="exampleRadios3">Third default radio
           </label>
         </div>
-      <div class="form-group">
+      <div class="form-group" id="archetype">
         <label for="archetype">Class:</label>
-        <input class="form-input" type="radio" id="archetype" />
+        <input class="form-input" type="radio" />
         <div class="form-check">
           <input class="form-check-input" type="radio" name="dwarf" id="dwarf" value="option1" checked>
           <label class="form-check-label" for="Radio1">
@@ -46,7 +46,7 @@
           </label>
         </div>
       </div>
-      <div class="form-group">
+      <div class="form-group" id="alignment">
         <label for="alignment">Alignment:</label>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -63,7 +63,7 @@
           </label>
         </div>
       </div>
-      <div class="form-group">
+      <div class="form-group" id="stat">
         <label for="stats">Stats:</label>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -79,7 +79,7 @@
             Default checkbox3
           </label>
         </div>
-      <div class="form-group">
+      <div class="form-group" id="skill">
         <label for="skills">Skills:</label>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -95,7 +95,7 @@
               Default checkbox3
             </label>
           </div>
-      <div class="form-group">
+      <div class="form-group" id="background">
         <label for="background">Background:</label>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -111,7 +111,7 @@
               Default checkbox3
             </label>
           </div>
-      <div class="form-group">
+      <div class="form-group" id="backstory">
         <label for="backstory">Backstory:</label>
         <textarea class="form-control" id="backstory" rows="3"></textarea>
       </div>

@@ -40,7 +40,9 @@ router.get('/user', withAuth, async (req, res) => {
   }
 });
 
-
+router.get('/profile', (req, res) => {
+  res.render('profile');
+});
 
 /* ===== load your page routes below (or create a separate folder for them) ================== */
 
