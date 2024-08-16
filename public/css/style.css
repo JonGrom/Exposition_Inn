@@ -4,8 +4,8 @@
     background-size: 100vw 100%;
     background-repeat: no-repeat;
 }
-.character-background {
-    background-image: url("/assets/createbackground.jpg");
+.profile-background {
+    background-image: url("/assets/profilebackground.jpg");
     position: inherit;
     background-size: 100vw 100%;
     background-repeat: no-repeat;
