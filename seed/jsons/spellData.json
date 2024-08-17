@@ -1,1585 +1,3330 @@
 [
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Acid Splash",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "ranger",
+      "wizard"
+    ],
     "spellName": "Alarm",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
     "spellName": "Animal Friendship",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric"
+    ],
     "spellName": "Bane",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Blade Ward",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "paladin"
+    ],
     "spellName": "Bless",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Burning Hands",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Charm Person",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Chill Touch",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Chromatic Orb",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Color Spray",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "paladin"
+    ],
     "spellName": "Command",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "paladin"
+    ],
     "spellName": "Compelled Duel",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Comprehend Languages",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid"
+    ],
     "spellName": "Create or Destroy Water",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger"
+    ],
     "spellName": "Cure Wounds",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Dancing Lights",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "paladin"
+    ],
     "spellName": "Detect Evil and Good",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Detect Magic",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger"
+    ],
     "spellName": "Detect Poison and Disease",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Disguise Self",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "paladin"
+    ],
     "spellName": "Divine Favor",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard"
+    ],
     "spellName": "Dissonant Whispers",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "druid"
+    ],
     "spellName": "Druidcraft",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "warlock"
+    ],
     "spellName": "Eldritch Blast",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "ranger"
+    ],
     "spellName": "Ensnaring Strike",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "druid"
+    ],
     "spellName": "Entangle",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid"
+    ],
     "spellName": "Faerie Fire",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Expeditious Retreat",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "False Life",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Feather Fall",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Find Familiar",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Fire Bolt",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Fog Cloud",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Friends",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "druid",
+      "ranger"
+    ],
     "spellName": "Goodberry",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Grease",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid"
+    ],
     "spellName": "Guidance",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Guiding Bolt",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "ranger"
+    ],
     "spellName": "Hail of Thorns",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "druid"
+    ],
     "spellName": "Healing Word",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "warlock"
+    ],
     "spellName": "Hellish Rebuke",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "warlock"
+    ],
     "spellName": "Hex",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "paladin"
+    ],
     "spellName": "Heroism",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "ranger"
+    ],
     "spellName": "Hunter's Mark",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "wizard"
+    ],
     "spellName": "Identify",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Illusory Script",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Inflict Wounds",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Jump",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Light",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid",
+      "ranger",
+      "wizard"
+    ],
     "spellName": "Longstrider",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Mage Armor",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Mage Hand",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Magic Missile",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Mending",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Message",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Minor Illusion",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Poison Spray",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Prestidigitation",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "druid"
+    ],
     "spellName": "Produce Flame",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "paladin",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Protection from Evil and Good",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid",
+      "paladin"
+    ],
     "spellName": "Purify Food and Drink",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Ray of Frost",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Ray of Sickness",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "paladin",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Remove Curse",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid"
+    ],
     "spellName": "Resistance",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Sacred Flame",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Sanctuary",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "paladin"
+    ],
     "spellName": "Shield of Faith",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "paladin"
+    ],
     "spellName": "Searing Smite",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Shield",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "druid"
+    ],
     "spellName": "Shillelagh",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Shocking Grasp",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Silent Image",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Sleep",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Spare the Dying",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
     "spellName": "Speak with Animals",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Thaumaturgy",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "druid"
+    ],
     "spellName": "Thorn Whip",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "paladin"
+    ],
     "spellName": "Thunderous Smite",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Thunderwave",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "True Strike",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "bard",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Unseen Servant",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard"
+    ],
     "spellName": "Vicious Mockery",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Witch Bolt",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "paladin"
+    ],
     "spellName": "Wrathful Smite",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "paladin"
+    ],
     "spellName": "Aid",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
     "spellName": "Animal Messenger",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Blindness/Deafness",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Augury",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric"
+    ],
     "spellName": "Calm Emotions",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Hold Person",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger"
+    ],
     "spellName": "Lesser Restoration",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Prayer of Healing",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "ranger"
+    ],
     "spellName": "Silence",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Spiritual Weapon",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Warding Bond",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "wizard"
+    ],
     "spellName": "Animate Dead",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Arcane Eye",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "paladin"
+    ],
     "spellName": "Aura of Life",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "paladin"
+    ],
     "spellName": "Aura of Purity",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "paladin"
+    ],
     "spellName": "Aura Of Vitality",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "paladin",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Banishment",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Beacon of Hope",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Blight",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "wizard"
+    ],
     "spellName": "Bestow Curse",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "paladin"
+    ],
     "spellName": "Blinding Smite",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Blink",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "druid"
+    ],
     "spellName": "Call Lightning",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Clairvoyance",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Cloud of Daggers",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard"
+    ],
     "spellName": "Compulsion",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "druid",
+      "ranger"
+    ],
     "spellName": "Conjure Animals",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "ranger"
+    ],
     "spellName": "Conjure Barrage",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Counterspell",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "paladin"
+    ],
     "spellName": "Create Food and Water",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "paladin"
+    ],
     "spellName": "Crusader's Mantle",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger",
+      "sorcerer"
+    ],
     "spellName": "Daylight",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Dispel Magic",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "paladin"
+    ],
     "spellName": "Elemental Weapon",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Fear",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "druid",
+      "wizard"
+    ],
     "spellName": "Feign Death",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Fireball",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Fly",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Gaseous Form",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Haste",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Hypnotic Pattern",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "ranger"
+    ],
     "spellName": "Lightning Arrow",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "paladin",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Magic Circle",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Major Image",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Mass Healing Word",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Alter Self",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Arcane Lock",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "druid",
+      "ranger"
+    ],
     "spellName": "Barkskin",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "ranger",
+      "wizard"
+    ],
     "spellName": "Nondetection",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid"
+    ],
     "spellName": "Meld into Stone",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Phantom Steed",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
     "spellName": "Plant Growth",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Protection from Energy",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "paladin"
+    ],
     "spellName": "Revivify",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "wizard"
+    ],
     "spellName": "Sending",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Sleet Storm",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Slow",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric"
+    ],
     "spellName": "Speak with Dead",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
     "spellName": "Speak with Plants",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Spirit Guardians",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Stinking Cloud",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Confusion",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "druid",
+      "wizard"
+    ],
     "spellName": "Conjure Minor Elementals",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid",
+      "wizard"
+    ],
     "spellName": "Control Water",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "druid",
+      "ranger"
+    ],
     "spellName": "Conjure Woodland Beings",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "paladin"
+    ],
     "spellName": "Death Ward",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Tongues",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "druid",
+      "ranger"
+    ],
     "spellName": "Beast Sense",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Blur",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "paladin"
+    ],
     "spellName": "Branding Smite",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "ranger"
+    ],
     "spellName": "Cordon Of Arrows",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Crown of Madness",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Darkness",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Darkvision",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Detect Thoughts",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "druid"
+    ],
     "spellName": "Animal Shapes",
     "spellLevel": "8"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "wizard"
+    ],
     "spellName": "Antimagic Field",
     "spellLevel": "8"
   },
   {
+    "spellClasses": [
+      "druid",
+      "wizard"
+    ],
     "spellName": "Antipathy/Sympathy",
     "spellLevel": "8"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Astral Projection",
     "spellLevel": "9"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Clone",
     "spellLevel": "8"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid",
+      "wizard"
+    ],
     "spellName": "Control Weather",
     "spellLevel": "8"
   },
   {
+    "spellClasses": [
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Demiplane",
     "spellLevel": "8"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Dominate Monster",
     "spellLevel": "8"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid",
+      "sorcerer"
+    ],
     "spellName": "Earthquake",
     "spellLevel": "8"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Feeblemind",
     "spellLevel": "8"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Foresight",
     "spellLevel": "9"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Gate",
     "spellLevel": "9"
   },
   {
+    "spellClasses": [
+      "bard",
+      "warlock"
+    ],
     "spellName": "Glibness",
     "spellLevel": "8"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Holy Aura",
     "spellLevel": "8"
   },
   {
+    "spellClasses": [
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Imprisonment",
     "spellLevel": "9"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Incendiary Cloud",
     "spellLevel": "8"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Mass Heal",
     "spellLevel": "9"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Maze",
     "spellLevel": "8"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Meteor Swarm",
     "spellLevel": "9"
   },
   {
+    "spellClasses": [
+      "bard",
+      "wizard"
+    ],
     "spellName": "Mind Blank",
     "spellLevel": "8"
   },
   {
+    "spellClasses": [
+      "bard"
+    ],
     "spellName": "Power Word Heal",
     "spellLevel": "9"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Power Word Kill",
     "spellLevel": "9"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Power Word Stun",
     "spellLevel": "8"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Prismatic Wall",
     "spellLevel": "9"
   },
   {
+    "spellClasses": [
+      "druid",
+      "wizard"
+    ],
     "spellName": "Shapechange",
     "spellLevel": "9"
   },
   {
+    "spellClasses": [
+      "druid"
+    ],
     "spellName": "Storm of Vengeance",
     "spellLevel": "9"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Telepathy",
     "spellLevel": "8"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Sunburst",
     "spellLevel": "8"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Time Stop",
     "spellLevel": "9"
   },
   {
+    "spellClasses": [
+      "bard",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "True Polymorph",
     "spellLevel": "9"
   },
   {
+    "spellClasses": [
+      "druid"
+    ],
     "spellName": "Tsunami",
     "spellLevel": "8"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid"
+    ],
     "spellName": "True Resurrection",
     "spellLevel": "9"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Weird",
     "spellLevel": "9"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Wish",
     "spellLevel": "9"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Conjure Celestial",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Delayed Blast Fireball",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Dimension Door",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Divine Word",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Etherealness",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Finger of Death",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid",
+      "sorcerer"
+    ],
     "spellName": "Fire Storm",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "bard",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Forcecage",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid",
+      "wizard"
+    ],
     "spellName": "Mirage Arcane",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Prismatic Spray",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "bard",
+      "wizard"
+    ],
     "spellName": "Project Image",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Plane Shift",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "druid"
+    ],
     "spellName": "Regenerate",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric"
+    ],
     "spellName": "Resurrection",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Reverse Gravity",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Sequester",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Simulacrum",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "wizard"
+    ],
     "spellName": "Symbol",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Teleport",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Suggestion",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Invisibility",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Animate Objects",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "druid"
+    ],
     "spellName": "Antilife Shell",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Arcane Gate",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid"
+    ],
     "spellName": "Awaken",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "paladin"
+    ],
     "spellName": "Banishing Smite",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Chain Lightning",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Blade Barrier",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Circle of Death",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "paladin"
+    ],
     "spellName": "Circle of Power",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Cloudkill",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "druid",
+      "ranger"
+    ],
     "spellName": "Commune with Nature",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Commune",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Cone of Cold",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "druid",
+      "wizard"
+    ],
     "spellName": "Conjure Elemental",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "druid",
+      "warlock"
+    ],
     "spellName": "Conjure Fey",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "ranger"
+    ],
     "spellName": "Conjure Volley",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Contact Other Plane",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid"
+    ],
     "spellName": "Contagion",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Contingency",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Create Undead",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "wizard"
+    ],
     "spellName": "Continual Flame",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Creation",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "paladin"
+    ],
     "spellName": "Destructive Wave",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Disintegrate",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Divination",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "paladin"
+    ],
     "spellName": "Dispel Evil and Good",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer"
+    ],
     "spellName": "Dominate Beast",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Dominate Person",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "bard",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Dream",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "druid",
+      "sorcerer"
+    ],
     "spellName": "Enhance Ability",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Enlarge/Reduce",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "warlock"
+    ],
     "spellName": "Enthrall",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Fabricate",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Eyebite",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "paladin"
+    ],
     "spellName": "Find Steed",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "druid"
+    ],
     "spellName": "Find the Path",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid",
+      "ranger"
+    ],
     "spellName": "Find Traps",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Fire Shield",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "druid"
+    ],
     "spellName": "Flame Blade",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Flame Strike",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "druid",
+      "wizard"
+    ],
     "spellName": "Flaming Sphere",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Flesh to Stone",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Forbiddance",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "druid",
+      "ranger"
+    ],
     "spellName": "Freedom of Movement",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "wizard",
+      "paladin",
+      "druid",
+      "bard"
+    ],
     "spellName": "Geas",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "wizard"
+    ],
     "spellName": "Gentle Repose",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "druid"
+    ],
     "spellName": "Giant Insect",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Globe of Invulnerability",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "wizard",
+      "bard"
+    ],
     "spellName": "Glyph of Warding",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "ranger",
+      "druid"
+    ],
     "spellName": "Grasping Vine",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard",
+      "bard"
+    ],
     "spellName": "Greater Invisibility",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid",
+      "bard"
+    ],
     "spellName": "Greater Restoration",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Guardian of Faith",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "wizard",
+      "bard"
+    ],
     "spellName": "Guards and Wards",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard",
+      "druid"
+    ],
     "spellName": "Gust of Wind",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Hallucinatory Terrain",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Hallow",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Harm",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "druid",
+      "bard"
+    ],
     "spellName": "Heat Metal",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid"
+    ],
     "spellName": "Heal",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid"
+    ],
     "spellName": "Heroes' Feast",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Hold Monster",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Ice Storm",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid",
+      "sorcerer"
+    ],
     "spellName": "Insect Plague",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard",
+      "bard"
+    ],
     "spellName": "Knock",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "wizard",
+      "bard"
+    ],
     "spellName": "Legend Lore",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Levitate",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
     "spellName": "Locate Animals or Plants",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Lightning Bolt",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger",
+      "wizard"
+    ],
     "spellName": "Locate Creature",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger",
+      "wizard"
+    ],
     "spellName": "Locate Object",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Magic Jar",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "paladin",
+      "wizard"
+    ],
     "spellName": "Magic Weapon",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "wizard"
+    ],
     "spellName": "Magic Mouth",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "druid"
+    ],
     "spellName": "Mass Cure Wounds",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Mass Suggestion",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Mirror Image",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "wizard"
+    ],
     "spellName": "Mislead",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Misty Step",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "wizard"
+    ],
     "spellName": "Modify Memory",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "druid"
+    ],
     "spellName": "Moonbeam",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Move Earth",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "druid",
+      "ranger"
+    ],
     "spellName": "Pass without Trace",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Passwall",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Phantasmal Killer",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Phantasmal Force",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Planar Ally",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "druid",
+      "wizard"
+    ],
     "spellName": "Planar Binding",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Polymorph",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "bard",
+      "wizard"
+    ],
     "spellName": "Programmed Illusion",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "paladin",
+      "bard"
+    ],
     "spellName": "Raise Dead",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "ranger",
+      "paladin",
+      "druid"
+    ],
     "spellName": "Protection from Poison",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Ray of Enfeeblement",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "druid"
+    ],
     "spellName": "Reincarnate",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Rope Trick",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Scorching Ray",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "druid",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Scrying",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Seeming",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "See Invisibility",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Shatter",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Spider Climb",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "druid",
+      "ranger"
+    ],
     "spellName": "Spike Growth",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "paladin"
+    ],
     "spellName": "Staggering Smite",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid",
+      "wizard"
+    ],
     "spellName": "Stone Shape",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Sunbeam",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "ranger",
+      "wizard"
+    ],
     "spellName": "Stoneskin",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "ranger"
+    ],
     "spellName": "Swift Quiver",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Telekinesis",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Teleportation Circle",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "druid"
+    ],
     "spellName": "Transport via Plants",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "druid",
+      "ranger"
+    ],
     "spellName": "Tree Stride",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "True Seeing",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Vampiric Touch",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Wall of Fire",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Wall of Ice",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Wall of Force",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Wall of Stone",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "druid"
+    ],
     "spellName": "Wall of Thorns",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Water Breathing",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "cleric",
+      "druid",
+      "ranger",
+      "sorcerer"
+    ],
     "spellName": "Water Walk",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Web",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "druid"
+    ],
     "spellName": "Wind Walk",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "druid",
+      "ranger"
+    ],
     "spellName": "Wind Wall",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "cleric"
+    ],
     "spellName": "Word of Recall",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "bard",
+      "cleric",
+      "paladin"
+    ],
     "spellName": "Zone of Truth",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Earth Tremor",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Pyrotechnics",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid",
+      "wizard"
+    ],
     "spellName": "Skywrite",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Thunderclap",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "bard",
+      "druid",
+      "sorcerer"
+    ],
     "spellName": "Warding Wind",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Control Flames",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Create Bonfire",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Frostbite",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Gust",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "druid",
+      "warlock"
+    ],
     "spellName": "Magic Stone",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Mold Earth",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Shape Water",
     "spellLevel": "0"
   },
   {
+    "spellClasses": [
+      "druid",
+      "ranger",
+      "wizard"
+    ],
     "spellName": "Absorb Elements",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "druid",
+      "ranger"
+    ],
     "spellName": "Beast Bond",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Ice Knife",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Earthbind",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Dust Devil",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Catapult",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Control Winds",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "druid"
+    ],
     "spellName": "Bones of the Earth",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Erupting Earth",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "druid",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Elemental Bane",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Flame Arrows",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Investiture of Flame",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Investiture of Ice",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Investiture of Stone",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
     "spellName": "Investiture of Wind",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "druid"
+    ],
     "spellName": "Maelstrom",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "druid"
+    ],
     "spellName": "Primordial Ward",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "druid",
+      "wizard"
+    ],
     "spellName": "Tidal Wave",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "druid",
+      "wizard"
+    ],
     "spellName": "Transmute Rock",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Wall of Water",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Watery Sphere",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "druid",
+      "wizard"
+    ],
     "spellName": "Whirlwind",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Immolation",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Storm Sphere",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "sorcerer",
+      "wizard"
+    ],
     "spellName": "Vitriolic Sphere",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Wall of Sand",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Arcane Hand",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Instant Summons",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Black Tentacles",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Secret Chest",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "wizard",
+      "bard"
+    ],
     "spellName": "Tiny Hut",
     "spellLevel": "3"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Acid Arrow",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Faithful Hound",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "wizard",
+      "bard"
+    ],
     "spellName": "Magnificent Mansion",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Private Sanctum",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "wizard",
+      "bard"
+    ],
     "spellName": "Arcane Sword",
     "spellLevel": "7"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Arcanist’s Magic Aura",
     "spellLevel": "2"
   },
   {
+    "spellClasses": [
+      "wizard",
+      "sorcerer"
+    ],
     "spellName": "Freezing Sphere",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Resilient Sphere",
     "spellLevel": "4"
   },
   {
+    "spellClasses": [
+      "wizard",
+      "bard"
+    ],
     "spellName": "Irresistible Dance",
     "spellLevel": "6"
   },
   {
+    "spellClasses": [
+      "wizard",
+      "bard"
+    ],
     "spellName": "Telepathic Bond",
     "spellLevel": "5"
   },
   {
+    "spellClasses": [
+      "wizard",
+      "bard"
+    ],
     "spellName": "Hideous Laughter",
     "spellLevel": "1"
   },
   {
+    "spellClasses": [
+      "wizard"
+    ],
     "spellName": "Floating Disk",
     "spellLevel": "1"
   }

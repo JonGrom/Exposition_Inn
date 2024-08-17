@@ -1,4 +1,7 @@
-const Character = require('../models/Character')
+const Character = require('../models/Character');
+const Weapon = require('../models/Weapon');
+const Armor = require('../models/Armor');
+const Spell = require('../models/Spell');
 
 
 function convertToDb(charObj) {
@@ -10,6 +13,8 @@ function convertToDb(charObj) {
             level: charObj.level, 
             background: charObj.background, 
             race: charObj.race.name, 
+
+            proficiencyBonus: charObj.profBonus,
 
             strength: charObj.stat.strength.val, 
             strMod: charObj.stat.strength.mod, 
@@ -134,6 +139,58 @@ function convertToDb(charObj) {
 }
 
 
+
+async function convertFromDatabase(databaseObject){
+
+    let weapons = [];
+    let weaponTemp = databaseObject.weapon.split(',');
+    for(let i = 0; i < weaponTemp.length; i++){
+        const singleWeapon = await Weapon.findOne({
+            where: {
+                weaponName: weaponTemp[i]
+            }
+        })
+        weapons.push(singleWeapon)
+    }
+
+    let armors = [];
+    let armorTemp = databaseObject.armor.split(',');
+    for(let i = 0; i < armorTemp.length; i++){
+        const singleArmor = await Armor.findOne({
+            where: {
+                armorName: armorTemp[i]
+            }
+        })
+        armors.push(singleArmor)
+    }
+
+    let spells = [];
+    let spellTemp = databaseObject.spellsKnown.split(',');
+    for(let i = 0; i < spellTemp.length; i++){
+        const singleSpell = await Spell.findOne({
+            where: {
+                spellName: spellTemp[i]
+            }
+        })
+        spells.push(singleSpell)
+    }
+
+
+
+    const characterObject = {
+        
+
+
+
+
+    }
+
+
+    return characterObject;
+}
+
+
 module.exports = {
-    convertToDb
+    convertToDb,
+    convertFromDatabase
 }
