@@ -198,6 +198,7 @@ function buildArchetypeObj(){
     archetypeObj.option.armor.push('Leather')
     archetypeObj.option.weapon.push('Longbow')
   }
+  return archetypeObj
 }
 
 function buildBackgroundObj(){
