@@ -4,13 +4,13 @@
 </div>
 
   {{#if characters.length}}
-  <div class="col-md-6 character character-form" id="character-card">
-    <h3>Current Characters:</h3>
+  <div class="col-md-6 character character-box-2" id="character-card">
+    <h3>Your Current Characters:</h3>
 
     {{#each characters as |character|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/character/{{character.id}}">{{character.name}}</a></h4>
+        <h4>🛡️<a href="/character/{{character.id}}">{{character.name}}</a></h4>
       </div>
     </div>
     {{/each}}
