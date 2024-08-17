@@ -22,21 +22,18 @@ Character.belongsTo(User, {
 
 //Character Spell
 
-Character.belongsToMany(Spell, {through: 'CharacterSpells'});
-
-Spell.belongsToMany(Character, {through: 'CharacterSpells'});
+// Character.belongsToMany(Spell, {through: 'CharacterSpells'});
+// Spell.belongsToMany(Character, {through: 'CharacterSpells'});
 
 //Character Weapon
 
-Character.belongsToMany(Weapon, {through: 'CharacterWeapons'});
-
-Weapon.belongsToMany(Character, {through: 'CharacterWeapons'});
+// Character.belongsToMany(Weapon, {through: 'CharacterWeapons'});
+// Weapon.belongsToMany(Character, {through: 'CharacterWeapons'});
 
 //Character Armor
 
-Character.belongsToMany(Armor, {through: 'CharacterArmor'});
-
-Armor.belongsToMany(Character, {through: 'CharacterArmor'});
+// Character.belongsToMany(Armor, {through: 'CharacterArmor'});
+// Armor.belongsToMany(Character, {through: 'CharacterArmor'});
 
 module.exports = {
   User, 

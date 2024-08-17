@@ -10,5 +10,4 @@ router.use('/user', user);
 router.use('/character', character);
 router.use('/profile', profile);
 
-
 module.exports = router;
