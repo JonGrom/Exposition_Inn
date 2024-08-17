@@ -35,6 +35,7 @@ function buildDataObj(){
   const raceOption4 = $('#race-option4').val()
   const alignment = $('#alignment-select').val()
   console.log(alignment)
+  console.log(raceOption1)
   const strength = $('#strength-stat').val()
   const dexterity = $('#dexterity-stat').val()
   const constitution = $('#constitution-stat').val()
@@ -51,12 +52,15 @@ function buildDataObj(){
   subrace ? dataObj.race.name = subrace : dataObj.race.name = race
 
   if(raceOption){
+    console.log(raceOption)
     dataObj.race.option = raceOption
+    console.log(dataObj.race.option)
   } else if (raceOption1){
-    race.option = {
+    dataObj.race.option = {
       stat: [raceOption1, raceOption2],
       skill: [raceOption3, raceOption4]
     }
+    console.log(dataObj.race.option)
   }
 
   //Archetype Object
@@ -197,17 +201,19 @@ function renderGnomeOptions(){
 
   $('#race-options').append(form)
 }
+
+//HALF-ELF
 function renderHalfElfOptions(){
   //stat and skill options
   const options = $('<div>')
-  .append($('<label id="race-option1">').text('stat buff:'))
-  .append($('<select class="stat" id="<stat">'))
-  .append($('<label id="race-option2">').text('stat buff:'))
-  .append($('<select class="stat" id="<stat">'))
-  .append($('<label id="race-option3">').text('skill:'))
-  .append($('<select class="skill" id="<skill">'))
-  .append($('<label id="race-option4">').text('skill:'))
-  .append($('<select class="skill" id="<skill">'))
+  .append($('<label id="buff">').text('stat buff:'))
+  .append($('<select class="stat" id="race-option1">'))
+  .append($('<label id="buff">').text('stat buff:'))
+  .append($('<select class="stat" id="race-option2">'))
+  .append($('<label id="buff">').text('skill:'))
+  .append($('<select class="skill" id="race-option3">'))
+  .append($('<label id="buff">').text('skill:'))
+  .append($('<select class="skill" id="race-option4">'))
 
   $('#race-options').append(options)
 
