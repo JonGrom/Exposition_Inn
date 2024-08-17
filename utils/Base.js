@@ -406,7 +406,6 @@ class Base{
             this.weapon.push(this.archetype.option.weapon)
             this.equipment.kits.push("explorer's pack")
             this.weapon.push('javelin')
-//!! 10 javelins actshually
 
             this.features.push('Rage', 'Unarmored Defense')
             //Unarmored Defense
@@ -433,7 +432,7 @@ class Base{
 
             //EQUIPMENT
             this.equipment.weapon.push(this.archetype.option.weapon, 'Dagger')
-            this.equipment.kits.push(this.archetype.option.pack, this.archetype.option.instrument)
+            this.equipment.kits.push(this.archetype.option.pack)
             this.equipment.armor.push('Leather')
 
             //SPELLCASTING 
@@ -499,7 +498,7 @@ class Base{
 
             //EQUIPMENT
             this.equipment.weapon.push(this.archetype.option.weapon)
-            this.equipment.armor.push(this.archetype.option.armor, 'Leather')
+            this.equipment.armor.push('Leather')
             this.equipment.kits.push("Explorer's Pack", 'Druidic Focus')
 
             //SPELLCASTING 
@@ -519,7 +518,7 @@ class Base{
             this.hpMax = this.stat.constitution.mod + 10
             
             //PROFICIENCIES
-            this.armorProficiencies.push('light', 'medium', 'heavy', 'shields')
+            this.armorProficiencies.push('All', 'shields')
             this.weaponProficiencies.push('simple', 'martial')
             //no tools
             //SAVING THROWS
@@ -530,10 +529,7 @@ class Base{
             this.skill[this.archetype.option.skill[1]].prof = true
 
             //EQUIPMENT!!!
-            this.equipment.weapon.push(this.archetype.option.weapon)
-            this.equipment.armor.push(this.archetype.option.armor, 'Leather')
-            this.equipment.kits.push(this.archetype.option.pack)
-
+           
 
             this.features.push(`Fighting Style: ${this.archetype.option.feature}`)
             
@@ -546,7 +542,8 @@ class Base{
             //PROFICIENCIES
             //no armor
             this.weaponProficiencies.push('simple', 'shortbows')
-            this.toolProficiencies.push(this.archetype.option.tool)
+            this.toolProficiencies.push("Artisan's Tools")
+                    //*^ NONE CANNON. Monk gets to choose between this and an instrument
             //SAVING THROWS
             this.stat.strength.prof = true
             this.stat.dexterity.prof = true
@@ -676,7 +673,7 @@ class Base{
             //FEATURES
             this.features.push(`Sorcerous Origin: ${this.archetype.option.feature}`)
             if(this.archetype.option.feature == 'Draconic Bloodline'){
-                this.features.push(`Dragon Ancestor: ${this.archetype.option.feature.ancestor}`, 'Draconic Resilience')
+                this.features.push(`Dragon Ancester: ${this.archetype.option.feature.ancestor}`, 'Draconic Resilience')
                 this.languages.push('Draconic')
             } else if(this.archetype.option.feature == 'Wild Magic'){
                 this.features.push('Wild Magic Surge', 'Tides of Chaos')

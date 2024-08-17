@@ -1,5 +1,6 @@
 async function handleSubmit(event) {
     event.preventDefault()
+    validateInput()
     const dataObj = buildDataObj()
     console.log(dataObj)
     
@@ -20,17 +21,60 @@ async function handleSubmit(event) {
     // }
 };
 
+//FORM VALIDATION
+function validateInput(){
+
+}
+
+
+//DATA OBJECT
 function buildDataObj(){
-
-  validateInput()
-  const raceObj = buildRaceObj()
-  const archetypeObj = buildArchetypeObj()
-  const bakcgroundObj = buildBackgroundObj()
-
   const dataObj = {}
 
-  //define query selectors
+  
+  //query selectors
   const name = $('#name').val()
+  const alignment = $('#alignment-select').val()
+  const strength = $('#strength-stat').val()
+  const dexterity = $('#dexterity-stat').val()
+  const constitution = $('#constitution-stat').val()
+  const intelligence = $('#intelligence-stat').val()
+  const wisdom = $('#wisdom-stat').val()
+  const charisma = $('#charisma-stat').val()
+  
+  //Build data object
+  dataObj.name = name
+  
+  //Stats
+  dataObj.strength = strength
+  dataObj.dexterity = dexterity
+  dataObj.constitution = constitution
+  dataObj.intelligence = intelligence
+  dataObj.wisdom = wisdom
+  dataObj.charisma = charisma
+  
+  //Race Object
+  const raceObj = buildRaceObj()
+  dataObj.race = raceObj
+
+  //Archetype Object
+  const archetypeObj = buildArchetypeObj()
+  dataObj.archetype = archetypeObj
+
+  //Background Object
+  const bakcgroundObj = buildBackgroundObj()
+  //Misc
+  dataObj.level = 1
+  dataObj.alignment = alignment
+
+  return dataObj
+}
+
+//RACE OBJECT
+function buildRaceObj(){
+  const raceObj = {}
+
+  //query selectors
   const race = $('#race-select').val()
   const subrace = $('#subrace-select').val()
   const raceOption = $('#race-option').val()
@@ -38,69 +82,66 @@ function buildDataObj(){
   const raceOption2 = $('#race-option2').val()
   const raceOption3 = $('#race-option3').val()
   const raceOption4 = $('#race-option4').val()
-  const alignment = $('#alignment-select').val()
-  console.log(alignment)
-  console.log(raceOption1)
-  const strength = $('#strength-stat').val()
-  const dexterity = $('#dexterity-stat').val()
-  const constitution = $('#constitution-stat').val()
-  const intelligence = $('#intelligence-stat').val()
-  const wisdom = $('#wisdom-stat').val()
-  const charisma = $('#charisma-stat').val()
 
-  //Build data object
-  dataObj.name = name
-
-  //Race Object
-  dataObj.race = {}
-
-  subrace ? dataObj.race.name = subrace : dataObj.race.name = race
+  subrace ? raceObj.name = subrace : raceObj.name = race
 
   if(raceOption){
     console.log(raceOption)
-    dataObj.race.option = raceOption
-    console.log(dataObj.race.option)
+    raceObj.option = raceOption
+    console.log(raceObj.option)
   } else if (raceOption1){
-    dataObj.race.option = {
+    raceObj.option = {
       stat: [raceOption1, raceOption2],
       skill: [raceOption3, raceOption4]
     }
-    console.log(dataObj.race.option)
+    console.log(raceObj.option)
   }
+  return raceObj
+}
 
-  function validateInput(){
+//ARCHETYPE OBJECT
+function buildArchetypeObj(){
+  const archetypeObj = {}
 
-  }
+  //SKILLS
+  const skill1 = $('#skill1').val()
+  const skill2 = $('#skill2').val()
+  const skill3 = $('#skill3').val()
+  const skill4 = $('#skill4').val()
+  //WEAPONS
+  //* if weapon2 = '2 handaxes' push 2 handaxes
+  const weapon1 = $('#weapon1').val()
+  const weapon2 = $('#weapon2').val()
+  const weapon3 = $('#weapon3').val()
+  //ARMOR
+  const armor = $('#weapon3').val()
+  //if armor2 fix cleric
 
-  function buildRaceObj(){
+  //TOOLS
+  const tool1 = $('#tool1').val()
+  const tool2 = $('#tool2').val()
+  const tool3 = $('#tool3').val()
+  //PACKS
+  const pack1 = $('#pack1').val()
+  const pack2 = $('#pack2').val()
 
-  }
+  //FEATURES
 
-  function buildArchetypeObj(){
+  //SPELLS
+  const spell1 = $('#spell1').val()
+  const spell2 = $('#spell2').val()
+  const spell3 = $('#spell3').val()
+  const spell4 = $('#spell4').val()
+  const spell5 = $('#spell5').val()
+  const spell6 = $('#spell6').val()
 
-  }
+  //MISC
+  //* this = Chain mail or 'Leather armor + Longbow'
+  const fighterSpcl = $('#fighter-spcl').val()
+}
 
-  function buildBackgroundObj(){
+function buildBackgroundObj(){
 
-  }
-
-  //Archetype Object
-
-  //Background Object
-
-  //Race Object Stats
-  dataObj.strength = strength
-  dataObj.dexterity = dexterity
-  dataObj.constitution = constitution
-  dataObj.intelligence = intelligence
-  dataObj.wisdom = wisdom
-  dataObj.charisma = charisma
-
-  //Misc
-  dataObj.level = 1
-  dataObj.alignment = alignment
-
-  return dataObj
 }
 
 
@@ -229,217 +270,262 @@ function renderHalfElfOptions(){
   //stat and skill options
   const options = $('<div>')
   .append($('<label id="buff">').text('stat buff:'))
-  .append($('<select class="stat" id="race-option1">'))
+  .append($('<select class="prof" id="race-option1">'))
   .append($('<label id="buff">').text('stat buff:'))
-  .append($('<select class="stat" id="race-option2">'))
+  .append($('<select class="prof" id="race-option2">'))
   .append($('<label id="buff">').text('skill:'))
-  .append($('<select class="skill" id="race-option3">'))
+  .append($('<select class="prof" id="race-option3">'))
   .append($('<label id="buff">').text('skill:'))
-  .append($('<select class="skill" id="race-option4">'))
+  .append($('<select class="prof" id="race-option4">'))
 
   $('#race-options').append(options)
 
   renderDropdown('stat', stats)
-  renderDropdown('skill', skills)
+  renderDropdown('prof', skills)
 }
 
 //RENDER RACE OPTION
 
-//BARBARIAN
+//BARBARIAN  .skill(2) .weapon(2) SPCL 2 handaxes option weapon 2
 function renderBarbarianOptions(){
   //Prficiencies
   const skillProfs = ['Animal Handling', 'Athletics', 'Intimidation', 'Nature', 'Perception', 'Survival']
-  const martialMelee = ['!!!!']
-  const simpleWeapons = ['!!!!']
+
+  const weapon2 = ['2 Handaxes']
+  simpleWeapons.forEach((weapon) => weapon2.push(weapon))
 
   const options = $('<div>')
-  .append($('<label id="prof">').text('skill:'))
-  .append($('<select class="profs" id="archetype-skill1">'))
-  .append($('<label id="prof">').text('skill:'))
-  .append($('<select class="profs" id="archetype-skill2">'))
-  .append($('<label id="weapon">').text('weapon:'))
+  .append($('<label id="prof">').text('skill'))
+  .append($('<select class="skill" id="skill1">'))
+  .append($('<label id="prof">').text('skill'))
+  .append($('<select class="skill" id="skill2">'))
+  .append($('<label id="weapon">').text('weapon'))
   .append($('<select class="weapon1" id="weapon1">'))
-  .append($('<label id="weapon">').text('weapon:'))
+  .append($('<label id="weapon">').text('weapon'))
   .append($('<select class="weapon2" id="weapon2">'))
   
   $('#archetype-options').append(options)
   
-  renderDropdown('profs', skillProfs)
+  renderDropdown('skill', skillProfs)
   renderDropdown('weapon1', martialMelee)
-  renderDropdown('weapon2', simpleWeapons)
+  renderDropdown('weapon2', weapon2)
 
 }
 
-//BARD
+//BARD .tool(3) .skill(3) .weapon .pack(pack and instrument) .spell(2 + 4)
 function renderBardOptions(){
   //arrays
   //full skills array for skills
-  const weapons = ['Rapier', 'Longsword']
-//!!! simpleWeapons.forEach(weapon => weapons.push(weapon))
+  const weapon1 = ['Rapier', 'Longsword']
+  simpleWeapons.forEach(weapon => weapon1.push(weapon))
   //musical instruments in object as "option.tool" array
   //inputs
-  const options = $('<div>')
-  .append($('<label id="">').text(':'))
-  .append($('<input class="" id="">'))
-  .append($('<label id="">').text(':'))
-  .append($('<input class="" id="">'))
-  .append($('<label id="">').text(':'))
-  .append($('<input class="" id="">'))
+  const tools = $('<div>')
+  .append($('<h6>').text('You can play 3 instruments'))
+  .append($('<input id="tool1">'))
+  .append($('<input id="tool2">'))
+  .append($('<input id="tool3">'))
 
   //skills in as "option.skills" array 
   //all skills
-  const skillprofs = $('<div>')
-  .append($('<label id="">').text(':'))
-  .append($('<select class="" id="">'))
-  .append($('<label id="">').text(':'))
-  .append($('<select class="" id="">'))
-  .append($('<label id="">').text(':'))
-  .append($('<select class="" id="">'))
+  const profs = $('<div>')
+  .append($('<label>').text('skill'))
+  .append($('<select class="skill" id="skill1">'))
+  .append($('<label>').text('skill'))
+  .append($('<select class="skill" id="skill2">'))
+  .append($('<label>').text('skill'))
+  .append($('<select class="skill" id="skill3">'))
 
   //option.weapon
   const misc = $('<div>')
-  .append($('<label id="">').text(':'))
-  .append($('<select class="" id="">'))
+  .append($('<label>').text('weapon'))
+  .append($('<select class="weapon" id="weapon1">'))
   //option.pack
-  .append($('<label id="">').text(':'))
-  .append($('<select class="" id="">')
+  .append($('<label>').text('gear'))
+  .append($('<select id="pack1">')
     .append($('<option>').text("Diplomat's Pack"))
     .append($('<option>').text("Entertainer's Pack")))
-  //option.instrument 
-  .append($('<label id="">').text(':'))
-  .append($('<input class="" id="">'))
+  //option.pack2 
+  .append($('<h6>').text('You own an instrument'))
+  .append($('<input id="pack2">'))
 
 
   //spells
   //cantrips
   const cantripsKnown = $('<div>')
-  .append($('<label id="">').text(':'))
-  .append($('<select class="" id="">'))
-  .append($('<label id="">').text(':'))
-  .append($('<select class="" id="">'))
+  .append($('<label>').text('cantrip'))
+  .append($('<select class="cantrip" id="spell1">'))
+  .append($('<label>').text('cantrip'))
+  .append($('<select class="cantrip" id="spell2">'))
 
   //1st level
   const spellsKnown = $('<div>')
-  .append($('<label id="">').text(':'))
-  .append($('<select class="" id="">'))
-  .append($('<label id="">').text(':'))
-  .append($('<select class="" id="">'))
-  .append($('<label id="">').text(':'))
-  .append($('<select class="" id="">'))
-  .append($('<label id="">').text(':'))
-  .append($('<select class="" id="">'))
+  .append($('<label>').text('spell'))
+  .append($('<select class="spell" id="spell3">'))
+  .append($('<label>').text('spell'))
+  .append($('<select class="spell" id="spell4">'))
+  .append($('<label>').text('spell'))
+  .append($('<select class="spell" id="spell5">'))
+  .append($('<label>').text('spell'))
+  .append($('<select class="spell" id="spell6">'))
 
-  $('#archetype-options').append(options).append(skillprofs).append(misc).append(spellsKnown)
+  $('#archetype-options').append(tools).append(profs).append(misc).append(cantripsKnown).append(spellsKnown)
 
-  renderDropdown('prof', skills)
-  renderDropdown('weapon', weapons)
+  renderDropdown('skill', skills)
+  renderDropdown('weapon', weapon1)
   renderDropdown('cantrip', bardCantrips)
-  renderDropdown('spells', lvl1BardSpells)
+  renderDropdown('spell', lvl1BardSpells)
 }
 
-//CLERIC !! BUFFED(because if-proficient)
+//CLERIC !! BUFFED(because if-proficient)  .skill(2) .weapon .armor .pack .spell(3)
 function renderClericOptions(){
   //arrays
   const skillProfs = ['History', 'Insight', 'Medicine', 'Persuasion', 'Religion']
 
   //option.skill
   const profs = $('<div>')
-  .append($('<label id="">').text(':'))
-  .append($('<select class="" id="">'))
-  .append($('<label id="">').text(':'))
-  .append($('<select class="" id="">'))
+  .append($('<label>').text('skill'))
+  .append($('<select class="skill" id="skill1">'))
+  .append($('<label>').text('skill'))
+  .append($('<select class="skill" id="skill2">'))
 
   //option.weapon / option.armor / option.pack
   const misc = $('<div>')
-  .append($('<label id="">').text(':'))
-  .append($('<select class="" id="">')
+  .append($('<label id="">').text('weapon'))
+  .append($('<select id="weapon1">')
     .append($('<option>').text("Mace"))
     .append($('<option>').text("Warhammer")))
-  .append($('<label id="">').text(':'))
-  .append($('<select class="" id="">')
+  .append($('<label id="">').text('armor'))
+  .append($('<select id="armor">')
     .append($('<option>').text("Scale mail"))
     .append($('<option>').text("Leather")))
-  .append($('<label id="">').text(':'))
-  .append($('<select class="" id="">')
+  .append($('<label id="">').text('gear'))
+  .append($('<select id="pack1">')
     .append($('<option>').text("Priests' Pack"))
     .append($('<option>').text("Explorer's Pack")))
 
   //option.spell 
-  const spellsKnown = $('<div>')
-  .append($('<label id="">').text(':'))
-  .append($('<select class="" id="">'))
-  .append($('<label id="">').text(':'))
-  .append($('<select class="" id="">'))
-  .append($('<label id="">').text(':'))
-  .append($('<select class="" id="">'))
+  const cantripsKnown = $('<div>')
+  .append($('<label>').text('cantrip'))
+  .append($('<select class="cantrip" id="spell1">'))
+  .append($('<label>').text('cantrip'))
+  .append($('<select class="cantrip" id="spell2">'))
+  .append($('<label>').text('cantrip'))
+  .append($('<select class="cantrip" id="spell3">'))
   
 
-  $('#archetype-options').append(profs).append(misc).append(spellsKnown)
+  $('#archetype-options').append(profs).append(misc).append(cantripsKnown)
 
-  renderDropdown('prof', skillProfs)
+  renderDropdown('skill', skillProfs)
   renderDropdown('cantrip', clericCantrips)
 }
 
-//DRUID 
+//DRUID .skill(2) .
 function renderDruidOptions(){
   
   //arrays choose 2
   const skillProfs = ['Arcana', 'Animal Handling', 'Insight', 'Medicine', 'Nature', 'Perception', 'Religion', 'Survival']
-  const weapon1 = ['wooden shield']
-// simpleWeapons.forEach(weapon => weapons.push(weapon))
-  const weapon2 = ['scimitar']
-// simpleMelee.forEach(weapon => weapons.push(weapon))
+  const weapon1 = ['Wooden shield']
+  simpleWeapons.forEach(weapon => weapon1.push(weapon))
+  const weapon2 = ['Scimitar']
+  simpleMelee.forEach(weapon => weapon2.push(weapon))
 
-//2 cantrips known
-  // const spellsKnown = $('<div>')
-  // .append($('<label id="">').text(':'))
-  // .append($('<select class="" id="">'))
+  const profs = $('<div>')
+    .append($('<label>').text('skill'))
+    .append($('<select class="skill" id="skill1">'))
+    .append($('<label>').text('skill'))
+    .append($('<select class="skill" id="skill2">'))
 
-  // $('#archetype-options').append()
+  const misc = $('<div>')
+    .append($('<label>').text('weapon'))
+    .append($('<select class="weapon1" id="weapon1">'))
+    .append($('<label>').text('weapon'))
+    .append($('<select class="weapon2" id="weapon2">'))
 
-  renderDropdown('prof', skillProfs)
+  const cantripsKnown = $('<div>')
+    .append($('<label>').text('cantrip'))
+    .append($('<select class="cantrip" id="spell1">'))
+    .append($('<label>').text('cantrip'))
+    .append($('<select class="cantrip" id="spell2">'))
+
+  $('#archetype-options').append(profs).append(misc).append(cantripsKnown)
+
+  renderDropdown('skill', skillProfs)
   renderDropdown('weapon1', weapon1)
   renderDropdown('weapon2', weapon2)
   renderDropdown('cantrip', druidCantrips)
 }
+
+//FIGHTER 
 function renderFighterOptions(){
   //arrays
-  // choose 2
   const skillProfs = ['Acrobatics', 'Animal handling', 'Athletics', 'History', 'Insight', 'Intimidation', 'Perception', 'Survival']
-  const weapon2 = ['shield']
-// martialWeapons.forEach(weapon => weapons.push(weapon))
+  const weapon1 = ['shield']
+  martialWeapons.forEach(weapon => weapon1.push(weapon))
   const features = ['Archery', 'Defense', 'Dueling', 'Great Weapon Fighting', 'Protection', 'Two-Weapon Fighting']
-  //! Chain mail / leather armor and longbow UNIQUE ID! weapon1
-        //^ if no time just Chain mail straight to constructor
-  //! s AND shield OR two martial weapons UNIQUE ID!
-  //! light crossbow / 2 handaxes
-  //!dungeneers pack or explorer's pack
 
-  // const spellsKnown = $('<div>')
-  // .append($('<label id="">').text(':'))
-  // .append($('<select class="" id="">'))
+  const profs = $('<div>')
+    .append($('<label>').text('skill'))
+    .append($('<select class="skill" id="skill1">'))
+    .append($('<label>').text('skill'))
+    .append($('<select class="skill" id="skill2">'))
 
-  // $('#archetype-options').append()
+  const gear = $('<div>')
+    .append($('<label>').text('armor'))
+    .append($('<select id="fighter-spcl">')
+      .append($('<option>').text("Chain mail"))
+      .append($('<option>').text("Leather armor + Longbow")))
+    .append($('<label>').text('weapon'))
+    .append($('<select class="weapon1" id="weapon1">'))
+    .append($('<label>').text('weapon'))
+    .append($('<select class="weapon3" id="weapon3">'))
 
-  renderDropdown('weapon2', weapon2)
+  const more = $('<div>')
+    .append($('<label>').text('weapon'))
+    .append($('<select id="weapon2">')
+      .append($('<option>').text("light crossbow"))
+      .append($('<option>').text("2 handaxes")))
+    .append($('<label>').text('gear'))
+    .append($('<select id="pack1">')
+      .append($('<option>').text("Dungeneer's Pack"))
+      .append($('<option>').text("Explorer's Pack")))
+    .append($('<label>').text('fighting style'))
+    .append($('<select class="feature" id="feature1">'))
+    
+  
+  $('#archetype-options').append(profs).append(gear).append(more)
+
+  renderDropdown('skill', skillProfs)
+  renderDropdown('weapon1', weapon1)
   renderDropdown('weapon3', martialWeapons)
   renderDropdown('feature', features)
 }
+
+//MONK
 function renderMonkOptions(){
   //arrays
   const skillProfs = ['Acrobatics', 'Athletics', 'History', 'Insight', 'Religion', 'Stealth']
-  const weapons = ['Shortsword']
-// simpleWeapons.forEach(weapon => weapons.push(weapon))
+  const weapon1 = ['Shortsword']
+  simpleWeapons.forEach(weapon => weapon1.push(weapon))
 
-  //! dungeoneers pack / explorers pack option.pack
-  // const spellsKnown = $('<div>')
-  // .append($('<label id="">').text(':'))
-  // .append($('<select class="" id="">'))
+  const profs = $('<div>')
+  .append($('<label>').text('skill'))
+  .append($('<select class="skill" id="skill1">'))
+  .append($('<label>').text('skill'))
+  .append($('<select class="skill" id="skill2">'))
 
-  // $('#archetype-options').append()
+  const misc = $('<div>')
+  .append($('<label>').text('weapon'))
+  .append($('<select class="weapon" id="weapon1">'))
+  .append($('<label>').text('gear'))
+  .append($('<select id="pack1">')
+    .append($('<option>').text("Dungeneer's Pack"))
+    .append($('<option>').text("Explorer's Pack")))
 
-  renderDropdown('prof', skillProfs)
-  renderDropdown('weapon', weapons)
+  $('#archetype-options').append(profs).append(misc)
+
+  renderDropdown('skill', skillProfs)
+  renderDropdown('weapon', weapon1)
 }
 function renderPaladinOptions(){
   //arrays
@@ -456,7 +542,7 @@ function renderPaladinOptions(){
 
   // $('#archetype-options').append()
 
-  renderDropdown('prof', skillProfs)
+  renderDropdown('skill', skillProfs)
   renderDropdown('weapon1', weapon1)
   renderDropdown('weapon2', martialWeapons)
   renderDropdown('weapon3', weapon3)
@@ -480,7 +566,7 @@ function renderRangerOptions(){
 
   // $('#archetype-options').append()
 
-  renderDropdown('prof', skillProfs)
+  renderDropdown('skill', skillProfs)
   renderDropdown('feature1', feature1)
   renderDropdown('feature2', feature2)
 }
@@ -501,7 +587,7 @@ function renderRogueOptions(){
 
   // $('#archetype-options').append()
 
-  renderDropdown('prof', skillProfs)
+  renderDropdown('skill', skillProfs)
 
   renderDropdown('feature', skills)
       //^ will need to make only those proficient
@@ -524,7 +610,7 @@ function renderSorcererOptions(){
 
   // $('#archetype-options').append()
 
-  renderDropdown('prof', skillProfs)
+  renderDropdown('skill', skillProfs)
   renderDropdown('weapon', weapons)
   renderDropdown('cantrip', sorcererCantrips)
   renderDropdown('spell', lvl1SorcererSpells)
@@ -553,7 +639,7 @@ function renderWarlockOptions(){
 
   // $('#archetype-options').append()
 
-  renderDropdown('prof', skillProfs)
+  renderDropdown('skill', skillProfs)
   renderDropdown('weapon1', weapon1)
   renderDropdown('feature', feature)
   renderDropdown('cantrip', warlockCantrips)
@@ -576,7 +662,7 @@ function renderWizardOptions(){
 
   // $('#archetype-options').append()
 
-  renderDropdown('prof', skillProfs)
+  renderDropdown('skill', skillProfs)
   renderDropdown('cantrip', wizardCantrips)
   renderDropdown('spell', wizardSpells)
 }
@@ -587,7 +673,8 @@ function renderWizardOptions(){
 
 $(document).ready(function (){
   //render default options
-
+  renderDwarfOptions()
+  renderBarbarianOptions()
 
   // $('#archetype-options').append($('<h1>').text('WHYYYYYY'))
   //event listeners on race and class options
