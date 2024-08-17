@@ -4,6 +4,7 @@ const apiRoutes = require('./api');
 const { User, Character } = require('../models');
 const withAuth = require('../utils/auth');
 const { getAttributes } = require('../models/Character');
+const { convertFromDatabase } = require('../utils/converter')
 
 router.use('/api', apiRoutes);
 
@@ -70,6 +71,7 @@ router.get('/character/:id', withAuth, async (req, res) => {
 
 
     const character = characterData.get({plain: true});
+    console.log(convertFromDatabase(character))
 
     // const user = userData.get({ plain: true });
 
