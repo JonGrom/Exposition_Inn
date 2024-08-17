@@ -56,7 +56,7 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
     try {
       
-      // console.log("console log in character post", req.body)
+      console.log("console log in character post", req.body)
 
       const newBase = new Base(req.body)
       newBase.applyRace();
