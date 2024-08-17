@@ -42,13 +42,25 @@ background: radial-gradient(circle, rgba(237,237,237,0.6587228641456583) 8%, rgb
     padding-left: 5px;
 }
 
+#skill1, #skill2, #weapon1, #weapon2, #weapon3, #subrace-select, #languages, #race-option, #race-select, #alignment-select, #pack1, #spell1, #spell2, #spell3, #spell4, #spell5, #spell6, #fighter-spcl{
+    padding-right: 30px;
+    padding-left: 5px;
+}
 
 
 
-#charisma-stat, #strength-stat, #dexterity-stat, #constitution-stat, #intelligence-stat, #wisdom-stat{
-    padding-right: 18px;
+#charisma-stat, #strength-stat, #dexterity-stat, #constitution-stat, #intelligence-stat, #wisdom-stat, #archetype-select, .prof{
+    display: flex;
+    padding-right: 20px;
     padding-left: 5px
 }
+
+#prof, #weapon, #race-options{
+    color: black;
+    font-weight: lighter;
+    padding-right: 10px;
+}
+
 
 header{
     background-color: white;
@@ -95,7 +107,7 @@ h2{
     margin-top: 20px;
 }
 
-.form-label{
+.form-label, #race, #archetype, #alignment{
    color: rgb(0, 8, 255);
    font-weight:bold
 }
