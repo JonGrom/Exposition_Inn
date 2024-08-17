@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'Mael';
-    src: url("/assets/fonts/mael.woff") format("woff");
-    src: url("/assets/fonts/mael.woff2") format("woff2");
-    src: url("/assets/fonts/mael.ttf") format('truetype');
+    src: url("/assets/fonts/mael.woff2") format("woff2"),
+         url("/assets/fonts/mael.woff") format("woff"),
+         url("/assets/fonts/mael.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 body div header h1 a {
-    font-family: 'Mael', normal;
+    font-family: 'Mael', sans-serif; /* Changed 'normal' to 'sans-serif' */
 }
