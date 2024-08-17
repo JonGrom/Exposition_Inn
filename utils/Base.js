@@ -403,9 +403,9 @@ class Base{
             this.skill[this.archetype.option.skill[1]].prof = true
 
             //EQUIPMENT
-            this.weapon.push(this.archetype.option.weapon)
+            this.equipment.weapon.push(this.archetype.option.weapon)
             this.equipment.kits.push("explorer's pack")
-            this.weapon.push('javelin')
+            this.equipment.weapon.push('javelin')
 
             this.features.push('Rage', 'Unarmored Defense')
             //Unarmored Defense
