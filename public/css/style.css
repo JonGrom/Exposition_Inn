@@ -72,9 +72,19 @@ header{
     background-color: white;
     opacity: 60%;
 }
+header a {
+    color: rgb(22, 22, 21);
+    text-shadow: 1px 1px 2px black;
+}
+
+header button {
+    text-shadow: 1px 1px 2px black;
+}
+
 
 .signup-card{
     color: yellow;
+    text-shadow: 1px 1px 2px black;
     @media screen {
         
     }
@@ -82,7 +92,7 @@ header{
 
 .login-card{
     color: yellow;
-    
+    text-shadow: 1px 1px 2px black;
 }
 
 
@@ -106,6 +116,7 @@ header{
 
 h2{
     color: yellow;
+    text-shadow: 1px 1px 2px black;
     padding-top: 10px;
 }
 
@@ -155,7 +166,9 @@ h2{
 
     h2{
         margin-top: -10px;
+        text-shadow: 1px 1px 2px black;
     }
+
 
     .signup-form {
         display: flex;
@@ -202,4 +215,8 @@ h2{
         padding: -20px;
     
     }
+}
+
+.form-input, .btn {
+    box-shadow: 1px 1px 2px black;
 }
