@@ -5,6 +5,8 @@ const Spell = require('../models/Spell');
 
 function convertToDb(charObj) {
 
+    // console.log("console log in converter: ",charObj)
+
     const databaseObj = {
             name: charObj.name,
             archetype: charObj.archetype.name, 

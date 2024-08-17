@@ -56,6 +56,7 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
     try {
       
+      // console.log("console log in character post", req.body)
 
       const newBase = new Base(req.body)
       newBase.applyRace();
@@ -63,7 +64,7 @@ router.post('/', async (req, res) => {
       newBase.applyArchetype();
       newBase.calculations();
 
-      console.log(newBase);
+      // console.log("newBase console log" , newBase);
 
       const newCharacter = await Character.create(convertToDb(newBase));
       // const tagsToAdd = req.body.tagIds.map( user => ({ newCharacter_id: newCharacter.id, tagIds_id: tagIds.id}) )
