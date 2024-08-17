@@ -559,6 +559,8 @@ renderDropdown('weapon1', weapon1)
 renderDropdown('weapon2', martialWeapons)
 renderDropdown('weapon3', weapon3)
 }
+
+//RANGER
 function renderRangerOptions(){
 //arrays
 //CHOOSE 3 OF STATS!!
@@ -603,6 +605,8 @@ renderDropdown('skill', skillProfs)
 renderDropdown('feature1', feature1)
 renderDropdown('feature2', feature2)
 }
+
+//ROGUE
 function renderRogueOptions(){
 //.weapon, .pack, .feature
 
@@ -610,21 +614,45 @@ function renderRogueOptions(){
 //CHOOSE 4!!!
 const skillProfs = ['Acrobatics', 'Athletics', 'Deception', 'Insight', 'Intimidation', 'Investigation', 'Perception', 'Performance', 'Persuasion', 'Sleight of Hand']
 
-//rapier or shortsword
-//shortbow or shortsword
-//burglar's dungeneers or explorers
-//!! Choose 2 skills of your skill proficiencies!! HOW???
-// const option = $('<div>')
-// .append($('<label id="">').text(':'))
-// .append($('<select class="" id="">'))
+const profs = $('<div>')
+  .append($('<label>').text('skill'))
+  .append($('<select class="skill" id="skill1">'))
+  .append($('<label>').text('skill'))
+  .append($('<select class="skill" id="skill2">'))
+  .append($('<label>').text('skill'))
+  .append($('<select class="skill" id="skill3">'))
+  .append($('<label>').text('skill'))
+  .append($('<select class="skill" id="skill4">'))
 
-// $('#archetype-options').append()
+const misc = $('<div>')
+  .append($('<label>').text('weapon'))
+  .append($('<select id="weapon1">')
+    .append($('<option>').text("Rapier"))
+    .append($('<option>').text("Shortsword")))
+  .append($('<label>').text('weapon'))
+  .append($('<select id="weapon2">')
+    .append($('<option>').text("Shortbow"))
+    .append($('<option>').text("Shortsword")))
+  .append($('<label>').text('gear'))
+  .append($('<select id="pack1">')
+  .append($('<option>').text("Burglar's Pack"))
+  .append($('<option>').text("Dungeneer's Pack"))
+    .append($('<option>').text("Explorer's Pack")))
+//NON CANNON. NEED TO CHOOSE OF PROFICIENCIES
+const feature = $('<div>')
+.append($('<label>').text('expertise'))
+.append($('<select class="skill" id="feature1">'))
+.append($('<label>').text('expertise'))
+.append($('<select class="skill" id="feature2">'))
+
+$('#archetype-options').append(profs).append(misc).append(feature)
 
 renderDropdown('skill', skillProfs)
-
 renderDropdown('feature', skills)
     //^ will need to make only those proficient
 }
+
+//SORCERER
 function renderSorcererOptions(){
 //arrays
 const skillProfs = ['Arcana', 'Deception', 'Insight', 'Intimidation', 'Persuastion', 'Religion']
