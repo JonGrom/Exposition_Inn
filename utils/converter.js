@@ -6,8 +6,7 @@ const Spell = require('../models/Spell');
 
 function convertToDb(charObj) {
 
-    const databaseObj = Character.create(
-        {
+    const databaseObj = {
             name: charObj.name,
             archetype: charObj.archetype.name, 
             level: charObj.level, 
@@ -131,9 +130,8 @@ function convertToDb(charObj) {
             ideals: charObj.ideals, 
             bonds: charObj.bonds, 
             flaws: charObj.flaws, 
-            alignment: '' 
+            alignment: charObj.alignment 
         }
-    )
 
     return databaseObj;
 }
@@ -176,17 +174,9 @@ async function convertFromDatabase(databaseObject){
 
         const singleSpellPlain = singleSpell.get({plain: true})
 
-        console.log(`
-            
-
-            ${singleSpellPlain}
-
-            
-            `)
-
-        if(singleSpellPlain.level === 0){
+        if(singleSpellPlain.spellLevel === 0){
             cantrips.push(singleSpell.get({plain: true}))
-        }else if(singleSpellPlain.level === 1){
+        }else if(singleSpellPlain.spellLevel === 1){
             lvlOneSpells.push(singleSpell.get({plain: true}))
         }
     }

@@ -181,17 +181,22 @@
     {{!-- Weapons --}}
     <div class="col-12 col-sm-6 col-md-4 character-box">
         {{!-- here is where to list all the weapon elements --}}
-        {{!-- {{#each }} --}}
+        <p>Attacks:</p>
+        {{#each weapon}}
+            <p>{{this.weaponName}} dmg: {{this.weaponDamage}}</p>
+        {{/each}}
     </div>
 
-    {{!-- Cantrips --}}
     <div class="col-12 col-sm-6 col-md-4 character-box">
+        {{!-- Cantrips --}}
+        <div>
+            <p></p>
+        </div>
 
-    </div>
+        {{!-- Level 1 spells --}}
+        <div class="col-12 col-sm-6 col-md-4 character-box">
 
-    {{!-- Level 1 spells --}}
-    <div class="col-12 col-sm-6 col-md-4 character-box">
-
+        </div>
     </div>
 </div>
 
