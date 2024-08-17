@@ -1,0 +1,83 @@
+const martial = [
+    "Battleaxe",
+    "Flail",
+    "Glaive",
+    "Greataxe",
+    "Greatsword",
+    "Halberd",
+    "Lance",
+    "Longsword",
+    "Maul",
+    "Morningstar",
+    "Pike",
+    "Rapier",
+    "Scimitar",
+    "Shortsword",
+    "Trident",
+    "War pick",
+    "Warhammer",
+    "Whip",
+    "Blowgun",
+    "Hand crossbow",
+    "Heavy crossbow",
+    "Longbow"
+];
+
+const melee = [
+    "Club",
+    "Dagger",
+    "Greatclub",
+    "Handaxe",
+    "Light hammer",
+    "Javelin",
+    "Quarterstaff",
+    "Mace",
+    "Spear",
+    "Sickle",
+    "Battleaxe",
+    "Flail",
+    "Glaive",
+    "Greataxe",
+    "Greatsword",
+    "Halberd",
+    "Lance",
+    "Longsword",
+    "Maul",
+    "Morningstar",
+    "Pike",
+    "Rapier",
+    "Scimitar",
+    "Shortsword",
+    "Trident",
+    "War pick",
+    "Warhammer",
+    "Whip"
+];
+
+const ranged = [
+    "Light crossbow",
+    "Shortbow",
+    "Sling",
+    "Dart",
+    "Blowgun",
+    "Hand crossbow",
+    "Heavy crossbow",
+    "Longbow"
+];
+
+const simple = [
+    "Club",
+    "Dagger",
+    "Greatclub",
+    "Handaxe",
+    "Light hammer",
+    "Javelin",
+    "Quarterstaff",
+    "Mace",
+    "Spear",
+    "Light crossbow",
+    "Sickle",
+    "Shortbow",
+    "Sling",
+    "Dart"
+];

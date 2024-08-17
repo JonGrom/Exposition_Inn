@@ -432,7 +432,7 @@ class Base{
 
             //EQUIPMENT
             this.equipment.weapon.push(this.archetype.option.weapon, 'Dagger')
-            this.equipment.kits.push(this.archetype.option.pack, this.archetype.option.instrument)
+            this.equipment.kits.push(this.archetype.option.pack)
             this.equipment.armor.push('Leather')
 
             //SPELLCASTING 
@@ -498,7 +498,7 @@ class Base{
 
             //EQUIPMENT
             this.equipment.weapon.push(this.archetype.option.weapon)
-            this.archetype.option.armor ? this.equipment.armor.push(this.archetype.option.armor, 'Leather') : this.equipment.armor.push('Leather')
+            this.equipment.armor.push('Leather')
             this.equipment.kits.push("Explorer's Pack", 'Druidic Focus')
 
             //SPELLCASTING 
@@ -542,7 +542,8 @@ class Base{
             //PROFICIENCIES
             //no armor
             this.weaponProficiencies.push('simple', 'shortbows')
-            this.toolProficiencies.push(this.archetype.option.tool)
+            this.toolProficiencies.push("Artisan's Tools")
+                    //*^ NONE CANNON. Monk gets to choose between this and an instrument
             //SAVING THROWS
             this.stat.strength.prof = true
             this.stat.dexterity.prof = true
@@ -553,7 +554,7 @@ class Base{
 
             //EQUIPMENT
             this.equipment.weapon.push(this.archetype.option.weapon)
-            this.equipment.kits.push(this.archetype.option.kit, 'Dart') //10 darts?
+            this.equipment.kits.push(this.archetype.option.pack, 'Dart') //10 darts?
 
             this.features.push('Unarmored Defense', 'Martial Arts')
             
