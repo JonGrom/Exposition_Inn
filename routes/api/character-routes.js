@@ -1,6 +1,7 @@
 const router = require("express").Router() 
 const { Character, Stat, Skill, Weapon, Armor, Spell, User } = require("../../models");
 const { convertToDb } = require("../../utils/converter");
+const Base = require("../../utils/Base");
 
 // get all characters
 router.get('/', async (req, res) => {
@@ -54,14 +55,22 @@ router.get('/:id', async (req, res) => {
   // create 
 router.post('/', async (req, res) => {
     try {
-      console.log('Received request body:', req.body);
-      // const { id, name, archetype, level, skill_id, background, race, alignment, lvl1slot, tagIds } = req.body 
-      console.log('Received tagIds:', tagIds);
-      const newCharacter = await Character.create(convertToDb(JSON.parse(req.body)));
-      const tagsToAdd = req.body.tagIds.map( user => ({ newCharacter_id: newCharacter.id, tagIds_id: tagIds.id}) )
-      if( tagsToAdd.length ){
-        await Character.bulkCreate(tagsToAdd)
-      }
+      
+      // console.log("console log in character post", req.body)
+
+      const newBase = new Base(req.body)
+      newBase.applyRace();
+      newBase.calculateMods();
+      newBase.applyArchetype();
+      newBase.calculations();
+
+      // console.log("newBase console log" , newBase);
+
+      const newCharacter = await Character.create(convertToDb(newBase));
+      // const tagsToAdd = req.body.tagIds.map( user => ({ newCharacter_id: newCharacter.id, tagIds_id: tagIds.id}) )
+      // if( tagsToAdd.length ){
+      //   await Character.bulkCreate(tagsToAdd)
+      // }
       res.status(200).json(newCharacter);
     } catch(err){
       console.log(err);
