@@ -12,8 +12,8 @@ router.get('/', async (req, res) => {
     try {
     console.log("Hello")
     res.render('homepage', { 
-      bodyClass: 'home-background',
-      logged_in: req.session.logged_in 
+      logged_in: req.session.logged_in,
+      bodyClass: req.session.logged_in ? 'home-background-alt' : 'home-background'
     });
   } catch (err) {
     res.status(500).json(err);

@@ -18,6 +18,12 @@
     background-size: 100vw 100%;
     background-repeat: no-repeat;
 }
+.home-background-alt {
+    background-image: url("/assets/campbackground.jpg");
+    position: inherit;
+    background-size: 100vw 100%;
+    background-repeat: no-repeat;
+}
 
 .character-form{
     display: flex;
