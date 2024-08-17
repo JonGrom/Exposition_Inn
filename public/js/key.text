@@ -19,7 +19,9 @@ const spellsKnown = $('<div>')
   .append($('<select class="spell" id="spell3">'))
 
 //option.pack
-.append($('<label>').text('gear'))
-.append($('<select id="pack1">')
-.append($('<option>').text("Dungeneer's Pack"))
-.append($('<option>').text("Explorer's Pack")))
+
+const misc = $('<div>')
+    .append($('<label>').text('gear'))
+    .append($('<select id="pack1">')
+        .append($('<option>').text("Dungeneer's Pack"))
+        .append($('<option>').text("Explorer's Pack")))

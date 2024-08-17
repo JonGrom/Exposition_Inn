@@ -552,7 +552,7 @@ function renderPaladinOptions(){
     .append($('<option>').text("Explorer's Pack")))
 
 
-  $('#archetype-options').append(gear)
+  $('#archetype-options').append(profs).append(gear)
 
   renderDropdown('skill', skillProfs)
   renderDropdown('weapon1', weapon1)
@@ -568,15 +568,36 @@ function renderRangerOptions(){
 
   const feature2 = ['arctic', 'coast', 'desert', 'forest', 'grassland', 'mountain', 'swamp', 'underdark']
   
-
-  //.armor Scale mail or leather
+  const profs = $('<div>')
+  .append($('<label>').text('skill'))
+  .append($('<select class="skill" id="skill1">'))
+  .append($('<label>').text('skill'))
+  .append($('<select class="skill" id="skill2">'))
+  .append($('<label>').text('skill'))
+  .append($('<select class="skill" id="skill3">'))
+  
+  const misc = $('<div>')
+  .append($('<label>').text('weapon'))
+  .append($('<select id="weapon2">')
+    .append($('<option>').text("2 Shortswords"))
+    .append($('<option>').text("2 simple melee weapons")))
+  .append($('<label>').text('armor'))
+  .append($('<select id="armor">')
+    .append($('<option>').text("Scale mail"))
+    .append($('<option>').text("Leather")))
+  .append($('<label>').text('gear'))
+  .append($('<select id="pack1">')
+    .append($('<option>').text("Dungeneer's Pack"))
+    .append($('<option>').text("Explorer's Pack")))
+  
+  const feature = $('<div>')
+    .append($('<label>').text('Favored Enemy'))
+    .append($('<select class="feature1" id="feature1">'))
+      .append($('<label>').text('Natural Explorer'))
+      .append($('<select class="feature2" id="feature2">'))
   //!!! SPECIAL!!! 2 shortswords or 2 simple melee weapons
-  //dungeneer's pack or explorer's
-  // const option = $('<div>')
-  // .append($('<label id="">').text(':'))
-  // .append($('<select class="" id="">'))
-
-  // $('#archetype-options').append()
+  
+  $('#archetype-options').append(profs).append(misc).append(feature)
 
   renderDropdown('skill', skillProfs)
   renderDropdown('feature1', feature1)
