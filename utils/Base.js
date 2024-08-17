@@ -579,7 +579,7 @@ class Base{
 
         
             //EQUIPMENT
-            this.equipment.weapon.push(this.archetype.option.weapon[0])
+            this.equipment.weapon.push(this.archetype.option.weapon)
             this.equipment.armor.push('Chain mail')
             this.equipment.kits.push(this.archetype.option.pack, 'Holy Symbol')
 

@@ -1,23 +1,16 @@
-//Require modules
-const Base = require('../../utils/Base')
-const { convertToDb } = require('../../utils/converter')
-
-
 async function handleSubmit(event) {
     event.preventDefault()
     validateInput()
     const dataObj = buildDataObj()
     console.log(dataObj)
-    const base = new Base(dataObj)
-    const character = convertToDb(base)
 
     const response = await fetch(`/api/character`, {
       method: 'POST',
-      body: JSON.stringify(character)
+      body: JSON.stringify(dataObj)
     })
     
     if (response.ok) {
-      document.location.replace('/character');
+      document.location.replace('/user');
     } else {
       alert('Failed to create character');
     }
@@ -530,20 +523,36 @@ function renderMonkOptions(){
   renderDropdown('skill', skillProfs)
   renderDropdown('weapon', weapon1)
 }
+
+//PALADIN
 function renderPaladinOptions(){
   //arrays
   const skillProfs = ['Athletics', 'Insight', 'Intimidation', 'Medicine', 'Persuasion', 'Religion']
   const weapon1 = ['shield']
-// martialWeapons.forEach(weapon => weapons.push(weapon))
+  martialWeapons.forEach(weapon => weapon1.push(weapon))
   const weapon3 = ['Javelin']
-// simpleMelee.forEach(weapon => weapons.push(weapon))
+  simpleMelee.forEach(weapon => weapon3.push(weapon))
 
-//.pack preists or explorers
-  // const option = $('<div>')
-  // .append($('<label id="">').text(':'))
-  // .append($('<select class="" id="">'))
+  const profs = $('<div>')
+  .append($('<label>').text('skill'))
+  .append($('<select class="skill" id="skill1">'))
+  .append($('<label>').text('skill'))
+  .append($('<select class="skill" id="skill2">'))
 
-  // $('#archetype-options').append()
+  const gear = $('<div>')
+  .append($('<label>').text('weapon'))
+  .append($('<select class="weapon1" id="weapon1">'))
+  .append($('<label>').text('weapon'))
+  .append($('<select class="weapon2" id="weapon2">'))
+  .append($('<label>').text('weapon'))
+  .append($('<select class="weapon3" id="weapon3">'))
+  .append($('<label>').text('gear'))
+  .append($('<select id="pack1">')
+    .append($('<option>').text("Preist's Pack"))
+    .append($('<option>').text("Explorer's Pack")))
+
+
+  $('#archetype-options').append(gear)
 
   renderDropdown('skill', skillProfs)
   renderDropdown('weapon1', weapon1)
