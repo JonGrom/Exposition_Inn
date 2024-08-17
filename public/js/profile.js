@@ -82,15 +82,12 @@ function buildRaceObj(){
   subrace ? raceObj.name = subrace : raceObj.name = race
 
   if(raceOption){
-    console.log(raceOption)
     raceObj.option = raceOption
-    console.log(raceObj.option)
   } else if (raceOption1){
     raceObj.option = {
-      stat: [raceOption1, raceOption2],
-      skill: [raceOption3, raceOption4]
+      stat: [raceOption1.toLowerCase(), raceOption2.toLowerCase()],
+      skill: [raceOption3.toLowerCase(), raceOption4.toLowerCase()]
     }
-    console.log(raceObj.option)
 }
 return raceObj
 }
@@ -115,10 +112,10 @@ function buildArchetypeObj(){
   archetypeObj.name = name
 
   //SKILLS
-  let skill1 = $('#skill1').val()
-  let skill2 = $('#skill2').val()
-  let skill3 = $('#skill3').val()
-  let skill4 = $('#skill4').val()
+  let skill1 = $('#skill1').val().toLowerCase()
+  let skill2 = $('#skill2').val().toLowerCase()
+  let skill3 = $('#skill3').val().toLowerCase()
+  let skill4 = $('#skill4').val().toLowerCase()
   let skillsArray = [skill1, skill2, skill3, skill4,]
   skillsArray = skillsArray.filter((skill) => skill !== undefined)
   archetypeObj.option.skill = skillsArray
@@ -706,14 +703,16 @@ const misc = $('<div>')
 //NON CANNON. NEED TO CHOOSE OF PROFICIENCIES
 const feature = $('<div>')
 .append($('<label>').text('expertise'))
-.append($('<select class="skill" id="feature1">'))
+.append($('<select class="feature" id="feature1">'))
 .append($('<label>').text('expertise'))
-.append($('<select class="skill" id="feature2">'))
+.append($('<select class="feature" id="feature2">'))
 
 $('#archetype-options').append(profs).append(misc).append(feature)
 
 renderDropdown('skill', skillProfs)
-renderDropdown('feature', skills)
+renderDropdown('feature', lowerCaseSkill)
+lowerCaseSkill = skills.forEach((skill) => skill.toLowerCase())
+renderDropdown('')
     //^ will need to make only those proficient
 }
 
