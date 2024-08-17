@@ -9,11 +9,11 @@
     <form class="character-form">
       <div class="form-group" id="character-name">
         <label for="character-name" class="form-label">Character Name</label>
-        <input class="form-input" type="text" />
+        <input class="form-input" type="text" id="name"/>
       </div>
       <div class="form-group" id="race">
           <label for="exampleFormControlSelect1">Race:</label>
-            <select class="form-control" id="dexterity-stat">
+            <select class="form-control" id="race-select">
               <option>Dwarf</option>
               <option>Elf</option>
               <option>Halfling</option>
@@ -24,10 +24,14 @@
               <option>Half-Orc</option>
               <option>Tiefling</option>
             </select>
+            <div id="race-options">
+
+            </div>
+
       </div>
       <div class="form-group" id="archetype">
           <label for="exampleFormControlSelect1">Class:</label>
-            <select class="form-control" id="dexterity-stat">
+            <select class="form-control" id="archetype-select">
               <option>Barbarian</option>
               <option>Bard</option>
               <option>Cleric</option>
@@ -44,7 +48,7 @@
       </div>
       <div class="form-group" id="alignment">
           <label for="exampleFormControlSelect1">Alignment:</label>
-            <select class="form-control" id="dexterity-stat">
+            <select class="form-control" id="alignment-select">
               <option>Lawful Good</option>
               <option>Neutral Good</option>
               <option>Chaotic Good</option>
