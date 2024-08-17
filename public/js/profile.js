@@ -97,13 +97,23 @@ return raceObj
 
 //ARCHETYPE OBJECT
 function buildArchetypeObj(){
-  const archetypeObj = {}
+  const archetypeObj = {
+    name: '',
+    option: {
+      skill: [],
+      weapon: [],
+      armor: [],
+      tool: [],
+      pack: [],
+      feature: [],
+      spell: []
+    }
+  }
 
   //NAME
   const name = $('#archetype-select').val()
   archetypeObj.name = name
 
-  archetype.option = {}
   //SKILLS
   const skill1 = $('#skill1').val()
   const skill2 = $('#skill2').val()
