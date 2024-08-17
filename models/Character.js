@@ -31,7 +31,7 @@ Character.init(
     background: {
       //THIS IS NOT THEIR BACKSTORY NARRATIVE! IT'S SOMETHING ELSE THAT THEY NEED.
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     race: {
       type: DataTypes.STRING,
