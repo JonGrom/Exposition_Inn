@@ -1,24 +1,27 @@
+//Require modules
+const Base = require('../../utils/Base')
+const { convertToDb } = require('../../utils/converter')
+
+
 async function handleSubmit(event) {
     event.preventDefault()
     validateInput()
     const dataObj = buildDataObj()
     console.log(dataObj)
+    const base = new Base(dataObj)
+    const character = convertToDb(base)
+
+    const response = await fetch(`/api/character`, {
+      method: 'POST',
+      body: JSON.stringify(character)
+    })
     
-    // if (characterName && race && archetype && alignment && stat && skill && background && backstory) {
-    //   const response = await fetch(`/api/profile`, {
-    //     method: 'GET',
-    //     body: JSON.stringify({ characterName, race, archetype, alignment, stat, skill, background, backstory }),
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //   });
-  
-    //   if (response.ok) {
-    //     document.location.replace('/character');
-    //   } else {
-    //     alert('Failed to create character');
-    //   }
-    // }
+    if (response.ok) {
+      document.location.replace('/character');
+    } else {
+      alert('Failed to create character');
+    }
+    
 };
 
 //FORM VALIDATION
