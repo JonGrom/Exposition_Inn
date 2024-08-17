@@ -112,12 +112,13 @@ function buildArchetypeObj(){
   archetypeObj.name = name
 
   //SKILLS
-  let skill1 = $('#skill1').val().toLowerCase()
-  let skill2 = $('#skill2').val().toLowerCase()
-  let skill3 = $('#skill3').val().toLowerCase()
-  let skill4 = $('#skill4').val().toLowerCase()
+  let skill1 = $('#skill1').val()
+  let skill2 = $('#skill2').val()
+  let skill3 = $('#skill3').val()
+  let skill4 = $('#skill4').val()
   let skillsArray = [skill1, skill2, skill3, skill4,]
   skillsArray = skillsArray.filter((skill) => skill !== undefined)
+  skillsArray - skillsArray.forEach((skill) => skill.toLowerCase())
   archetypeObj.option.skill = skillsArray
 
 
