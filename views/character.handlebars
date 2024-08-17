@@ -169,10 +169,10 @@
             <p><span class="mael">Hit Dice Count:</span> {{hitDiceCount}}</p>
         </div>
         <div class="character-box">
-            <p class="mael">Death Saving Throws</p>
+            <p><span class="mael">Death Saving Throws</span></p>
             <div>
-                <p>🔲🔲🔲 Success</p>
-                <p>🔲🔲🔲 Failure</p>
+                <p class="bold">🔲🔲🔲 Success</p>
+                <p class="bold">🔲🔲🔲 Failure</p>
             </div>
         </div>
     </div>
@@ -184,7 +184,7 @@
     {{!-- Weapons --}}
     <div class="col-12 col-sm-6 col-md-4 character-box">
         {{!-- here is where to list all the weapon elements --}}
-        <p class="mael">Attacks:</p>
+        <p><span class="mael">Attacks:</span></p>
         {{#each weapon}}
             <p><span class="bold">{{this.weaponName}}</span>: dmg: {{this.weaponDamage}}</p>
         {{/each}}
@@ -192,7 +192,7 @@
 
     <div class="col-12 col-sm-6 col-md-4 character-box">
         {{!-- Cantrips --}}
-        <p class="mael">Spells Known</p>
+        <p><span class="mael">Spells Known</span></p>
         <div>
             <p class="bold">Cantrips:</p>
             {{#each cantripsKnown}}
@@ -212,23 +212,23 @@
 
 <div class="row">
     <div class="col-12 col-sm-6 col-md-4 character-box">
-        <p class="mael">Personality Traits</p>
+        <p><span class="mael">Personality Traits</span></p>
         <p>{{personalityTraits}}</p>
     </div>
     <div class="col-12 col-sm-6 col-md-4 character-box">
-        <p class="mael">Ideals</p>
+        <p><span class="mael">Ideals</span></p>
         <p>{{ideals}}</p>
     </div>
     <div class="col-12 col-sm-6 col-md-4 character-box">
-        <p class="mael">Bonds</p>
+        <p><span class="mael">Bonds</span></p>
         <p>{{bonds}}</p>
     </div>
     <div class="col-12 col-sm-6 col-md-4 character-box">
-        <p class="mael">Flaws</p>
+        <p><span class="mael">Laws</span></p>
         <p>{{flaws}}</p>
     </div>
     <div class="col-12 col-sm-6 col-md-4 character-box">
-        <p class="mael">Backstory: </p>
+        <p><span class="mael">Backstory: </span></p>
         <p>{{!-- This isn't in the db yet but we want to have chatGPT API pull a backstory for the character based on their characterobject. --}}</p>
     </div>
 
