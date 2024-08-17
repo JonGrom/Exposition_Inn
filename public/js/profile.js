@@ -1,4 +1,5 @@
-async function handleSubmit(event) {
+async function handleSubmit(event, archetypeObj) {
+    console.log(archetypeObj)
     event.preventDefault()
     const dataObj = buildDataObj()
     console.log(dataObj)
@@ -85,6 +86,7 @@ function buildDataObj(){
 
 //DROPDOWNS
 function renderDropdown(name, array){
+  //filter
   array.forEach((element) => {$(`.${name}`).append($ ('<option>').text(element))
   })
 }
@@ -221,12 +223,175 @@ function renderHalfElfOptions(){
   renderDropdown('skill', skills)
 }
 
+//RENDER RACE OPTION
+
+//Barbaian
+function renderBarbarianOptions(){
+  //Prficiencies
+  console.log('YAY!')
+  //StatProfs
+  const profs = $('<div>')
+  .append($('<label id="buff">').text('stat buff:'))
+  .append($('<select class="stat" id="archetype-skill1">'))
+  .append($('<label id="buff">').text('stat buff:'))
+  .append($('<select class="stat" id="archetype-skill2">'))
+
+  $('#archetype-options').append($('<h1>').text('WHYYYYYY'))
+
+  renderDropdown('skill', skills)
+
+  // const skill1 = $('<div>')
+  // .append($('<label>').text('Skills:'))
+  // .append($('<select class="stats" id="archetype-skill1">')
+  // )
+  // const skill2 = $('<div>')
+  // .append($('<label>').text('Skills:'))
+  // .append($('<select class="stats" id="archetype-skill2">')
+  // )
+  // const skill3 = $('<div>')
+  // .append($('<label>').text('Skills:'))
+  // .append($('<select class="skills" id="archetype-skill3">')
+  // )
+  // const skill4 = $('<div>')
+  // .append($('<label>').text('Skills:'))
+  // .append($('<select class="skills" id="archetype-skill4">')
+  // )
+  // console.log(skill1)
+  // $('#archetype-options').append(skill1).append(skill2).append(skill3).append(skill4)
+
+  // renderDropdown('stats', stats)
+  // renderDropdown('skills', skills)
+}
+function renderBardOptions(){
+  //Prficiencies
+
+  //StatProfs
+
+  //SkillProfs
+
+  //Equipment
+
+  //Spellcasting
+}
+function renderClericOptions(){
+  //Prficiencies
+
+  //StatProfs
+
+  //SkillProfs
+
+  //Equipment
+
+  //Spellcasting
+}
+function renderDruidOptions(){
+  //Prficiencies
+
+  //StatProfs
+
+  //SkillProfs
+
+  //Equipment
+
+  //Spellcasting
+}
+function renderFighterOptions(){
+  //Prficiencies
+
+  //StatProfs
+
+  //SkillProfs
+
+  //Equipment
+
+  //Spellcasting
+}
+function renderMonkOptions(){
+  //Prficiencies
+
+  //StatProfs
+
+  //SkillProfs
+
+  //Equipment
+
+  //Spellcasting
+}
+function renderPaladinOptions(){
+  //Prficiencies
+
+  //StatProfs
+
+  //SkillProfs
+
+  //Equipment
+
+  //Spellcasting
+}
+function renderRangerOptions(){
+  //Prficiencies
+
+  //StatProfs
+
+  //SkillProfs
+
+  //Equipment
+
+  //Spellcasting
+}
+function renderRogueOptions(){
+  //Prficiencies
+
+  //StatProfs
+
+  //SkillProfs
+
+  //Equipment
+
+  //Spellcasting
+}
+function renderSorcererOptions(){
+  //Prficiencies
+
+  //StatProfs
+
+  //SkillProfs
+
+  //Equipment
+
+  //Spellcasting
+}
+function renderWarlockOptions(){
+  //Prficiencies
+
+  //StatProfs
+
+  //SkillProfs
+
+  //Equipment
+
+  //Spellcasting
+}
+function renderWizardOptions(){
+  //Prficiencies
+
+  //StatProfs
+
+  //SkillProfs
+
+  //Equipment
+
+  //Spellcasting
+}
+
 //**No racial options for half-orc or tiefling 
 
 //ARCHETYPE OPTION FUNCTIONS
 
 $(document).ready(function (){
+//ON READY!!! Make sure to render default and assign archetype object
 
+$('#archetype-options').append($('<h1>').text('WHYYYYYY'))
   //event listeners on race and class options
   $('#race-select').on('change', function(event){
     event.preventDefault()
@@ -256,9 +421,48 @@ $(document).ready(function (){
   
   })
   $('#archetype-select').on('change', function(event){
+    event.preventDefault()
     console.log($('#archetype-select').val())
+    $('#archetype-options').html("")
+    if($('#archetype-select').val() == 'Barbarian'){
+      renderBarbarianOptions()
+    }
+    else if($('#archetype-select').val() == 'Bard'){
+      renderBardOptions()
+    }
+    else if($('#archetype-select').val() == 'Cleric'){
+      renderClericOptions()
+    }
+    else if($('#archetype-select').val() == 'Druid'){
+      renderDruidOptions()
+    }
+    else if($('#archetype-select').val() == 'Fighter'){
+      renderFighterOptions()
+    }
+    else if($('#archetype-select').val() == 'Monk'){
+      renderMonkOptions()
+    }
+    else if($('#archetype-select').val() == 'Paladin'){
+      renderPaladinOptions()
+    }
+    else if($('#archetype-select').val() == 'Ranger'){
+      renderRangerOptions()
+    }
+    else if($('#archetype-select').val() == 'Rogue'){
+      renderRogueOptions()
+    }
+    else if($('#archetype-select').val() == 'Sorcerer'){
+      renderSorcererOptions()
+    }
+    else if($('#archetype-select').val() == 'Warlock'){
+      renderWarlockOptions()
+    }
+    else if($('#archetype-select').val() == 'Wizard'){
+      renderWizardOptions()
+    }
   })
 
+  
   //Form Submit Listener
   $('#character-submit').on('click', handleSubmit)
   
