@@ -10,3 +10,16 @@
 body div header h1 a {
     font-family: 'Mael', sans-serif;
 }
+body div main div div h2 {
+    font-family: 'Mael', sans-serif;
+}
+body div main div h3 {
+    font-family: 'Mael', sans-serif;
+}
+body div main div div h4 {
+    font-family: 'Mael', sans-serif;
+}
+label {
+    font-family: 'Mael', sans-serif;
+}
+
