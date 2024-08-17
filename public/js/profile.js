@@ -759,11 +759,23 @@ const stats = ['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom'
 
 const skills = ['Acrobatics', 'AnimalHandling', 'Arcana', 'Athletics', 'Deception', 'History', 'Insight', 'Intimidation', 'Investigation', 'Medicine', 'Nature', 'Perception', 'Performance', 'Persuasion', 'Religion', 'Sleight of Hand', 'Stealth', 'Survival']
 
-//weapon arrays needed
-const simpleWeapons = ['SIMPLE WEAPONS']
-const simpleMelee = ['SIMPLE MELEE']
-const martialWeapons = ['MARTIAL WEAPONS']
-const martialMelee = ['MARTIAL MELEE']
+//weapon arrays
+const simpleWeapons = [
+  "Club", "Dagger", "Greatclub", "Handaxe", "Light hammer", "Javelin", "Quarterstaff", "Mace", "Spear", "Light crossbow", "Sickle", "Shortbow", "Sling", "Dart"];
+
+const simpleMelee = ["Club", "Dagger", 
+"Greatclub", "Handaxe", "Light hammer", "Javelin", "Quarterstaff", "Mace", "Spear", "Sickle"]
+
+const rangedWeapons = ["Light crossbow", "Shortbow", "Sling", "Dart", "Blowgun", "Hand crossbow", "Heavy crossbow", "Longbow"]
+
+const simpleRanged = ["Light crossbow", "Shortbow", "Sling", "Dart"]
+
+const martialRanged = ["Blowgun", "Hand crossbow", "Heavy crossbow", "Longbow"]
+
+const martialWeapons = [
+  "Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar", "Shortsword", "Trident", "War pick", "Warhammer", "Whip", "Blowgun", "Hand crossbow", "Heavy crossbow", "Longbow"
+];
+const martialMelee = ["Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar", "Shortsword", "Trident", "War pick", "Warhammer", "Whip"]
 
 //spell arrays needed
 const bardCantrips = ['BARD CANTRIPS']
