@@ -85,9 +85,30 @@ function buildRaceObj(){
   if(raceOption){
     raceObj.option = raceOption
   } else if (raceOption1){
+    let statArray = [raceOption1, raceOption2]
+    let skillArray = [raceOption2, raceOption4]
+    let statArrayTrue = statArray.map(function(stat) {
+      if (stat == "Animal Handling") {
+        return "animalHandling";
+      } else if (stat == "Sleight of Hand") {
+        return "sleightOfHand";
+      } else {
+        return stat.toLowerCase();
+      }
+    });
+    let skillArrayTrue = skillArray.map(function(skill) {
+      if (skill == "Animal Handling") {
+        return "animalHandling";
+      } else if (skill == "Sleight of Hand") {
+        return "sleightOfHand";
+      } else {
+        return skill.toLowerCase();
+      }
+    });
+    
     raceObj.option = {
-      stat: [raceOption1.toLowerCase(), raceOption2.toLowerCase()],
-      skill: [raceOption3.toLowerCase(), raceOption4.toLowerCase()]
+      stat: statArrayTrue,
+      skill: skillArrayTrue
     }
 }
 return raceObj
@@ -119,8 +140,16 @@ function buildArchetypeObj(){
   let skill4 = $('#skill4').val()
   let skillsArray = [skill1, skill2, skill3, skill4,]
   skillsArray = skillsArray.filter((skill) => skill !== undefined)
-  skillsArray - skillsArray.forEach((skill) => skill.toLowerCase())
-  archetypeObj.option.skill = skillsArray
+  let skillsArrayTrue = skillsArray.map(function(skill) {
+    if (skill == "Animal Handling") {
+      return "animalHandling";
+    } else if (skill == "Sleight of Hand") {
+      return "sleightOfHand";
+    } else {
+      return skill.toLowerCase();
+    }
+  });
+  archetypeObj.option.skill = skillsArrayTrue
 
 
   //WEAPONS
@@ -201,7 +230,7 @@ function buildArchetypeObj(){
 }
 
 function buildBackgroundObj(){
-
+    //FOR FUTURE!!
 }
 
 
@@ -712,8 +741,8 @@ const feature = $('<div>')
 $('#archetype-options').append(profs).append(misc).append(feature)
 
 renderDropdown('skill', skillProfs)
-renderDropdown('feature', lowerCaseSkill)
-lowerCaseSkill = skills.forEach((skill) => skill.toLowerCase())
+renderDropdown('feature', skills)
+
 renderDropdown('')
     //^ will need to make only those proficient
 }
