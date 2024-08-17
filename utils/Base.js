@@ -804,7 +804,7 @@ const dataObj = {
         },
     },
     background: '',
-    username: '',
+    alignment: '',
     strength: 14,
     dexterity: 12,
     constitution: 12,
