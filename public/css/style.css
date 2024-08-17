@@ -1,4 +1,6 @@
-
+p .mael {
+    font-size: 25px;
+}
 
 .user-background {
     background-image: url("/assets/userbackground.jpg");
@@ -29,7 +31,7 @@
     display: flex;
     flex-wrap: wrap;
     background: rgb(237,237,237);
-background: radial-gradient(circle, rgba(237,237,237,0.6587228641456583) 8%, rgba(255, 147, 46, 0.838) 78%);
+    background: radial-gradient(#f3751bb1, #9198e5);
     opacity: 90%;
     border: 1px solid black;
     border-radius: 5px;
@@ -55,6 +57,9 @@ background: radial-gradient(circle, rgba(237,237,237,0.6587228641456583) 8%, rgb
     padding-left: 5px;
 }
 
+select {
+    border-radius: 5px
+}
 
 
 #charisma-stat, #strength-stat, #dexterity-stat, #constitution-stat, #intelligence-stat, #wisdom-stat, #archetype-select, .prof{
@@ -112,6 +117,7 @@ header button {
     border-radius: 5px;
     padding: 10px;
     background-color: rgb(176, 176, 176);
+    background: radial-gradient(#f3751bb1, hsl(236, 74%, 85%));
     box-shadow: 1px 1px 2px black;
     opacity: 80%;
 }
@@ -141,8 +147,9 @@ h2{
 }
 
 .form-label, #race, #archetype, #alignment{
-   color: rgb(0, 8, 255);
-   font-weight:bold
+   color: rgb(22, 26, 157);
+   font-weight:bold;
+   text-shadow: 1px 1px 2px black;
 }
 
 @media screen and (max-width: 768px) {
