@@ -6,6 +6,7 @@ async function handleSubmit(event) {
   console.log(JSON.stringify(dataObj))
   const response = await fetch(`/api/character`, {
     method: 'POST',
+    headers: {'Content-Type': 'application/json'},
     body: JSON.stringify(dataObj)
   })
   
