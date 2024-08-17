@@ -27,21 +27,34 @@
         {{else}}
           <a href="/">Exposition Inn</a>
         {{/if}}
-                  <span id="🔊" class="btn btn-success m-1 p-1">🔊</span>
-        <audio id="speaker-icon" loop>
-            <source src="./assets/sound/cobblestone.mp3" type="audio/mpeg">
-            <source src="./assets/sound/cobblestone.mp3" type="audio/ogg">
-        </audio>
       </h1>
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if making_character}}
-          <a href="/user">🏹Your Characters🗡️</a> | <button class="no-button" id="logout">Log Out</button>
+          <span id="🔊" class="no-button">🔊
+            <audio id="speaker-icon" loop>
+                <source src="./assets/sound/cobblestone.mp3" type="audio/mpeg">
+                <source src="./assets/sound/cobblestone.mp3" type="audio/ogg">
+            </audio>
+          </span>
+          | <a href="/user">🏹Your Characters🗡️</a> | <button class="no-button" id="logout">Log Out</button>
         {{else if character_list}}
-          <a href="/profile">➕New Character</a> | 
+          <span id="🔊" class="no-button">🔊
+            <audio id="speaker-icon" loop>
+                <source src="./assets/sound/cobblestone.mp3" type="audio/mpeg">
+                <source src="./assets/sound/cobblestone.mp3" type="audio/ogg">
+            </audio>
+          </span>
+          | <a href="/profile">➕New Character</a> | 
           <button class="no-button" id="logout">Log Out</button>
         {{else if logged_in}}
-          <a href="/user">🏹Your Characters🗡️</a> | <a href="/profile">➕New Character</a> | 
+          <span id="🔊" class="no-button">🔊
+            <audio id="speaker-icon" loop>
+                <source src="./assets/sound/cobblestone.mp3" type="audio/mpeg">
+                <source src="./assets/sound/cobblestone.mp3" type="audio/ogg">
+            </audio>
+          </span>
+          | <a href="/user">🏹Your Characters🗡️</a> | <a href="/profile">➕New Character</a> | 
           <button class="no-button" id="logout">Log Out</button>
         {{/if}}
       </nav>

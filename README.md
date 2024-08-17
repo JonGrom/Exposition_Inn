@@ -14,11 +14,13 @@ A collaborative project using Express and Sequelize to create a website on Rende
   ## Description
   Dungeons and Dragons turns 50! In honor of one of the greatest things to come from our great state of Minnesota (fun fact!), we've been diving into designing programs related to the game. For our group project, we built a character creator website, from which a user with a secure login can design the DnD character (or characters) of their dreams!
   ### Homepage/Landing
-  ![image](./assets/war-mockup.png)
+  ![image](./screenshots/Login.png)
   ### User Secure Page (View Your Characters On File)
-  ![image](./assets/war-mockup.png)
-  ### Character Creation
-  ![image](./assets/war-mockup.png)
+  ![image](./screenshots/CharacterList.png)
+  ### User Secure Page (View A Specific Character Sheet On File)
+  ![image](./screenshots/ViewCharacterSheet.png)
+  ### User Secure Page (Character Creation)
+  ![image](./screenshots/CreateNewCharacter.png)
 
   ## Installation
   To install this project after copying down the repo, you will first need to run `npm install` (-y for default settings) on the project root, which should grant you access to the necessary libraries listed in the package-lock.json file. You'll need a tool to call api routes.
@@ -43,6 +45,7 @@ A collaborative project using Express and Sequelize to create a website on Rende
   - Shoutout to Gary Almes and Katy for helping us with our routing.
   - Background images were produced using OpenAI's ChatGPT4, via the CoPilot iOS mobile app.
   - Background song [Cobblestone Village](https://www.youtube.com/watch?v=jZ7a1yPaJh0) © 2014 Brandon Fiechter; All Rights Reserved. Retrieved with [Y2Mate](https://en.y2mate.is/v84/youtube-to-mp3.html).
+  - Website font 'Mael' © 1999 [Dale Thrope](mailto:dale_thorpe@bssc.edu.au) at utopiafonts.
 
   ## Questions
   ### For Jonathan:

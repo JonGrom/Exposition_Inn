@@ -29,7 +29,7 @@
     display: flex;
     flex-wrap: wrap;
     background: rgb(237,237,237);
-background: radial-gradient(circle, rgba(237,237,237,0.6587228641456583) 8%, rgba(224,255,0,0.8379945728291316) 78%);
+background: radial-gradient(circle, rgba(237,237,237,0.6587228641456583) 8%, rgba(255, 147, 46, 0.838) 78%);
     opacity: 90%;
     border: 1px solid black;
     border-radius: 5px;
@@ -104,6 +104,19 @@ header button {
     border-radius: 5px;
     padding: 10px;
     background-color: white;
+    box-shadow: 1px 1px 2px black;
+}
+.character-box-2 {
+
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(176, 176, 176);
+    box-shadow: 1px 1px 2px black;
+    opacity: 80%;
+}
+
+#logout {
     box-shadow: 1px 1px 2px black;
 }
 
