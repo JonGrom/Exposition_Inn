@@ -340,7 +340,7 @@ function renderBardOptions(){
 //CLERIC !! BUFFED(because if-proficient)
 function renderClericOptions(){
   //arrays
-  skillProfs = ['History', 'Insight', 'Medicine', 'Persuasion', 'Religion']
+  const skillProfs = ['History', 'Insight', 'Medicine', 'Persuasion', 'Religion']
 
   //option.skill
   const profs = $('<div>')
@@ -384,10 +384,10 @@ function renderClericOptions(){
 function renderDruidOptions(){
   
   //arrays choose 2
-  skillProfs = ['Arcana', 'Animal Handling', 'Insight', 'Medicine', 'Nature', 'Perception', 'Religion', 'Survival']
-  weapon1 = ['wooden shield']
+  const skillProfs = ['Arcana', 'Animal Handling', 'Insight', 'Medicine', 'Nature', 'Perception', 'Religion', 'Survival']
+  const weapon1 = ['wooden shield']
 // simpleWeapons.forEach(weapon => weapons.push(weapon))
-  weapon2 = ['scimitar']
+  const weapon2 = ['scimitar']
 // simpleMelee.forEach(weapon => weapons.push(weapon))
 
 //2 cantrips known
@@ -405,10 +405,10 @@ function renderDruidOptions(){
 function renderFighterOptions(){
   //arrays
   // choose 2
-  skillProfs = ['Acrobatics', 'Animal handling', 'Athletics', 'History', 'Insight', 'Intimidation', 'Perception', 'Survival']
-  weapon2 = ['shield']
-// ss.forEach(weapon => weapons.push(weapon))
-  features = ['Archery', 'Defense', 'Dueling', 'Great Weapon Fighting', 'Protection', 'Two-Weapon Fighting']
+  const skillProfs = ['Acrobatics', 'Animal handling', 'Athletics', 'History', 'Insight', 'Intimidation', 'Perception', 'Survival']
+  const weapon2 = ['shield']
+// martialWeapons.forEach(weapon => weapons.push(weapon))
+  const features = ['Archery', 'Defense', 'Dueling', 'Great Weapon Fighting', 'Protection', 'Two-Weapon Fighting']
   //! Chain mail / leather armor and longbow UNIQUE ID! weapon1
         //^ if no time just Chain mail straight to constructor
   //! s AND shield OR two martial weapons UNIQUE ID!
@@ -422,13 +422,13 @@ function renderFighterOptions(){
   // $('#archetype-options').append()
 
   renderDropdown('weapon2', weapon2)
-  renderDropdown('weapon3', ss)
+  renderDropdown('weapon3', martialWeapons)
   renderDropdown('feature', features)
 }
 function renderMonkOptions(){
   //arrays
-  skillProfs = ['Acrobatics', 'Athletics', 'History', 'Insight', 'Religion', 'Stealth']
-  weapons = ['Shortsword']
+  const skillProfs = ['Acrobatics', 'Athletics', 'History', 'Insight', 'Religion', 'Stealth']
+  const weapons = ['Shortsword']
 // simpleWeapons.forEach(weapon => weapons.push(weapon))
 
   //! dungeoneers pack / explorers pack option.pack
@@ -443,10 +443,10 @@ function renderMonkOptions(){
 }
 function renderPaladinOptions(){
   //arrays
-  skillProfs = ['Athletics', 'Insight', 'Intimidation', 'Medicine', 'Persuasion', 'Religion']
-  weapon1 = ['shield']
+  const skillProfs = ['Athletics', 'Insight', 'Intimidation', 'Medicine', 'Persuasion', 'Religion']
+  const weapon1 = ['shield']
 // martialWeapons.forEach(weapon => weapons.push(weapon))
-  weapon3 = ['Javelin']
+  const weapon3 = ['Javelin']
 // simpleMelee.forEach(weapon => weapons.push(weapon))
 
 //.pack preists or explorers
@@ -464,11 +464,11 @@ function renderPaladinOptions(){
 function renderRangerOptions(){
   //arrays
   //CHOOSE 3 OF STATS!!
-  skillProfs = ['Animal Handling', 'Athletics', 'Insight', 'Investigation', 'Nature', 'Perception', 'Stealth', 'Survival']
+  const skillProfs = ['Animal Handling', 'Athletics', 'Insight', 'Investigation', 'Nature', 'Perception', 'Stealth', 'Survival']
 
-  feature1 = ['aberrations', 'beasts', 'celestials', 'constructs', 'dragons', 'elementals', 'fey', 'fiends', 'giants', 'monstrosities', 'oozes', 'plants', 'undead']
+  const feature1 = ['aberrations', 'beasts', 'celestials', 'constructs', 'dragons', 'elementals', 'fey', 'fiends', 'giants', 'monstrosities', 'oozes', 'plants', 'undead']
 
-  feature2 = ['arctic', 'coast', 'desert', 'forest', 'grassland', 'mountain', 'swamp', 'underdark']
+  const feature2 = ['arctic', 'coast', 'desert', 'forest', 'grassland', 'mountain', 'swamp', 'underdark']
   
 
   //.armor Scale mail or leather
@@ -489,7 +489,7 @@ function renderRogueOptions(){
   
   //arrays
   //CHOOSE 4!!!
-  skillProfs = ['Acrobatics', 'Athletics', 'Deception', 'Insight', 'Intimidation', 'Investigation', 'Perception', 'Performance', 'Persuasion', 'Sleight of Hand']
+  const skillProfs = ['Acrobatics', 'Athletics', 'Deception', 'Insight', 'Intimidation', 'Investigation', 'Perception', 'Performance', 'Persuasion', 'Sleight of Hand']
 
   //rapier or shortsword
   //shortbow or shortsword
@@ -508,9 +508,9 @@ function renderRogueOptions(){
 }
 function renderSorcererOptions(){
   //arrays
-  skillProfs = ['Arcana', 'Deception', 'Insight', 'Intimidation', 'Persuastion', 'Religion']
+  const skillProfs = ['Arcana', 'Deception', 'Insight', 'Intimidation', 'Persuastion', 'Religion']
 
-  weapons = ['Light crossbow']
+  const weapons = ['Light crossbow']
 // simpleWeapons.forEach(weapon => weapons.push(weapon))
 
     //component pouch or arcane focus
@@ -534,12 +534,12 @@ function renderSorcererOptions(){
 function renderWarlockOptions(){
   
   //arrays 
-  skillProfs = ['Arcana', 'Deception', 'History', 'Intimidation', 'Investigation', 'Nature', 'Religion']
+  const skillProfs = ['Arcana', 'Deception', 'History', 'Intimidation', 'Investigation', 'Nature', 'Religion']
 
-  weapon1 = ['Light crossbow']
+  const weapon1 = ['Light crossbow']
 //!! simpleWeapons.forEach(weapon => weapons.push(weapon))
 
-  feature = ['The Archfey', 'The Fiend', 'The Great Old One']
+  const feature = ['The Archfey', 'The Fiend', 'The Great Old One']
 
   //component pouch or arcane focus
     // scholar's or dungeoneer's 
@@ -564,7 +564,7 @@ function renderWarlockOptions(){
 //WIZARD
 function renderWizardOptions(){
   //arrays
-  skillProfs = ['Arcana', 'History', 'Insight', 'Investigation', 'Medicine', 'Religion']
+  const skillProfs = ['Arcana', 'History', 'Insight', 'Investigation', 'Medicine', 'Religion']
 
   //quaterstaff or dagger
   //component pouch or arcane focus
@@ -586,9 +586,10 @@ function renderWizardOptions(){
 //ARCHETYPE OPTION FUNCTIONS
 
 $(document).ready(function (){
-//ON READY!!! Make sure to render default and assign archetype object
+  //render default options
 
-// $('#archetype-options').append($('<h1>').text('WHYYYYYY'))
+
+  // $('#archetype-options').append($('<h1>').text('WHYYYYYY'))
   //event listeners on race and class options
   $('#race-select').on('change', function(event){
     event.preventDefault()
