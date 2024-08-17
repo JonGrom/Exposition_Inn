@@ -1,7 +1,7 @@
 class Base{
     //takes in user input data to construct character
     constructor(dataObj){
-        const { name, archetype, level, race, background, username, strength, dexterity, constitution, intelligence, wisdom, charisma } = dataObj;
+        const { name, archetype, level, race, background, alignment, strength, dexterity, constitution, intelligence, wisdom, charisma } = dataObj;
         //Base straight from form
 
         this.name = name;
@@ -9,7 +9,7 @@ class Base{
         this.level = level;
         this.race = race;
         this.background = background;
-        this.username = username;
+        this.alignment = alignment;
 
         this.profBonus = 2
 
