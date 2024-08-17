@@ -11,6 +11,10 @@ Spell.init(
       allowNull: false,
       autoIncrement: true
     },
+    spellClasses: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      allowNull: false,
+    },
     spellName: {
       type: DataTypes.STRING,
       allowNull: false,
