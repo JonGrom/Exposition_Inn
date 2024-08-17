@@ -1,5 +1,6 @@
 const router = require("express").Router() 
-const { Character, Stat, Skill, Weapon, Armor, Spell, User } = require("../../models")
+const { Character, Stat, Skill, Weapon, Armor, Spell, User } = require("../../models");
+const { convertToDb } = require("../../utils/converter");
 
 // get all characters
 router.get('/', async (req, res) => {
@@ -54,19 +55,9 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
     try {
       console.log('Received request body:', req.body);
-      const { id, name, archetype, level, skill_id, background, race, alignment, lvl1slot, tagIds } = req.body 
+      // const { id, name, archetype, level, skill_id, background, race, alignment, lvl1slot, tagIds } = req.body 
       console.log('Received tagIds:', tagIds);
-      const newCharacter = await Character.create({ id, name, archetype, level, skill_id, background, race, alignment, lvl1slot, tagIds},
-        {
-        include: [
-        { model: Stat, as: 'stat' },
-        { model: Skill, as: 'skill' },
-        { model: Weapon, as: 'weapon' },
-        { model: Armor, as: 'armor' },
-        { model: Spell, as: 'spell' },
-        { model: User, as: 'user' }
-        ]
-      });
+      const newCharacter = await Character.create(convertToDb(JSON.parse(req.body)));
       const tagsToAdd = req.body.tagIds.map( user => ({ newCharacter_id: newCharacter.id, tagIds_id: tagIds.id}) )
       if( tagsToAdd.length ){
         await Character.bulkCreate(tagsToAdd)
