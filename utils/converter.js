@@ -173,9 +173,20 @@ async function convertFromDatabase(databaseObject){
                 spellName: spellTemp[i]
             }
         })
-        if(singleSpell.level === 0){
+
+        const singleSpellPlain = singleSpell.get({plain: true})
+
+        console.log(`
+            
+
+            ${singleSpellPlain}
+
+            
+            `)
+
+        if(singleSpellPlain.level === 0){
             cantrips.push(singleSpell.get({plain: true}))
-        }else if(singleSpell.level === 1){
+        }else if(singleSpellPlain.level === 1){
             lvlOneSpells.push(singleSpell.get({plain: true}))
         }
     }

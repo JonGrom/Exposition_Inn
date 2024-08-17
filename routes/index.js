@@ -70,8 +70,8 @@ router.get('/character/:id', withAuth, async (req, res) => {
     // add converter to pull out weapons, spells, 
 
 
-    const character = characterData.get({plain: true});
-    console.log(convertFromDatabase(character))
+    const character = await convertFromDatabase(characterData.get({plain: true}));
+    console.log(character)
 
     // const user = userData.get({ plain: true });
 
