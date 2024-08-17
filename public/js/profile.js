@@ -109,7 +109,7 @@ function buildArchetypeObj(){
   const skill2 = $('#skill2').val()
   const skill3 = $('#skill3').val()
   const skill4 = $('#skill4').val()
-  const skillsArray = [skill1, skill2, skill3, skill4,]
+  let skillsArray = [skill1, skill2, skill3, skill4,]
   skillsArray = skillsArray.filter((skill) => skill !== undefined)
   archetypeObj.option.skill = skillsArray
 
@@ -149,7 +149,7 @@ function buildArchetypeObj(){
   const spell7 = $('#spell6').val()
   const spell8 = $('#spell6').val()
   const spell9 = $('#spell6').val()
-  const spellsArray = [spell1, spell2, spell3, spell4, spell5, spell6, spell7, spell8, spell9]
+  let spellsArray = [spell1, spell2, spell3, spell4, spell5, spell6, spell7, spell8, spell9]
   spellsArray = spellsArray.filter((spell) => spell !== undefined)
   archetypeObj.option.spell = spellsArray
 
@@ -409,15 +409,15 @@ const profs = $('<div>')
 
 //option.weapon / option.armor / option.pack
 const misc = $('<div>')
-.append($('<label id="">').text('weapon'))
+.append($('<label>').text('weapon'))
 .append($('<select id="weapon1">')
   .append($('<option>').text("Mace"))
   .append($('<option>').text("Warhammer")))
-.append($('<label id="">').text('armor'))
+.append($('<label>').text('armor'))
 .append($('<select id="armor">')
   .append($('<option>').text("Scale mail"))
   .append($('<option>').text("Leather")))
-.append($('<label id="">').text('gear'))
+.append($('<label>').text('gear'))
 .append($('<select id="pack1">')
   .append($('<option>').text("Priests' Pack"))
   .append($('<option>').text("Explorer's Pack")))
