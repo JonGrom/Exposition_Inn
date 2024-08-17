@@ -79,7 +79,8 @@ router.get('/character/:id', withAuth, async (req, res) => {
     res.render('character', {
       bodyClass: 'profile-background',
       ...character,
-      logged_in: true
+      logged_in: true,
+      view_character: true
     });
   } catch (err) {
     console.log("character page loading fails: routes/index")

@@ -36,12 +36,14 @@ background: radial-gradient(circle, rgba(237,237,237,0.6587228641456583) 8%, rgb
     padding: 30px;
     margin: 15px;
     margin-left: -15px;
+    box-shadow: 1px 1px 2px black;
 }
 
 
 #character-submit{
     background-color: blue;
     color: white;
+    box-shadow: 1px 1px 2px black;
 }
 
 #archetype{
@@ -102,7 +104,7 @@ header button {
     border-radius: 5px;
     padding: 10px;
     background-color: white;
-
+    box-shadow: 1px 1px 2px black;
 }
 
 .bold {
@@ -122,6 +124,7 @@ h2{
 
 #character-submit{
     margin-top: 20px;
+    box-shadow: 1px 1px 2px black;
 }
 
 .form-label, #race, #archetype, #alignment{
