@@ -1,4 +1,3 @@
-const Character = require('../models/Character');
 const Weapon = require('../models/Weapon');
 const Armor = require('../models/Armor');
 const Spell = require('../models/Spell');

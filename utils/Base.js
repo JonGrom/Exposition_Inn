@@ -818,6 +818,6 @@ marcus.applyRace()
 marcus.calculateMods()
 marcus.applyArchetype()
 marcus.calculations()
-console.log(marcus)
+// console.log(marcus)
 
 module.exports = Base
