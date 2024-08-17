@@ -760,36 +760,46 @@ const stats = ['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom'
 const skills = ['Acrobatics', 'AnimalHandling', 'Arcana', 'Athletics', 'Deception', 'History', 'Insight', 'Intimidation', 'Investigation', 'Medicine', 'Nature', 'Perception', 'Performance', 'Persuasion', 'Religion', 'Sleight of Hand', 'Stealth', 'Survival']
 
 //weapon arrays
-const simpleWeapons = [
-  "Club", "Dagger", "Greatclub", "Handaxe", "Light hammer", "Javelin", "Quarterstaff", "Mace", "Spear", "Light crossbow", "Sickle", "Shortbow", "Sling", "Dart"];
+const simpleWeapons = ["Club", "Dagger", "Greatclub", "Handaxe", "Light hammer", "Javelin", "Quarterstaff", "Mace", "Spear", "Light crossbow", "Sickle", "Shortbow", "Sling", "Dart"];
 
-const simpleMelee = ["Club", "Dagger", 
-"Greatclub", "Handaxe", "Light hammer", "Javelin", "Quarterstaff", "Mace", "Spear", "Sickle"]
+const simpleMelee = ["Club", "Dagger", "Greatclub", "Handaxe", "Light hammer", "Javelin", "Quarterstaff", "Mace", "Spear", "Sickle"];
 
-const rangedWeapons = ["Light crossbow", "Shortbow", "Sling", "Dart", "Blowgun", "Hand crossbow", "Heavy crossbow", "Longbow"]
+const rangedWeapons = ["Light crossbow", "Shortbow", "Sling", "Dart", "Blowgun", "Hand crossbow", "Heavy crossbow", "Longbow"];
 
-const simpleRanged = ["Light crossbow", "Shortbow", "Sling", "Dart"]
+const simpleRanged = ["Light crossbow", "Shortbow", "Sling", "Dart"];
 
-const martialRanged = ["Blowgun", "Hand crossbow", "Heavy crossbow", "Longbow"]
+const martialRanged = ["Blowgun", "Hand crossbow", "Heavy crossbow", "Longbow"];
 
-const martialWeapons = [
-  "Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar", "Shortsword", "Trident", "War pick", "Warhammer", "Whip", "Blowgun", "Hand crossbow", "Heavy crossbow", "Longbow"
-];
+const martialWeapons = ["Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar", "Shortsword", "Trident", "War pick", "Warhammer", "Whip", "Blowgun", "Hand crossbow", "Heavy crossbow", "Longbow"];
+
 const martialMelee = ["Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar", "Shortsword", "Trident", "War pick", "Warhammer", "Whip"]
 
-//spell arrays needed
-const bardCantrips = ['BARD CANTRIPS']
-const clericCantrips = ['CLERIC CANTRIPS']
-const druidCantrips = ['DRUID CANTRIPS']
-const sorcererCantrips = ['SORCERER CANTRIPS']
-const warlockCantrips = ['WARLOCK CANTRIPS']
-const wizardCantrips = ['WIZARD CANTRIPS']
-const lvl1BardSpells = ['LVL 1 BARD SPELLS']
-const lvl1SorcererSpells = ['LVL 1 SORCERER SPELLS']
-const lvl1WarlockSpells = ['LVL 1 WARLOCK SPELLS']
-const lvl1WizardSpells = ['LVL 1 WIZARD SPELLS']
+//spell arrays
+//cantrips
+const bardCantrips = ['Friends', 'Mending', 'Blade Ward', 'Dancing Lights', 'Light', 'Mage Hand', 'Message', 'Minor Illusion', 'Prestidigitation', 'True Strike', 'Vicious Mockery', 'Thunderclap'];
+
+
+const clericCantrips = ['Mending', 'Guidance', 'Light', 'Resistance', 'Sacred Flame', 'Spare the Dying', 'Thaumaturgy'];
+
+const druidCantrips = ['Mending', 'Poison Spray', 'Druidcraft', 'Guidance', 'Produce Flame', 'Resistance', 'Shillelagh', 'Thorn Whip', 'Frostbite', 'Thunderclap', 'Gust', 'Magic Stone', 'Control Flames', 'Mold Earth', 'Create Bonfire', 'Shape Water'];
+
+const sorcererCantrips = ['Acid Splash', 'Friends', 'Mending', 'Poison Spray', 'Blade Ward', 'Chill Touch', 'Dancing Lights', 'Fire Bolt', 'Light', 'Mage Hand', 'Message', 'Minor Illusion', 'Prestidigitation', 'Ray of Frost', 'Shocking Grasp', 'True Strike', 'Frostbite', 'Thunderclap', 'Gust', 'Control Flames', 'Mold Earth', 'Create Bonfire', 'Shape Water'];
+
+const warlockCantrips = ['Friends', 'Poison Spray', 'Blade Ward', 'Chill Touch', 'Eldritch Blast', 'Mage Hand', 'Minor Illusion', 'Prestidigitation', 'True Strike', 'Frostbite', 'Thunderclap', 'Magic Stone', 'Create Bonfire'];
+
+const wizardCantrips = ['Acid Splash', 'Friends', 'Mending', 'Poison Spray', 'Blade Ward', 'Chill Touch', 'Dancing Lights', 'Fire Bolt', 'Light', 'Mage Hand', 'Message', 'Minor Illusion', 'Prestidigitation', 'Ray of Frost', 'Shocking Grasp', 'True Strike', 'Frostbite', 'Thunderclap', 'Gust', 'Control Flames', 'Mold Earth', 'Create Bonfire', 'Shape Water'];
+
+const lvl1BardSpells = ['Comprehend Languages', 'Disguise Self', 'Faerie Fire', 'Healing Word', 'Illusory Script', 'Silent Image', 'Thunderwave', 'Bane', 'Animal Friendship', 'Charm Person', 'Cure Wounds', 'Detect Magic', 'Dissonant Whispers', 'Feather Fall', 'Heroism', 'Identify', 'Longstrider', 'Sleep', 'Speak with Animals', 'Unseen Servant', 'Hideous Laughter', 'Earth Tremor']
+
+const lvl1SorcererSpells = ['Burning Hands', 'Comprehend Languages', 'Disguise Self', 'Mage Armor', 'Silent Image', 'Thunderwave', 'Charm Person', 'Chromatic Orb', 'Color Spray', 'Detect Magic', 'Expeditious Retreat', 'False Life', 'Feather Fall', 'Fog Cloud', 'Jump', 'Magic Missile', 'Ray of Sickness', 'Shield', 'Sleep', 'Witch Bolt', 'Catapult', 'Ice Knife', 'Earth Tremor'];
+
+const lvl1WarlockSpells = ['Comprehend Languages', 'Illusory Script', 'Protection from Evil and Good', 'Charm Person', 'Expeditious Retreat', 'Hellish Rebuke', 'Hex', 'Unseen Servant', 'Witch Bolt'];
+
+const lvl1WizardSpells = ['Burning Hands', 'Comprehend Languages', 'Disguise Self', 'Illusory Script', 'Mage Armor', 'Protection from Evil and Good', 'Silent Image', 'Thunderwave', 'Alarm', 'Charm Person', 'Chromatic Orb', 'Color Spray', 'Detect Magic', 'Expeditious Retreat', 'False Life', 'Feather Fall', 'Find Familiar', 'Fog Cloud', 'Grease', 'Identify', 'Jump', 'Longstrider', 'Magic Missile', 'Ray of Sickness', 'Shield', 'Sleep', 'Unseen Servant', 'Witch Bolt', 'Absorb Elements', 'Catapult', 'Ice Knife', 'Hideous Laughter', 'Floating Disk', 'Earth Tremor'];
 
 //for straight to character?
-const lvl1ClericSpells = ['LVL 1 CLERIC SPELLS']
-const lvl1DruidSpells = ['LVL 1 DRUID SPELLS']
-//GOAL! send character info into api
+const lvl1ClericSpells = ['Disguise Self', 'Healing Word', 'Protection from Evil and Good', 'Bane', 'Bless', 'Command', 'Create or Destroy Water', 'Cure Wounds', 'Detect Evil and Good', 'Detect Magic', 'Detect Poison and Disease', 'Guiding Bolt', 'Inflict Wounds', 'Purify Food and Drink', 'Sanctuary', 'Shield of Faith'];
+
+const lvl1DruidSpells = ['Faerie Fire', 'Healing Word', 'Thunderwave', 'Animal Friendship', 'Charm Person', 'Create or Destroy Water', 'Cure Wounds', 'Detect Magic', 'Detect Poison and Disease', 'Entangle', 'Fog Cloud', 'Goodberry', 'Jump', 'Longstrider', 'Purify Food and Drink', 'Speak with Animals', 'Absorb Elements', 'Beast Bond', 'Ice Knife', 'Earth Tremor'];
+
+//GOAL! 🏁🏁🏁send character info into api🏁🏁🏁
