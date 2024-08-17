@@ -4,138 +4,139 @@
         <h4>Character Name: {{name}}</h4>
     </div>
     <div class="col-12 col-sm-6 col-md-4 character-box">
-        <p>Player Name: {{username}}</p>
-        <p>Level {{level}} {{archetype}} </p>
-        <p>Race: {{race}}</p>
-        <p>Background: {{background}}</p>
-        <p>Alignment: {{alignment}}</p>
+        <h4 class="bold">Player Name: {{username}}</h4>
+        <p class="mael">Level {{level}} {{archetype}} </p>
+        <p class="bold"><span class="mael">Race:</span> {{race}}</p>
+        <p class="bold"><span class="mael">Background:</span> {{background}}</p>
+        <p class="bold"><span class="mael">Alignment:</span> {{alignment}}</p>
     </div>
 </div>
 {{!-- Stats: value and bonus --}}
 <div class="row justify-content-around">
     <div class="character-box">
-        <p class="bold">Strength</p>
-        <p>Modifier: {{strMod}}</p> {{!-- bonus --}}
-        <p>{{strength}}</p> {{!-- value --}}
+        <p class="mael">Strength</p>
+        <p class="bold">Modifier: {{strMod}}</p> {{!-- bonus --}}
+        <p class="bold">{{strength}}</p> {{!-- value --}}
     </div>
     <div class="character-box">
-        <p class="bold">Dexterity</p>
-        <p>Modifier: {{dexMod}}</p> {{!-- bonus --}}
-        <p>{{dexterity}}</p> {{!-- value --}}
+        <p class="mael">Dexterity</p>
+        <p class="bold">Modifier: {{dexMod}}</p> {{!-- bonus --}}
+        <p class="bold">{{dexterity}}</p> {{!-- value --}}
     </div>
     <div class="character-box">
-        <p class="bold">Constitution</p>
-        <p>Modifier: {{conMod}}</p> {{!-- bonus --}}
-        <p>{{constitution}}</p> {{!-- value --}}
+        <p class="mael">Constitution</p>
+        <p class="bold">Modifier: {{conMod}}</p> {{!-- bonus --}}
+        <p class="bold">{{constitution}}</p> {{!-- value --}}
     </div>
     <div class="character-box">
-        <p class="bold">Intelligence</p>
-        <p>Modifier: {{intMod}}</p> {{!-- bonus --}}
-        <p>{{intelligence}}</p> {{!-- value --}}
+        <p class="mael">Intelligence</p>
+        <p class="bold">Modifier: {{intMod}}</p> {{!-- bonus --}}
+        <p class="bold">{{intelligence}}</p> {{!-- value --}}
     </div>
     <div class="character-box">
-        <p class="bold">Wisdom</p>
-        <p>Modifier: {{wisMod}}</p> {{!-- bonus --}}
-        <p>{{wisdom}}</p> {{!-- value --}}
+        <p class="mael">Wisdom</p>
+        <p class="bold">Modifier: {{wisMod}}</p> {{!-- bonus --}}
+        <p class="bold">{{wisdom}}</p> {{!-- value --}}
     </div>
     <div class="character-box">
-        <p class="bold">Charisma</p>
-        <p>Modifier: {{chaMod}}</p> {{!-- bonus --}}
-        <p>{{charisma}}</p> {{!-- value --}}
+        <p class="mael">Charisma</p>
+        <p class="bold">Modifier: {{chaMod}}</p> {{!-- bonus --}}
+        <p class="bold">{{charisma}}</p> {{!-- value --}}
     </div>
     <div class="character-box">
-        <p>Proficiency Bonus: {{proficiencyBonus}}</p>
-        <p>Passive Perception: {{passivePerception}}</p>
+        <p class="bold"><span class="mael">Proficiency Bonus:</span> {{proficiencyBonus}}</p>
+        <p class="bold">Passive Perception: {{passivePerception}}</p>
     </div>
 </div>
 
 <div class="row justify-content-around">
     {{!-- Saving Throws --}}
     <div class="col-12 col-sm-6 col-md-4 character-box">
+        <h6 class="mael">Saving Throws</h6>
         <div class="character-box">
-            <p>{{#if strSaveProf}}🔳{{else}}🔲{{/if}}Modifier: {{strSaveVal}}</p> {{!-- bonus --}}
-            <p class="bold">Strength</p>
+            <p class="bold">{{#if strSaveProf}}🔳{{else}}🔲{{/if}}Modifier: {{strSaveVal}}</p> {{!-- bonus --}}
+            <p class="mael">Strength</p>
         </div>
         <div class="character-box">
-            <p>{{#if dexSaveProf}}🔳{{else}}🔲{{/if}}Modifier: {{dexSaveVal}}</p> {{!-- bonus --}}
-            <p class="bold">Dexterity</p>
+            <p class="bold">{{#if dexSaveProf}}🔳{{else}}🔲{{/if}}Modifier: {{dexSaveVal}}</p> {{!-- bonus --}}
+            <p class="mael">Dexterity</p>
         </div>
         <div class="character-box">
-            <p>{{#if conSaveProf}}🔳{{else}}🔲{{/if}}Modifier: {{conSaveVal}}</p> {{!-- bonus --}}
-            <p class="bold">Constitution</p>
+            <p class="bold">{{#if conSaveProf}}🔳{{else}}🔲{{/if}}Modifier: {{conSaveVal}}</p> {{!-- bonus --}}
+            <p class="mael">Constitution</p>
         </div>
         <div class="character-box">
-            <p>{{#if intSaveProf}}🔳{{else}}🔲{{/if}}Modifier: {{intSaveVal}}</p> {{!-- bonus --}}
-            <p class="bold">Intelligence</p>
+            <p class="bold">{{#if intSaveProf}}🔳{{else}}🔲{{/if}}Modifier: {{intSaveVal}}</p> {{!-- bonus --}}
+            <p class="mael">Intelligence</p>
         </div>
         <div class="character-box">
-            <p>{{#if wisSaveProf}}🔳{{else}}🔲{{/if}}Modifier: {{wisSaveVal}}</p> {{!-- bonus --}}
-            <p class="bold">Wisdom</p>
+            <p class="bold">{{#if wisSaveProf}}🔳{{else}}🔲{{/if}}Modifier: {{wisSaveVal}}</p> {{!-- bonus --}}
+            <p class="mael">Wisdom</p>
         </div>
         <div class="character-box">
-            <p>{{#if chaSaveProf}}🔳{{else}}🔲{{/if}}Modifier: {{chaSaveVal}}</p> {{!-- bonus --}}
-            <p class="bold">Charisma</p>
+            <p class="bold">{{#if chaSaveProf}}🔳{{else}}🔲{{/if}}Modifier: {{chaSaveVal}}</p> {{!-- bonus --}}
+            <p class="mael">Charisma</p>
         </div>
-        <h6 class="bold">Saving Throws</h6>
+        
     </div>
 
     {{!-- Skills: proficiency and bonus --}}
     <div class="col-12 col-sm-6 col-md-4 character-box">
+    <p class="mael">Skills</p>
         <div>
-            <p>{{#if acrobaticsProf}}🔳{{else}}🔲{{/if}}   Modifier: {{acrobaticsVal}} Acrobatics (Dex)</p>
+            <p class="bold">{{#if acrobaticsProf}}🔳{{else}}🔲{{/if}}   Modifier: {{acrobaticsVal}} Acrobatics (Dex)</p>
         </div>
         <div>
-            <p>{{#if animalHandlingProf}}🔳{{else}}🔲{{/if}}   Modifier: {{animalHandlingVal}} Animal Handling (Wis)</p>
+            <p class="bold">{{#if animalHandlingProf}}🔳{{else}}🔲{{/if}}   Modifier: {{animalHandlingVal}} Animal Handling (Wis)</p>
         </div>
         <div>
-            <p>{{#if arcanaProf}}🔳{{else}}🔲{{/if}}   Modifier: {{arcanaVal}} Arcana (Int)</p>
+            <p class="bold">{{#if arcanaProf}}🔳{{else}}🔲{{/if}}   Modifier: {{arcanaVal}} Arcana (Int)</p>
         </div>
         <div>
-            <p>{{#if athleticsProf}}🔳{{else}}🔲{{/if}}   Modifier: {{athleticsVal}} Athletics (Str)</p>
+            <p class="bold">{{#if athleticsProf}}🔳{{else}}🔲{{/if}}   Modifier: {{athleticsVal}} Athletics (Str)</p>
         </div>
         <div>
-            <p>{{#if deceptionProf}}🔳{{else}}🔲{{/if}}   Modifier: {{deceptionVal}} Deception (Cha)</p>
+            <p class="bold">{{#if deceptionProf}}🔳{{else}}🔲{{/if}}   Modifier: {{deceptionVal}} Deception (Cha)</p>
         </div>
         <div>
-            <p>{{#if historyProf}}🔳{{else}}🔲{{/if}}   Modifier: {{historyVal}} History (Int)</p>
+            <p class="bold">{{#if historyProf}}🔳{{else}}🔲{{/if}}   Modifier: {{historyVal}} History (Int)</p>
         </div>
         <div>
-            <p>{{#if insightProf}}🔳{{else}}🔲{{/if}}   Modifier: {{insightVal}} Insight (Wis)</p>
+            <p class="bold">{{#if insightProf}}🔳{{else}}🔲{{/if}}   Modifier: {{insightVal}} Insight (Wis)</p>
         </div>
         <div>
-            <p>{{#if intimidationProf}}🔳{{else}}🔲{{/if}}   Modifier: {{intimidationVal}} Intimidation (Cha)</p>
+            <p class="bold">{{#if intimidationProf}}🔳{{else}}🔲{{/if}}   Modifier: {{intimidationVal}} Intimidation (Cha)</p>
         </div>
         <div>
-            <p>{{#if investigationProf}}🔳{{else}}🔲{{/if}}   Modifier: {{investigationVal}} Investigation (Int)</p>
+            <p class="bold">{{#if investigationProf}}🔳{{else}}🔲{{/if}}   Modifier: {{investigationVal}} Investigation (Int)</p>
         </div>
         <div>
-            <p>{{#if medicineProf}}🔳{{else}}🔲{{/if}}   Modifier: {{medicineVal}} Medicine (Wis)</p>
+            <p class="bold">{{#if medicineProf}}🔳{{else}}🔲{{/if}}   Modifier: {{medicineVal}} Medicine (Wis)</p>
         </div>
         <div>
-            <p>{{#if natureProf}}🔳{{else}}🔲{{/if}}   Modifier: {{natureVal}} Nature (Int)</p>
+            <p class="bold">{{#if natureProf}}🔳{{else}}🔲{{/if}}   Modifier: {{natureVal}} Nature (Int)</p>
         </div>
         <div>
-            <p>{{#if perceptionProf}}🔳{{else}}🔲{{/if}}   Modifier: {{perceptionVal}} Perception (Wis)</p>
+            <p class="bold">{{#if perceptionProf}}🔳{{else}}🔲{{/if}}   Modifier: {{perceptionVal}} Perception (Wis)</p>
         </div>
         <div>
-            <p>{{#if performanceProf}}🔳{{else}}🔲{{/if}}   Modifier: {{performanceVal}} Performance (Cha)</p>
+            <p class="bold">{{#if performanceProf}}🔳{{else}}🔲{{/if}}   Modifier: {{performanceVal}} Performance (Cha)</p>
         </div>
         <div>
-            <p>{{#if persuasionProf}}🔳{{else}}🔲{{/if}}   Modifier: {{persuasionVal}} Persuasion (Cha)</p>
+            <p class="bold">{{#if persuasionProf}}🔳{{else}}🔲{{/if}}   Modifier: {{persuasionVal}} Persuasion (Cha)</p>
         </div>
         <div>
-            <p>{{#if religionProf}}🔳{{else}}🔲{{/if}}   Modifier: {{religionVal}} Religion (Int)</p>
+            <p class="bold">{{#if religionProf}}🔳{{else}}🔲{{/if}}   Modifier: {{religionVal}} Religion (Int)</p>
         </div>
         <div>
-            <p>{{#if sleightOfHandProf}}🔳{{else}}🔲{{/if}}   Modifier: {{sleightOfHandVal}} Sleight of Hand (Dex)</p>
+            <p class="bold">{{#if sleightOfHandProf}}🔳{{else}}🔲{{/if}}   Modifier: {{sleightOfHandVal}} Sleight of Hand (Dex)</p>
         </div>
         <div>
-            <p>{{#if stealthProf}}🔳{{else}}🔲{{/if}}   Modifier: {{stealthVal}} Stealth (Dex)</p>
+            <p class="bold">{{#if stealthProf}}🔳{{else}}🔲{{/if}}   Modifier: {{stealthVal}} Stealth (Dex)</p>
         </div>
         <div>
-            <p>{{#if survivalProf}}🔳{{else}}🔲{{/if}}   Modifier: {{survivalVal}} Survival (Wis)</p>
+            <p class="bold">{{#if survivalProf}}🔳{{else}}🔲{{/if}}   Modifier: {{survivalVal}} Survival (Wis)</p>
         </div>
-        <p class="bold">Skills</p>
     </div>
 </div>
 
@@ -143,32 +144,32 @@
     {{!-- Armor class, Initiative, Speed, HP --}}
     <div class="col-12 col-sm-6 col-md-4 character-box">
         <div>
-            <p>Armor Class: {{armorClass}}</p> {{!-- AC value --}}
+            <p class="bold"><span class="mael">Armor Class:</span> {{armorClass}}</p> {{!-- AC value --}}
         </div>
         <div>
-            <p>Initiative: {{initiative}}</p> {{!-- Initiative bonus --}}
+            <p class="bold"><span class="mael">Initiative:</span> {{initiative}}</p> {{!-- Initiative bonus --}}
         </div>
         <div>
-            <p>Speed: {{speed}}</p>{{!-- speed value --}}
+            <p class="bold"><span class="mael">Speed:</span> {{speed}}</p>{{!-- speed value --}}
         </div>
         <div>
-            <p>Max Hit Points: {{hpMax}}</p>{{!-- HP value --}}
+            <p class="bold"><span class="mael">Max Hit Points:</span> {{hpMax}}</p>{{!-- HP value --}}
         </div>
         <div>
-            <p>Current Hit Points:</p>
+            <p class="bold"><span class="mael">Current Hit Points:</span></p>{{!-- This value is in the db but isn't being used, it will be incorporated in future versions --}}
         </div>
         <div>
-            <p>Temporary Hit Points:</p>
+            <p class="bold"><span class="mael">Temporary Hit Points:</span></p>{{!-- This value is in the db but isn't being used, it will be incorporated in future versions --}}
         </div>
     </div>
 
     <div class="col-12 col-sm-6 col-md-4 character-box">
         <div class="character-box">
-            <p>Hit Dice: {{hitDice}}</p>
-            <p>Hit Dice Count: {{hitDiceCount}}</p>
+            <p><span class="mael">Hit Dice:</span> {{hitDice}}</p>
+            <p><span class="mael">Hit Dice Count:</span> {{hitDiceCount}}</p>
         </div>
         <div class="character-box">
-            <p class="bold">Death Saving Throws</p>
+            <p class="mael">Death Saving Throws</p>
             <div>
                 <p>🔲🔲🔲 Success</p>
                 <p>🔲🔲🔲 Failure</p>
@@ -183,17 +184,17 @@
     {{!-- Weapons --}}
     <div class="col-12 col-sm-6 col-md-4 character-box">
         {{!-- here is where to list all the weapon elements --}}
-        <p class="bold">Attacks:</p>
+        <p class="mael">Attacks:</p>
         {{#each weapon}}
-            <p><span class="bold">{{this.weaponName}}</span> dmg: {{this.weaponDamage}}</p>
+            <p><span class="bold">{{this.weaponName}}</span>: dmg: {{this.weaponDamage}}</p>
         {{/each}}
     </div>
 
     <div class="col-12 col-sm-6 col-md-4 character-box">
         {{!-- Cantrips --}}
-        <p class="bold">Spells Known</p>
+        <p class="mael">Spells Known</p>
         <div>
-            <p class="bold">Cantrips</p>
+            <p class="bold">Cantrips:</p>
             {{#each cantripsKnown}}
             <p>{{this.spellName}}</p>
             {{/each}}
@@ -201,7 +202,7 @@
 
         {{!-- Level 1 spells --}}
         <div>
-            <p class="bold">Level 1 spells</p>
+            <p class="bold">Level 1 spells:</p>
             {{#each lvlOneSpellsKnown}}
             <p>{{this.spellName}}</p>
             {{/each}}
@@ -211,24 +212,24 @@
 
 <div class="row">
     <div class="col-12 col-sm-6 col-md-4 character-box">
-        <p class="bold">Personality Traits</p>
+        <p class="mael">Personality Traits</p>
         <p>{{personalityTraits}}</p>
     </div>
     <div class="col-12 col-sm-6 col-md-4 character-box">
-        <p class="bold">Ideals</p>
+        <p class="mael">Ideals</p>
         <p>{{ideals}}</p>
     </div>
     <div class="col-12 col-sm-6 col-md-4 character-box">
-        <p class="bold">Bonds</p>
+        <p class="mael">Bonds</p>
         <p>{{bonds}}</p>
     </div>
     <div class="col-12 col-sm-6 col-md-4 character-box">
-        <p class="bold">Flaws</p>
+        <p class="mael">Flaws</p>
         <p>{{flaws}}</p>
     </div>
     <div class="col-12 col-sm-6 col-md-4 character-box">
-        <p class="bold">Backstory: </p>
-        <p></p>
+        <p class="mael">Backstory: </p>
+        <p>{{!-- This isn't in the db yet but we want to have chatGPT API pull a backstory for the character based on their characterobject. --}}</p>
     </div>
 
 </div>

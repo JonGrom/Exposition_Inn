@@ -10,7 +10,6 @@ router.use('/api', apiRoutes);
 
 router.get('/', async (req, res) => {
     try {
-    console.log("Hello")
     res.render('homepage', { 
       logged_in: req.session.logged_in,
       bodyClass: req.session.logged_in ? 'home-background-alt' : 'home-background'
@@ -50,7 +49,7 @@ router.get('/user', withAuth, async (req, res) => {
   }
 });
 
-router.get('/profile', (req, res) => {
+router.get('/profile', withAuth, (req, res) => {
   res.render('profile', {
     bodyClass: 'profile-background',
     logged_in: true,
@@ -88,11 +87,11 @@ router.get('/character/:id', withAuth, async (req, res) => {
   }
 });
 
-router.get('/profile', (req, res) => {
-  res.render('profile', {
-    bodyClass: 'profile-background'
-    });
-});
+// router.get('/profile', (req, res) => {
+//   res.render('profile', {
+//     bodyClass: 'profile-background'
+//     });
+// });
 
 
 
