@@ -3,7 +3,7 @@ async function handleSubmit(event) {
   validateInput()
   const dataObj = buildDataObj()
   console.log(dataObj)
-
+  console.log(JSON.stringify(dataObj))
   const response = await fetch(`/api/character`, {
     method: 'POST',
     body: JSON.stringify(dataObj)
@@ -25,114 +25,136 @@ function validateInput(){
 
 //DATA OBJECT
 function buildDataObj(){
-const dataObj = {}
+  const dataObj = {}
 
 
-//query selectors
-const name = $('#name').val()
-const alignment = $('#alignment-select').val()
-const strength = $('#strength-stat').val()
-const dexterity = $('#dexterity-stat').val()
-const constitution = $('#constitution-stat').val()
-const intelligence = $('#intelligence-stat').val()
-const wisdom = $('#wisdom-stat').val()
-const charisma = $('#charisma-stat').val()
+  //query selectors
+  const name = $('#name').val()
+  const alignment = $('#alignment-select').val()
+  const strength = $('#strength-stat').val()
+  const dexterity = $('#dexterity-stat').val()
+  const constitution = $('#constitution-stat').val()
+  const intelligence = $('#intelligence-stat').val()
+  const wisdom = $('#wisdom-stat').val()
+  const charisma = $('#charisma-stat').val()
 
-//Build data object
-dataObj.name = name
+  //Build data object
+  dataObj.name = name
 
-//Stats
-dataObj.strength = strength
-dataObj.dexterity = dexterity
-dataObj.constitution = constitution
-dataObj.intelligence = intelligence
-dataObj.wisdom = wisdom
-dataObj.charisma = charisma
+  //Stats
+  dataObj.strength = strength
+  dataObj.dexterity = dexterity
+  dataObj.constitution = constitution
+  dataObj.intelligence = intelligence
+  dataObj.wisdom = wisdom
+  dataObj.charisma = charisma
 
-//Race Object
-const raceObj = buildRaceObj()
-dataObj.race = raceObj
+  //Race Object
+  const raceObj = buildRaceObj()
+  dataObj.race = raceObj
 
-//Archetype Object
-const archetypeObj = buildArchetypeObj()
-dataObj.archetype = archetypeObj
+  //Archetype Object
+  const archetypeObj = buildArchetypeObj()
+  dataObj.archetype = archetypeObj
 
-//Background Object
-const bakcgroundObj = buildBackgroundObj()
-//Misc
-dataObj.level = 1
-dataObj.alignment = alignment
+  //Background Object
+  const bakcgroundObj = buildBackgroundObj()
+  //Misc
+  dataObj.level = 1
+  dataObj.alignment = alignment
 
 return dataObj
 }
 
 //RACE OBJECT
 function buildRaceObj(){
-const raceObj = {}
+  const raceObj = {}
 
-//query selectors
-const race = $('#race-select').val()
-const subrace = $('#subrace-select').val()
-const raceOption = $('#race-option').val()
-const raceOption1 = $('#race-option1').val()
-const raceOption2 = $('#race-option2').val()
-const raceOption3 = $('#race-option3').val()
-const raceOption4 = $('#race-option4').val()
+  //query selectors
+  const race = $('#race-select').val()
+  const subrace = $('#subrace-select').val()
+  const raceOption = $('#race-option').val()
+  const raceOption1 = $('#race-option1').val()
+  const raceOption2 = $('#race-option2').val()
+  const raceOption3 = $('#race-option3').val()
+  const raceOption4 = $('#race-option4').val()
 
-subrace ? raceObj.name = subrace : raceObj.name = race
+  subrace ? raceObj.name = subrace : raceObj.name = race
 
-if(raceOption){
-  console.log(raceOption)
-  raceObj.option = raceOption
-  console.log(raceObj.option)
-} else if (raceOption1){
-  raceObj.option = {
-    stat: [raceOption1, raceOption2],
-    skill: [raceOption3, raceOption4]
-  }
-  console.log(raceObj.option)
+  if(raceOption){
+    console.log(raceOption)
+    raceObj.option = raceOption
+    console.log(raceObj.option)
+  } else if (raceOption1){
+    raceObj.option = {
+      stat: [raceOption1, raceOption2],
+      skill: [raceOption3, raceOption4]
+    }
+    console.log(raceObj.option)
 }
 return raceObj
 }
 
 //ARCHETYPE OBJECT
 function buildArchetypeObj(){
-const archetypeObj = {}
+  const archetypeObj = {}
 
-//SKILLS
-const skill1 = $('#skill1').val()
-const skill2 = $('#skill2').val()
-const skill3 = $('#skill3').val()
-const skill4 = $('#skill4').val()
-//WEAPONS
-//* if weapon2 = '2 handaxes' push 2 handaxes
-const weapon1 = $('#weapon1').val()
-const weapon2 = $('#weapon2').val()
-const weapon3 = $('#weapon3').val()
-//ARMOR
-const armor = $('#weapon3').val()
-//if armor2 fix cleric
+  //NAME
+  const name = $('#archetype-select').val()
+  archetypeObj.name = name
 
-//TOOLS
-const tool1 = $('#tool1').val()
-const tool2 = $('#tool2').val()
-const tool3 = $('#tool3').val()
-//PACKS
-const pack1 = $('#pack1').val()
-const pack2 = $('#pack2').val()
+  archetype.option = {}
+  //SKILLS
+  const skill1 = $('#skill1').val()
+  const skill2 = $('#skill2').val()
+  const skill3 = $('#skill3').val()
+  const skill4 = $('#skill4').val()
+  const skillsArray = [skill1, skill2, skill3, skill4,]
+  skillsArray = skillsArray.filter((skill) => skill !== undefined)
+  archetypeObj.option.skill = skillsArray
 
-//FEATURES
 
-//SPELLS
-const spell1 = $('#spell1').val()
-const spell2 = $('#spell2').val()
-const spell3 = $('#spell3').val()
-const spell4 = $('#spell4').val()
-const spell5 = $('#spell5').val()
-const spell6 = $('#spell6').val()
+  //WEAPONS
+  //* if weapon2 = '2 handaxes' push 2 handaxes
+  const weapon1 = $('#weapon1').val()
+  const weapon2 = $('#weapon2').val()
+  const weapon3 = $('#weapon3').val()
 
-//MISC
-//* this = Chain mail or 'Leather armor + Longbow'
+  //ARMOR
+  const armor = $('#weapon3').val()
+  //if armor2 fix cleric
+
+  //TOOLS
+  const tool1 = $('#tool1').val()
+  const tool2 = $('#tool2').val()
+  const tool3 = $('#tool3').val()
+
+  //PACKS
+
+  const pack1 = $('#pack1').val()
+  const pack2 = $('#pack2').val()
+
+  //FEATURES
+  const feature1 = $('#feature1').val()
+  const feature2 = $('#feature2').val()
+  
+
+  //SPELLS
+  const spell1 = $('#spell1').val()
+  const spell2 = $('#spell2').val()
+  const spell3 = $('#spell3').val()
+  const spell4 = $('#spell4').val()
+  const spell5 = $('#spell5').val()
+  const spell6 = $('#spell6').val()
+  const spell7 = $('#spell6').val()
+  const spell8 = $('#spell6').val()
+  const spell9 = $('#spell6').val()
+  const spellsArray = [spell1, spell2, spell3, spell4, spell5, spell6, spell7, spell8, spell9]
+  spellsArray = spellsArray.filter((spell) => spell !== undefined)
+  archetypeObj.option.spell = spellsArray
+
+  //MISC
+  //* this = Chain mail or 'Leather armor + Longbow'
 const fighterSpcl = $('#fighter-spcl').val()
 }
 
