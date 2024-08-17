@@ -6,8 +6,7 @@ const Spell = require('../models/Spell');
 
 function convertToDb(charObj) {
 
-    const databaseObj = Character.create(
-        {
+    const databaseObj = {
             name: charObj.name,
             archetype: charObj.archetype.name, 
             level: charObj.level, 
@@ -131,9 +130,8 @@ function convertToDb(charObj) {
             ideals: charObj.ideals, 
             bonds: charObj.bonds, 
             flaws: charObj.flaws, 
-            alignment: '' 
+            alignment: charObj.alignment 
         }
-    )
 
     return databaseObj;
 }
@@ -150,7 +148,7 @@ async function convertFromDatabase(databaseObject){
                 weaponName: weaponTemp[i]
             }
         })
-        weapons.push(singleWeapon)
+        weapons.push(singleWeapon.get({plain: true}))
     }
 
     let armors = [];
@@ -161,10 +159,11 @@ async function convertFromDatabase(databaseObject){
                 armorName: armorTemp[i]
             }
         })
-        armors.push(singleArmor)
+        armors.push(singleArmor.get({plain: true}))
     }
 
-    let spells = [];
+    let lvlOneSpells = [];
+    let cantrips = [];
     let spellTemp = databaseObject.spellsKnown.split(',');
     for(let i = 0; i < spellTemp.length; i++){
         const singleSpell = await Spell.findOne({
@@ -172,7 +171,14 @@ async function convertFromDatabase(databaseObject){
                 spellName: spellTemp[i]
             }
         })
-        spells.push(singleSpell)
+
+        const singleSpellPlain = singleSpell.get({plain: true})
+
+        if(singleSpellPlain.spellLevel === 0){
+            cantrips.push(singleSpell.get({plain: true}))
+        }else if(singleSpellPlain.spellLevel === 1){
+            lvlOneSpells.push(singleSpell.get({plain: true}))
+        }
     }
 
 
@@ -180,7 +186,131 @@ async function convertFromDatabase(databaseObject){
     const characterObject = {
         
 
+        name: databaseObject.name,
+        archetype: databaseObject.archetype, 
+        level: databaseObject.level, 
+        background: databaseObject.background, 
+        race: databaseObject.race, 
 
+        proficiencyBonus: databaseObject.proficiencyBonus,
+
+        strength: databaseObject.strength, 
+        strMod: databaseObject.strMod, 
+        strSaveProf: databaseObject.strSaveProf, 
+        strSaveVal: databaseObject.strSaveVal, 
+
+        dexterity: databaseObject.dexterity, 
+        dexMod: databaseObject.dexMod, 
+        dexSaveProf: databaseObject.dexSaveProf, 
+        dexSaveVal: databaseObject.dexSaveVal, 
+
+        constitution: databaseObject.constitution, 
+        conMod: databaseObject.conMod, 
+        conSaveProf: databaseObject.conSaveProf, 
+        conSaveVal: databaseObject.conSaveVal, 
+
+        intelligence: databaseObject.intelligence, 
+        intMod: databaseObject.intMod, 
+        intSaveProf: databaseObject.intSaveProf, 
+        intSaveVal: databaseObject.intSaveVal, 
+
+        wisdom: databaseObject.wisdom, 
+        wisMod: databaseObject.wisMod, 
+        wisSaveProf: databaseObject.wisSaveProf, 
+        wisSaveVal: databaseObject.wisSaveVal, 
+
+        charisma: databaseObject.charisma, 
+        chaMod: databaseObject.chaMod, 
+        chaSaveProf: databaseObject.chaSaveProf, 
+        chaSaveVal: databaseObject.chaSaveVal, 
+
+        acrobaticsProf: databaseObject.acrobaticsProf, 
+        acrobaticsVal: databaseObject.acrobaticsVal,
+
+        animalHandlingProf: databaseObject.animalHandlingProf, 
+        animalHandlingVal: databaseObject.animalHandlingVal,
+
+        arcanaProf: databaseObject.arcanaProf, 
+        arcanaVal: databaseObject.arcanaVal, 
+
+        athleticsProf: databaseObject.athleticsProf, 
+        athleticsVal: databaseObject.athleticsVal, 
+
+        deceptionProf: databaseObject.deceptionProf, 
+        deceptionVal: databaseObject.deceptionVal, 
+
+        historyProf: databaseObject.historyProf, 
+        historyVal: databaseObject.historyVal, 
+
+        insightProf: databaseObject.insightProf, 
+        insightVal: databaseObject.insightVal, 
+
+        intimidationProf: databaseObject.intimidationProf, 
+        intimidationVal: databaseObject.intimidationVal, 
+
+        investigationProf: databaseObject.investigationProf, 
+        investigationVal: databaseObject.investigationVal, 
+
+        medicineProf: databaseObject.medicineProf, 
+        medicineVal: databaseObject.medicineVal, 
+
+        natureProf: databaseObject.natureProf, 
+        natureVal: databaseObject.natureVal, 
+
+        perceptionProf: databaseObject.perceptionProf, 
+        perceptionVal: databaseObject.perceptionVal, 
+
+        performanceProf: databaseObject.performanceProf, 
+        performanceVal: databaseObject.performanceVal, 
+
+        persuasionProf: databaseObject.persuasionProf, 
+        persuasionVal: databaseObject.persuasionVal, 
+
+        religionProf: databaseObject.religionProf, 
+        religionVal: databaseObject.religionVal, 
+
+        sleightOfHandProf: databaseObject.sleightOfHandProf, 
+        sleightOfHandVal: databaseObject.sleightOfHandVal, 
+
+        stealthProf: databaseObject.stealthProf, 
+        stealthVal: databaseObject.stealthVal,
+
+        survivalProf: databaseObject.survivalProf, 
+        survivalVal: databaseObject.survivalVal, 
+
+        cantripsKnown: cantrips,
+        lvlOneSpellsKnown: lvlOneSpells, 
+        splClass: databaseObject.splClass, 
+        splAbility: databaseObject.splAbility, 
+        splSave: databaseObject.splSave, 
+        splAtckBonus: databaseObject.splAtckBonus, 
+        lvl1spellSlots: databaseObject.lvl1spellSlots,
+
+        passivePerception: databaseObject.passivePerception, 
+        languages: databaseObject.languages, 
+        weaponProficiencies: databaseObject.weaponProficiencies, 
+        armorProficiencies: databaseObject.armorProficiencies, 
+        toolProficiencies: databaseObject.toolProficiencies, 
+        armorClass: databaseObject.armorClass, 
+        initiative: databaseObject.initiative, 
+        speed: databaseObject.speed, 
+        hpMax: databaseObject.hpMax, 
+        hitDice: databaseObject.hitDice, 
+        hitDiceCount: databaseObject.hitDiceCount, 
+
+        weapon: weapons,
+        armor: armors,
+        kit: databaseObject.kit,
+
+        hpCurrent: databaseObject.hpMax, 
+        hpTemp: 0, 
+        features: databaseObject.features, 
+        traits: databaseObject.traits, 
+        personalityTraits: databaseObject.personalityTraits, 
+        ideals: databaseObject.ideals, 
+        bonds: databaseObject.bonds, 
+        flaws: databaseObject.flaws, 
+        alignment: databaseObject.alignment 
 
 
     }
