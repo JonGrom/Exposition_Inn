@@ -27,6 +27,9 @@
         <!-- Conditionally render login or logout links -->
         {{#if making_character}}
           <button class="no-button" id="logout">Log Out</button>
+        {{else if character_list}}
+          <a href="/profile">➕New Character</a> | 
+          <button class="no-button" id="logout">Log Out</button>
         {{else if logged_in}}
           <a href="/user">🏹Your Characters🗡️</a> | <a href="/profile">➕New Character</a> | 
           <button class="no-button" id="logout">Log Out</button>

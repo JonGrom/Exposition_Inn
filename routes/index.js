@@ -41,6 +41,7 @@ router.get('/user', withAuth, async (req, res) => {
       bodyClass: 'user-background',
       // ...user,
       characters,
+      character_list: true,
       logged_in: true
     });
   } catch (err) {
