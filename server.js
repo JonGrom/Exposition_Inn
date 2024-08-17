@@ -40,7 +40,7 @@ app.set('view engine', 'handlebars');
 app.use(session(sess));
 app.use(routes);
 
-// Keeop this sync setting set to false and just use the seed file to update the database 
+// Keep this sync setting set to false and just use the seed file to update the database; site db logs and saves new users.
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });

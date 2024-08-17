@@ -31,8 +31,8 @@ router.get('/:id', async (req, res) => {
       const characterData = await Character.findByPk(req.params.id, {
   
         include: [
-        { model: Stat, as: 'stat' },
-        { model: Skill, as: 'skill' },
+        // { model: Stat, as: 'stat' },
+        // { model: Skill, as: 'skill' },
         { model: Weapon, as: 'weapon' },
         { model: Armor, as: 'armor' },
         { model: Spell, as: 'spell' },

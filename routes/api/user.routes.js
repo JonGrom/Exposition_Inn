@@ -27,16 +27,6 @@ router.get("/", async (req, res) => {
   }
 })
 
-
-// router.post("/", async (req, res) => {
-//   try {
-//     const response = await User.create(req.body)
-//     res.json({ status: "success", payload: response })
-//   } catch(err){
-//     res.status(500).json({ status: "error", payload: err.message })
-//   }
-// })
-
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
