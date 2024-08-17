@@ -111,14 +111,14 @@ function buildArchetypeObj(){
   }
 
   //NAME
-  const name = $('#archetype-select').val()
+  let name = $('#archetype-select').val()
   archetypeObj.name = name
 
   //SKILLS
-  const skill1 = $('#skill1').val()
-  const skill2 = $('#skill2').val()
-  const skill3 = $('#skill3').val()
-  const skill4 = $('#skill4').val()
+  let skill1 = $('#skill1').val()
+  let skill2 = $('#skill2').val()
+  let skill3 = $('#skill3').val()
+  let skill4 = $('#skill4').val()
   let skillsArray = [skill1, skill2, skill3, skill4,]
   skillsArray = skillsArray.filter((skill) => skill !== undefined)
   archetypeObj.option.skill = skillsArray
@@ -126,46 +126,78 @@ function buildArchetypeObj(){
 
   //WEAPONS
   //* if weapon2 = '2 handaxes' push 2 handaxes
-  const weapon1 = $('#weapon1').val()
-  const weapon2 = $('#weapon2').val()
-  const weapon3 = $('#weapon3').val()
+  let weapon1 = $('#weapon1').val()
+  let weapon2 = $('#weapon2').val()
+  let weapon3 = $('#weapon3').val()
+  if(weapon2 == '2 Handaxes'){
+    let weapon4 = 'Handaxe'
+    let weapon5 = 'Handaxe'
+    let weaponsArray = [weapon1, weapon3, weapon4, weapon5]
+    weaponsArray = weaponsArray.filter((weapon) => weapon !== undefined)
+    archetypeObj.option.weapon = weaponsArray
+  } else {
+    let weaponsArray = [weapon1, weapon2, weapon3]
+    weaponsArray = weaponsArray.filter((weapon) => weapon !== undefined)
+    archetypeObj.option.weapon = weaponsArray
+  }
 
   //ARMOR
-  const armor = $('#weapon3').val()
+  let armor = $('#weapon3').val()
+  if(armor){
+    archetypeObj.option.armor.push(armor)
+  }
+
   //if armor2 fix cleric
 
   //TOOLS
-  const tool1 = $('#tool1').val()
-  const tool2 = $('#tool2').val()
-  const tool3 = $('#tool3').val()
+  let tool1 = $('#tool1').val()
+  let tool2 = $('#tool2').val()
+  let tool3 = $('#tool3').val()
+  let toolsArray = [tool1, tool2, tool3]
+  toolsArray = toolsArray.filter((tool) => tool !== undefined)
+  archetypeObj.option.tool = toolsArray
+  
 
   //PACKS
 
-  const pack1 = $('#pack1').val()
-  const pack2 = $('#pack2').val()
+  let pack1 = $('#pack1').val()
+  let pack2 = $('#pack2').val()
+  let packsArray = [pack1, pack2]
+  packsArray = packsArray.filter((pack) => pack !== undefined)
+  archetypeObj.option.pack = packsArray
 
   //FEATURES
-  const feature1 = $('#feature1').val()
-  const feature2 = $('#feature2').val()
-  
+  let feature1 = $('#feature1').val()
+  let feature2 = $('#feature2').val()
+  let featuresArray = [feature1, feature2]
+  featuresArray = featuresArray.filter((feature) => feature !== undefined)
+  archetypeObj.option.feature = featuresArray
 
   //SPELLS
-  const spell1 = $('#spell1').val()
-  const spell2 = $('#spell2').val()
-  const spell3 = $('#spell3').val()
-  const spell4 = $('#spell4').val()
-  const spell5 = $('#spell5').val()
-  const spell6 = $('#spell6').val()
-  const spell7 = $('#spell6').val()
-  const spell8 = $('#spell6').val()
-  const spell9 = $('#spell6').val()
+  let spell1 = $('#spell1').val()
+  let spell2 = $('#spell2').val()
+  let spell3 = $('#spell3').val()
+  let spell4 = $('#spell4').val()
+  let spell5 = $('#spell5').val()
+  let spell6 = $('#spell6').val()
+  let spell7 = $('#spell6').val()
+  let spell8 = $('#spell6').val()
+  let spell9 = $('#spell6').val()
   let spellsArray = [spell1, spell2, spell3, spell4, spell5, spell6, spell7, spell8, spell9]
   spellsArray = spellsArray.filter((spell) => spell !== undefined)
   archetypeObj.option.spell = spellsArray
 
   //MISC
   //* this = Chain mail or 'Leather armor + Longbow'
-const fighterSpcl = $('#fighter-spcl').val()
+  let fighterSpcl = $('#fighter-spcl').val()
+  if(!fighterSpcl){
+
+  } else if(fighterSpcl == 'Chain mail'){
+    archetypeObj.option.armor.push('Chain mail')
+  } else {
+    archetypeObj.option.armor.push('Leather')
+    archetypeObj.option.weapon.push('Longbow')
+  }
 }
 
 function buildBackgroundObj(){
