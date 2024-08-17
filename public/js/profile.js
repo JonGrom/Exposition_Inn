@@ -654,27 +654,55 @@ renderDropdown('feature', skills)
 
 //SORCERER
 function renderSorcererOptions(){
-//arrays
-const skillProfs = ['Arcana', 'Deception', 'Insight', 'Intimidation', 'Persuastion', 'Religion']
+  //arrays
+  const skillProfs = ['Arcana', 'Deception', 'Insight', 'Intimidation', 'Persuastion', 'Religion']
 
-const weapons = ['Light crossbow']
-// simpleWeapons.forEach(weapon => weapons.push(weapon))
+  const weapon1 = ['Light crossbow']
+  simpleWeapons.forEach(weapon => weapon1.push(weapon))
 
-  //component pouch or arcane focus
-  //dungeoneers or explorers
-// const option = $('<div>')
-// .append($('<label id="">').text(':'))
-// .append($('<select class="" id="">'))
-  //if Draconic Bloodline
-      //dropdown of ancestors steal from dragonborn
-  //4 cantrips 2 spells
+  const profs = $('<div>')
+    .append($('<label>').text('skill'))
+    .append($('<select class="skill" id="skill1">'))
+    .append($('<label>').text('skill'))
+    .append($('<select class="skill" id="skill2">'))
+    .append($('<label>').text('gear'))
+    .append($('<select id="pack1">')
+        .append($('<option>').text("Component Pouch"))
+        .append($('<option>').text("Arcane Focus")))
+    .append($('<label>').text('gear'))
+    .append($('<select id="pack1">')
+        .append($('<option>').text("Dungeneer's Pack"))
+        .append($('<option>').text("Explorer's Pack")))
+    
+  const cantripsKnown = $('<div>')
+    .append($('<label>').text('cantrip'))
+    .append($('<select class="cantrip" id="spell1">'))
+    .append($('<label>').text('cantrip'))
+    .append($('<select class="cantrip" id="spell2">'))
+    .append($('<label>').text('cantrip'))
+    .append($('<select class="cantrip" id="spell3">'))
+    .append($('<label>').text('cantrip'))
+    .append($('<select class="cantrip" id="spell4">'))
+    
+  const feature = $('<div>')
+    .append($('<label>').text('spell'))
+    .append($('<select class="spell" id="spell5">'))
+    .append($('<label>').text('spell'))
+    .append($('<select class="spell" id="spell6">'))
+    .append($('<label>').text('feature'))
+    .append($('<select class="feature" id="feature1">')
+      .append($('<option>').text("Draconic Bloodline"))
+      .append($('<option>').text("Wild Magic")))
+    
+    //if Draconic Bloodline!!!
+        //dropdown of ancestors steal from dragonborn
 
-// $('#archetype-options').append()
+  $('#archetype-options').append(profs).append(cantripsKnown).append(feature)
 
-renderDropdown('skill', skillProfs)
-renderDropdown('weapon', weapons)
-renderDropdown('cantrip', sorcererCantrips)
-renderDropdown('spell', lvl1SorcererSpells)
+  renderDropdown('skill', skillProfs)
+  renderDropdown('weapon', weapon1)
+  renderDropdown('cantrip', sorcererCantrips)
+  renderDropdown('spell', lvl1SorcererSpells)
 }
 
 //WARLOCK . skill .weapon .pack .spell .feature
