@@ -765,19 +765,55 @@ function renderWizardOptions(){
 //arrays
 const skillProfs = ['Arcana', 'History', 'Insight', 'Investigation', 'Medicine', 'Religion']
 
-//quaterstaff or dagger
-//component pouch or arcane focus
-//scholar's pack or explorer's pack
-//3 cantrips, six spells
-// const option = $('<div>')
-// .append($('<label id="">').text(':'))
-// .append($('<select class="" id="">'))
+const profs = $('<div>')
+.append($('<label>').text('skill'))
+.append($('<select class="skill" id="skill1">'))
+.append($('<label>').text('skill'))
+.append($('<select class="skill" id="skill2">'))
+.append($('<label>').text('weapon'))
+  .append($('<select id="weapon1">')
+    .append($('<option>').text("Quaterstaff"))
+    .append($('<option>').text("Dagger")))
 
-// $('#archetype-options').append()
+const misc = $('<div>')
+  .append($('<label>').text('gear'))
+  .append($('<select id="pack1">')
+    .append($('<option>').text("Component Pouch"))
+    .append($('<option>').text("Arcane Focus")))
+  .append($('<label>').text('gear'))
+  .append($('<select id="pack2">')
+    .append($('<option>').text("Scholar's Pack"))
+    .append($('<option>').text("Explorer's Pack")))
+
+const cantripsKnown = $('<div>')
+    .append($('<label>').text('cantrip'))
+    .append($('<select class="cantrip" id="spell1">'))
+    .append($('<label>').text('cantrip'))
+    .append($('<select class="cantrip" id="spell2">'))
+    .append($('<label>').text('cantrip'))
+    .append($('<select class="cantrip" id="spell3">'))
+
+const spellsKnown1 = $('<div>')
+    .append($('<label>').text('spell'))
+    .append($('<select class="spell" id="spell4">'))
+    .append($('<label>').text('spell'))
+    .append($('<select class="spell" id="spell5">'))
+    .append($('<label>').text('spell'))
+    .append($('<select class="spell" id="spell6">'))
+
+const spellsKnown2 = $('<div>')
+    .append($('<label>').text('spell'))
+    .append($('<select class="spell" id="spell7">'))
+    .append($('<label>').text('spell'))
+    .append($('<select class="spell" id="spell8">'))
+    .append($('<label>').text('spell'))
+    .append($('<select class="spell" id="spell9">'))
+
+$('#archetype-options').append(profs).append(misc).append(cantripsKnown).append(spellsKnown1).append(spellsKnown2)
 
 renderDropdown('skill', skillProfs)
 renderDropdown('cantrip', wizardCantrips)
-renderDropdown('spell', wizardSpells)
+renderDropdown('spell', lvl1WizardSpells)
 }
 
 //**No racial options for half-orc or tiefling 
