@@ -14,7 +14,7 @@ const loginFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/user');
       } else {
-        alert(response.statusText);
+        alert("Login was unsuccessful!");
       }
     }
   };
@@ -36,8 +36,11 @@ const loginFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/user');
       } else {
-        alert(response.statusText);
+        alert("Signup was unsuccessful! Ensure you're giving a valid Email, Username, and a Password over 8 characters. Also ensure the Email and Username you're entering are not already associated with an account.");
       }
+    }
+    else {
+      alert("You need to provide an Mmail, Username, and Password to sign up!");
     }
   };
   
