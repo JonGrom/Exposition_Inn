@@ -670,7 +670,7 @@ function renderSorcererOptions(){
         .append($('<option>').text("Component Pouch"))
         .append($('<option>').text("Arcane Focus")))
     .append($('<label>').text('gear'))
-    .append($('<select id="pack1">')
+    .append($('<select id="pack2">')
         .append($('<option>').text("Dungeneer's Pack"))
         .append($('<option>').text("Explorer's Pack")))
     
@@ -689,7 +689,7 @@ function renderSorcererOptions(){
     .append($('<select class="spell" id="spell5">'))
     .append($('<label>').text('spell'))
     .append($('<select class="spell" id="spell6">'))
-    .append($('<label>').text('feature'))
+    .append($('<label>').text('Sorcerous Origin'))
     .append($('<select class="feature" id="feature1">')
       .append($('<option>').text("Draconic Bloodline"))
       .append($('<option>').text("Wild Magic")))
@@ -707,29 +707,53 @@ function renderSorcererOptions(){
 
 //WARLOCK . skill .weapon .pack .spell .feature
 function renderWarlockOptions(){
-
 //arrays 
 const skillProfs = ['Arcana', 'Deception', 'History', 'Intimidation', 'Investigation', 'Nature', 'Religion']
 
 const weapon1 = ['Light crossbow']
-//!! simpleWeapons.forEach(weapon => weapons.push(weapon))
+simpleWeapons.forEach(weapon => weapon1.push(weapon))
 
 const feature = ['The Archfey', 'The Fiend', 'The Great Old One']
 
-//component pouch or arcane focus
-  // scholar's or dungeoneer's 
-  //any simple weapon
-  //2 cantrips 2 spells
-// const option = $('<div>')
-// .append($('<label id="">').text(':'))
-// .append($('<select class="" id="">'))
+const profs = $('<div>')
+  .append($('<label>').text('skill'))
+  .append($('<select class="skill" id="skill1">'))
+  .append($('<label>').text('skill'))
+  .append($('<select class="skill" id="skill2">'))
+  .append($('<label>').text('weapon'))
+  .append($('<select class="weapon1" id="weapon1">'))
+  .append($('<label>').text('weapon'))
+  .append($('<select class="weapon2" id="weapon2">'))
 
-//EXPAND SPELL LIST BASED ON PATRON??
+const misc = $('<div>')
+  .append($('<label>').text('gear'))
+  .append($('<select id="pack1">')
+    .append($('<option>').text("Component Pouch"))
+    .append($('<option>').text("Arcane Focus")))
+  .append($('<label>').text('gear'))
+  .append($('<select id="pack2">')
+    .append($('<option>').text("Scholar's Pack"))
+    .append($('<option>').text("Dungeneer's Pack")))
+  .append($('<label>').text('Otherwordly Patron'))
+  .append($('<select class="feature" id="feature1">'))
 
-// $('#archetype-options').append()
+const spells = $('<div>')
+  .append($('<label>').text('cantrip'))
+  .append($('<select class="cantrip" id="spell1">'))
+  .append($('<label>').text('cantrip'))
+  .append($('<select class="cantrip" id="spell2">'))
+  .append($('<label>').text('spell'))
+  .append($('<select class="spell" id="spell3">'))
+  .append($('<label>').text('spell'))
+  .append($('<select class="spell" id="spell4">'))
+
+//EXPAND SPELL LIST BASED ON PATRON?? NOT CANNON
+
+$('#archetype-options').append(profs).append(misc).append(spells)
 
 renderDropdown('skill', skillProfs)
 renderDropdown('weapon1', weapon1)
+renderDropdown('weapon2', simpleWeapons)
 renderDropdown('feature', feature)
 renderDropdown('cantrip', warlockCantrips)
 renderDropdown('spell', lvl1WarlockSpells)
