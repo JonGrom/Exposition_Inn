@@ -1022,6 +1022,10 @@ $('#archetype-select').on('change', function(event){
   else if($('#archetype-select').val() == 'Wizard'){
     renderWizardOptions()
   }
+
+  let roll = chance.d6()
+  console.log(roll)
+  console.log('whatthe')
 })
 
 //Background

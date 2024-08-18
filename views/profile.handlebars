@@ -3,11 +3,11 @@
     <h2 class="page-title">New Character Creator</h2>
     <form class="character-form">
       <div class="form-group" id="character-name">
-        <label for="character-name" class="form-label">Character Name</label>
+        <label for="name" class="form-label">Character Name</label>
         <input class="form-input" type="text" id="name"/>
       </div>
       <div class="form-group" id="race">
-          <label for="exampleFormControlSelect1">Race:</label>
+          <label for="race-select">Race:</label>
             <select class="form-control" id="race-select">
               <option>Dwarf</option>
               <option>Elf</option>
@@ -25,7 +25,7 @@
 
       </div>
       <div class="form-group" id="archetype">
-          <label for="exampleFormControlSelect1">Class:</label>
+          <label for="archetype-select">Class:</label>
             <select class="form-control" id="archetype-select">
               <option>Barbarian</option>
               <option>Bard</option>
@@ -61,8 +61,16 @@
       <div class="form-group" id="stat">
         <label for="stat" class="form-label">Stats:</label>
           <div class="form-group" id="stat">
+            <div>
+              <button id="stat-roll">Roll Stats</button>
+            </div>
             <label for="strength-stat">Strength:</label>
               <select class="form-control" id="strength-stat">
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
                 <option>8</option>
                 <option>9</option>
                 <option>10</option>
@@ -71,11 +79,19 @@
                 <option>13</option>
                 <option>14</option>
                 <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
               </select>
           </div>
           <div class="form-group" id="dexterity">
             <label for="dexterity-stat">Dexerity:</label>
               <select class="form-control" id="dexterity-stat">
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
                 <option>8</option>
                 <option>9</option>
                 <option>10</option>
@@ -84,11 +100,19 @@
                 <option>13</option>
                 <option>14</option>
                 <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
               </select>
           </div>
           <div class="form-group" id="constitution">
             <label for="constitution-stat">Constitution:</label>
               <select class="form-control" id="constitution-stat">
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
                 <option>8</option>
                 <option>9</option>
                 <option>10</option>
@@ -97,11 +121,19 @@
                 <option>13</option>
                 <option>14</option>
                 <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
               </select>
           </div>
           <div class="form-group" id="intelligence">
             <label for="intelligence-stat">Intelligence:</label>
               <select class="form-control" id="intelligence-stat">
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
                 <option>8</option>
                 <option>9</option>
                 <option>10</option>
@@ -110,11 +142,19 @@
                 <option>13</option>
                 <option>14</option>
                 <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
               </select>
           </div>
           <div class="form-group" id="wisdom">
             <label for="wisdom-stat">Wisdom:</label>
               <select class="form-control" id="wisdom-stat">
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
                 <option>8</option>
                 <option>9</option>
                 <option>10</option>
@@ -123,11 +163,19 @@
                 <option>13</option>
                 <option>14</option>
                 <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
               </select>
           </div>
           <div class="form-group" id="charisma">
             <label for="charisma-stat">Charisma:</label>
               <select class="form-control" id="charisma-stat">
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
                 <option>8</option>
                 <option>9</option>
                 <option>10</option>
@@ -136,6 +184,9 @@
                 <option>13</option>
                 <option>14</option>
                 <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
               </select>
           </div>
       </div>
@@ -146,20 +197,20 @@
             <input type="text" id="background-name">
           </div>
           <div class="form-group">
-            <label for="background-skill">Skills</label>
+            <label for="background-skill1">Skills</label>
             <select class="background-skill" id="background-skill1"></select>
             <select class="background-skill" id="background-skill2"></select>
           </div>
           <div class="form-group">
             <label for="langOrTool">Bonus</label>
-            <div class="form-group">
+            <div class="form-group" id="langOrTool">
               <select id="langOrTool1">
                 <option>Language</option>
                 <option>Tools</option>
               </select>
               <select class="misc1" id="misc1"></select>
             </div>
-            <div class="form-group">
+            <div class="form-group" id="">
               <select id="langOrTool2">
                 <option>Language</option>
                 <option>Tools</option>
