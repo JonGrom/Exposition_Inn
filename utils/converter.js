@@ -11,7 +11,7 @@ function convertToDb(charObj) {
             name: charObj.name,
             archetype: charObj.archetype.name, 
             level: charObj.level, 
-            background: charObj.background, 
+            background: charObj.background.name, 
             race: charObj.race.name, 
 
             proficiencyBonus: charObj.profBonus,
