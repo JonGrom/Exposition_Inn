@@ -786,6 +786,7 @@ class Base{
 
 //WHEN CONSTRUCTING ALWAYS PERFORM THESE FUNCTIONS
 // character.applyRace()
+// character.applyBackground()
 // character.calculateMods()
 // character.applyArchetpye()
 // character.calculations()
