@@ -2,19 +2,19 @@ async function handleSubmit(event) {
   event.preventDefault()
   validateInput()
   const dataObj = buildDataObj()
-  console.log(dataObj)
-  console.log(JSON.stringify(dataObj))
-  const response = await fetch(`/api/character`, {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(dataObj)
-  })
+  // console.log(dataObj)
+  // console.log(JSON.stringify(dataObj))
+  // const response = await fetch(`/api/character`, {
+  //   method: 'POST',
+  //   headers: {'Content-Type': 'application/json'},
+  //   body: JSON.stringify(dataObj)
+  // })
   
-  if (response.ok) {
-    document.location.replace('/user');
-  } else {
-    alert('Failed to create character');
-  }
+  // if (response.ok) {
+  //   document.location.replace('/user');
+  // } else {
+  //   alert('Failed to create character');
+  // }
   
 };
 
@@ -60,6 +60,7 @@ function buildDataObj(){
 
   //Background Object
   const backgroundObj = buildBackgroundObj()
+  dataObj.background = backgroundObj
   //Misc
   dataObj.level = 1
   dataObj.alignment = alignment
@@ -230,7 +231,26 @@ function buildArchetypeObj(){
 }
 
 function buildBackgroundObj(){
-  
+  let backgroundObj = {
+    name: '',
+    option: [
+      {
+        type: '',
+        option: ''
+      },
+      {
+        type: '',
+        option: ''
+      }
+    ]
+  }
+  backgroundObj.name = $('#background-name').val()
+  console.log($('#background-name').val())
+  backgroundObj.option[0].type = $('#langOrTool1').val()
+  backgroundObj.option[1].type = $('#langOrTool2').val()
+  backgroundObj.option[0].option = $('#misc1').val()
+  backgroundObj.option[1].option = $('#misc2').val()
+  console.log(backgroundObj)
   return backgroundObj
 }
 
@@ -997,8 +1017,10 @@ $('#archetype-select').on('change', function(event){
 })
 
 //Background
+// console.log(('#langOrTool1').val())
 $('#langOrTool1').on('change', function(event){
-  $(misc1).html("")
+  event.preventDefault()
+  $("#misc1").html("")
   if ($('#langOrTool1').val() == 'Language'){
     renderDropdown('misc1', languages)
   } else if($('#langOrTool1').val() == 'Tools'){
@@ -1006,7 +1028,8 @@ $('#langOrTool1').on('change', function(event){
   }
 })
 $('#langOrTool2').on('change', function(event){
-  $(misc2).html("")
+  event.preventDefault()
+  $("#misc2").html("")
   if ($('#langOrTool2').val() == 'Language'){
     renderDropdown('misc2', languages)
   } else if($('#langOrTool2').val() == 'Tools'){
