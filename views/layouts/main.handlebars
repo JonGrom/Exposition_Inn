@@ -31,7 +31,7 @@
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if making_character}}
-          <span id="🔊" class="no-button">🔊
+           <span id="🔊" class="no-button">🔊
             <audio id="speaker-icon" loop>
                 <source src="./assets/sound/cobblestone.mp3" type="audio/mpeg">
                 <source src="./assets/sound/cobblestone.mp3" type="audio/ogg">
@@ -46,6 +46,12 @@
             </audio>
           </span>
           | <a href="/profile">➕New Character</a> | 
+          <button class="no-button" id="logout">Log Out</button>
+        {{else if view_character}}
+            <span onclick="window.print();" class="noPrint">
+            🖨️
+            </span>
+          | <a href="/user">🏹Your Characters🗡️</a> | <a href="/profile">➕New Character</a> | 
           <button class="no-button" id="logout">Log Out</button>
         {{else if logged_in}}
           <span id="🔊" class="no-button">🔊
