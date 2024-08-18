@@ -86,7 +86,7 @@ function buildRaceObj(){
     raceObj.option = raceOption
   } else if (raceOption1){
     let statArray = [raceOption1, raceOption2]
-    let skillArray = [raceOption2, raceOption4]
+    let skillArray = [raceOption3, raceOption4]
     let statArrayTrue = statArray.map(function(stat) {
       if (stat == "Animal Handling") {
         return "animalHandling";
@@ -359,9 +359,9 @@ function renderHalfElfOptions(){
 //stat and skill options
 const options = $('<div>')
 .append($('<label id="buff">').text('stat buff:'))
-.append($('<select class="prof" id="race-option1">'))
+.append($('<select class="stat" id="race-option1">'))
 .append($('<label id="buff">').text('stat buff:'))
-.append($('<select class="prof" id="race-option2">'))
+.append($('<select class="stat" id="race-option2">'))
 .append($('<label id="buff">').text('skill:'))
 .append($('<select class="prof" id="race-option3">'))
 .append($('<label id="buff">').text('skill:'))
