@@ -15,6 +15,8 @@ const loginFormHandler = async (event) => {
         document.location.replace('/user');
       } else {
         alert("Login was unsuccessful!");
+        document.getElementById('email-login').value = '';
+        document.getElementById('password-login').value = '';
       }
     }
   };
@@ -37,6 +39,9 @@ const loginFormHandler = async (event) => {
         document.location.replace('/user');
       } else {
         alert("Signup was unsuccessful! Ensure you're giving a valid Email, Username, and a Password over 8 characters. Also ensure the Email and Username you're entering are not already associated with an account.");
+        document.getElementById('username-signup').value = '';
+        document.getElementById('email-signup').value = '';
+        document.getElementById('password-signup').value = '';
       }
     }
     else {
