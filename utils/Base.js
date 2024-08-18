@@ -16,37 +16,37 @@ class Base{
         //Stats
         this.stat = {
             strength: {
-                val: strength,
+                val: parseInt(strength),
                 mod: 0,
                 saveVal: 0,
                 prof: false,
             },
             dexterity: {
-                val: dexterity,
+                val: parseInt(dexterity),
                 mod: 0,
                 saveVal: 0,
                 prof: false,
             },
             constitution: {
-                val: constitution,
+                val: parseInt(constitution),
                 mod: 0,
                 saveVal: 0,
                 prof: false,
             },
             intelligence: {
-                val: intelligence,
+                val: parseInt(intelligence),
                 mod: 0,
                 saveVal: 0,
                 prof: false,
             },
             wisdom: {
-                val: wisdom,
+                val: parseInt(wisdom),
                 mod: 0,
                 saveVal: 0,
                 prof: false,
             },
             charisma: {
-                val: charisma,
+                val: parseInt(charisma),
                 mod: 0,
                 saveVal: 0,
                 prof: false,
