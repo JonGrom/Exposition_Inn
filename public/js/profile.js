@@ -59,7 +59,7 @@ function buildDataObj(){
   dataObj.archetype = archetypeObj
 
   //Background Object
-  const bakcgroundObj = buildBackgroundObj()
+  const backgroundObj = buildBackgroundObj()
   //Misc
   dataObj.level = 1
   dataObj.alignment = alignment
