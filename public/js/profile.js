@@ -230,7 +230,8 @@ function buildArchetypeObj(){
 }
 
 function buildBackgroundObj(){
-    //FOR FUTURE!!
+  
+  return backgroundObj
 }
 
 
@@ -919,9 +920,12 @@ $(document).ready(function (){
 //render default options
 renderDwarfOptions()
 renderBarbarianOptions()
+renderDropdown('background-skill', skills)
+renderDropdown('misc1', languages)
+renderDropdown('misc2', languages)
 
-// $('#archetype-options').append($('<h1>').text('WHYYYYYY'))
 //event listeners on race and class options
+//Race
 $('#race-select').on('change', function(event){
   event.preventDefault()
   $('#race-options').html("")
@@ -949,9 +953,10 @@ $('#race-select').on('change', function(event){
   }
 
 })
+
+//Class
 $('#archetype-select').on('change', function(event){
   event.preventDefault()
-  console.log($('#archetype-select').val())
   $('#archetype-options').html("")
   if($('#archetype-select').val() == 'Barbarian'){
     renderBarbarianOptions()
@@ -991,17 +996,38 @@ $('#archetype-select').on('change', function(event){
   }
 })
 
+//Background
+$('#langOrTool1').on('change', function(event){
+  $(misc1).html("")
+  if ($('#langOrTool1').val() == 'Language'){
+    renderDropdown('misc1', languages)
+  } else if($('#langOrTool1').val() == 'Tools'){
+    renderDropdown('misc1', tools)
+  }
+})
+$('#langOrTool2').on('change', function(event){
+  $(misc2).html("")
+  if ($('#langOrTool2').val() == 'Language'){
+    renderDropdown('misc2', languages)
+  } else if($('#langOrTool2').val() == 'Tools'){
+    renderDropdown('misc2', tools)
+  }
+})
 
 //Form Submit Listener
 $('#character-submit').on('click', handleSubmit)
 
 })
 
+
+//ARRAYS 
 const languages = ['Abyssal', 'Celestial', 'Draconic', 'Dwarvish', 'Elvish', 'Giant', 'Gnomish', 'Goblin', 'Halfling', 'Infernal', 'Orc', 'Primordial', 'Sylvan']
+
+const tools = ["Artisan's Tools", 'Disguise Kit', 'Forgery Kit', 'Gaming Set', 'Herbalism Kit', "Navigator's Tools", "Poisoner's Kit", "Thieve's Tools"]
 
 const stats = ['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma']
 
-const skills = ['Acrobatics', 'AnimalHandling', 'Arcana', 'Athletics', 'Deception', 'History', 'Insight', 'Intimidation', 'Investigation', 'Medicine', 'Nature', 'Perception', 'Performance', 'Persuasion', 'Religion', 'Sleight of Hand', 'Stealth', 'Survival']
+const skills = ['Acrobatics', 'Animal Handling', 'Arcana', 'Athletics', 'Deception', 'History', 'Insight', 'Intimidation', 'Investigation', 'Medicine', 'Nature', 'Perception', 'Performance', 'Persuasion', 'Religion', 'Sleight of Hand', 'Stealth', 'Survival']
 
 //weapon arrays
 const simpleWeapons = ["Club", "Dagger", "Greatclub", "Handaxe", "Light hammer", "Javelin", "Quarterstaff", "Mace", "Spear", "Light crossbow", "Sickle", "Shortbow", "Sling", "Dart"];
