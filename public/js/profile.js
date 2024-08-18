@@ -4,17 +4,17 @@ async function handleSubmit(event) {
   const dataObj = buildDataObj()
   // console.log(dataObj)
   // console.log(JSON.stringify(dataObj))
-  // const response = await fetch(`/api/character`, {
-  //   method: 'POST',
-  //   headers: {'Content-Type': 'application/json'},
-  //   body: JSON.stringify(dataObj)
-  // })
+  const response = await fetch(`/api/character`, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(dataObj)
+  })
   
-  // if (response.ok) {
-  //   document.location.replace('/user');
-  // } else {
-  //   alert('Failed to create character');
-  // }
+  if (response.ok) {
+    document.location.replace('/user');
+  } else {
+    alert('Failed to create character');
+  }
   
 };
 

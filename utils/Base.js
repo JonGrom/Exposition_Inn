@@ -380,7 +380,13 @@ class Base{
         }
     }
     applyBackground(){
-
+        this.backgroundObj.option.forEach((option) => {
+            if (option.type == "Language"){
+                this.languages.push(option.option)
+            } else if (option.type == "Tools"){
+                this.equipment.kits.push(option.option)
+            }
+        })
     }
     calculateMods(){
         const stats = Object.keys(this.stat)
