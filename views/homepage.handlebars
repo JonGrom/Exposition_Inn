@@ -1,22 +1,6 @@
 {{#if logged_in}}
 {{else}}
 <div class="row justify-space-between-md">
-  <div class="login-card">
-    <h2 class="page-title">Login</h2>
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">Email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">Password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-secondary" type="submit">login</button>
-      </div>
-    </form>
-  </div>
   <div class="signup-card">
     <h2 class="page-title">Signup</h2>
     <form class="form signup-form">
@@ -34,6 +18,22 @@
       </div>
       <div class="form-group">
         <button class="btn btn-secondary" type="submit" id="signup-submit">signup</button>
+      </div>
+    </form>
+  </div>
+  <div class="login-card">
+    <h2 class="page-title">Login</h2>
+    <form class="form login-form">
+      <div class="form-group">
+        <label for="email-login">Email:</label>
+        <input class="form-input" type="text" id="email-login" />
+      </div>
+      <div class="form-group">
+        <label for="password-login">Password:</label>
+        <input class="form-input" type="password" id="password-login" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-secondary" type="submit">login</button>
       </div>
     </form>
   </div>
