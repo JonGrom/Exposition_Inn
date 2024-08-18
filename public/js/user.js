@@ -15,7 +15,7 @@ const newFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/character');
+      res.render('/character');
     } else {
       alert('Failed to create character');
     }

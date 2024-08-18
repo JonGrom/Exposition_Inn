@@ -46,6 +46,7 @@ A collaborative project using Express and Sequelize to create a website on Rende
   - Background images were produced using OpenAI's ChatGPT4, via the CoPilot iOS mobile app.
   - Background song [Cobblestone Village](https://www.youtube.com/watch?v=jZ7a1yPaJh0) © 2014 Brandon Fiechter; All Rights Reserved. Retrieved with [Y2Mate](https://en.y2mate.is/v84/youtube-to-mp3.html).
   - Website font 'Mael' © 1999 [Dale Thrope](mailto:dale_thorpe@bssc.edu.au) at utopiafonts.
+  - [Print Page Article](https://stackoverflow.com/questions/16894683/how-to-print-html-content-on-click-of-a-button-but-not-the-page)
 
   ## Questions
   ### For Jonathan:
