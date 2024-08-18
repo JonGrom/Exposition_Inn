@@ -29,24 +29,19 @@ router.get('/:id', async (req, res) => {
     // find a single product by its `id`
     // be sure to include its associated Category and Tag 
     try {
-      const characterData = await Character.findByPk(req.params.id, {
-  
-        include: [
-        // { model: Stat, as: 'stat' },
-        // { model: Skill, as: 'skill' },
-        { model: Weapon, as: 'weapon' },
-        { model: Armor, as: 'armor' },
-        { model: Spell, as: 'spell' },
-        { model: User, as: 'user' }
-        ]
-      });
+      const characterData = await Character.findByPk(req.params.id);
+
+
+      const character = await convertFromDatabase(characterData.get({plain: true}));
+      console.log(character)
+
   
       if (!characterData) {
         res.status(404).json({ message: 'No character found with this id!' });
         return;
       }
   
-      res.status(200).json(characterData);
+      res.status(200).json(character);
     } catch (err) {
       res.status(500).json(err);
     }
@@ -64,13 +59,12 @@ router.post('/', async (req, res) => {
       newBase.applyArchetype();
       newBase.calculations();
 
-      // console.log("newBase console log" , newBase);
 
-      const newCharacter = await Character.create(convertToDb(newBase));
-      // const tagsToAdd = req.body.tagIds.map( user => ({ newCharacter_id: newCharacter.id, tagIds_id: tagIds.id}) )
-      // if( tagsToAdd.length ){
-      //   await Character.bulkCreate(tagsToAdd)
-      // }
+      const newCharacter = await Character.create({
+        ...convertToDb(newBase),
+        user_id: req.session.user_id
+    });
+      
       res.status(200).json(newCharacter);
     } catch(err){
       console.log(err);
