@@ -405,7 +405,7 @@ class Base{
             //EQUIPMENT
             this.equipment.weapon.push(this.archetype.option.weapon)
             this.equipment.kits.push("explorer's pack")
-            this.equipment.weapon.push('javelin')
+            this.equipment.weapon.push('Javelin')
 
             this.features.push('Rage', 'Unarmored Defense')
             //Unarmored Defense
