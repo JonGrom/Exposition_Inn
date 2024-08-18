@@ -1,25 +1,35 @@
 async function handleSubmit(event) {
   event.preventDefault()
-  validateInput()
+  isValid = validateInput()
   const dataObj = buildDataObj()
   // console.log(dataObj)
   // console.log(JSON.stringify(dataObj))
-  const response = await fetch(`/api/character`, {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(dataObj)
-  })
-  
-  if (response.ok) {
-    document.location.replace('/user');
+  if(isValid){
+    const response = await fetch(`/api/character`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(dataObj)
+    })
+    
+    if (response.ok) {
+      document.location.replace('/user');
+    } else {
+      alert('Failed to create character');
+    }
   } else {
-    alert('Failed to create character');
+    alert("There's more to your story, traveler. Please fill out all form fields")
   }
-  
 };
 
 //FORM VALIDATION
 function validateInput(){
+  let name = $('#name').val()
+  let background = $('#background-name').val()
+  if(!name || !background){
+    return false
+  } else {
+    return true
+  }
 
 }
 
@@ -245,12 +255,10 @@ function buildBackgroundObj(){
     ]
   }
   backgroundObj.name = $('#background-name').val()
-  console.log($('#background-name').val())
   backgroundObj.option[0].type = $('#langOrTool1').val()
   backgroundObj.option[1].type = $('#langOrTool2').val()
   backgroundObj.option[0].option = $('#misc1').val()
   backgroundObj.option[1].option = $('#misc2').val()
-  console.log(backgroundObj)
   return backgroundObj
 }
 
