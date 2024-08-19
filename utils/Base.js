@@ -362,7 +362,7 @@ class Base{
             this.speed = 30
             this.traits.push('Darkvision', 'Relentless Endurance', 'Savage Attacks')
             //Menacing
-            this.stat.intimidation.prof = true
+            this.skill.intimidation.prof = true
             //Languages
             this.languages.push('Common', 'Orc')
         }
