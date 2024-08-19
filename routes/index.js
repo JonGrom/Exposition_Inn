@@ -19,6 +19,9 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get("/chance", function(req, res){
+  res.sendFile(path.join(__dirname, '../node_modules/chance/chance.js'));
+});
 
 
 // Use withAuth middleware to prevent access to route
